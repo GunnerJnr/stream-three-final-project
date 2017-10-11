@@ -75,4 +75,4 @@ class BlogPost(models.Model):
                              self.post_slug])
 
     def __unicode__(self):
-        return self.title
+        return self.post_title
