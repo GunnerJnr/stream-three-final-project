@@ -10,7 +10,7 @@ from .models import BlogPost
 # define a view to return a list of our blog posts with the 'published' status
 def blog_post_list(request):
     blog_posts = BlogPost.published.all()
-    return render(request, 'gamersblog/blogpost/blogpostlist.html',
+    return render(request, 'gamersblog/blogposts/blogpostlist.html',
                            {'blog_posts', blog_posts})
 
 
@@ -22,4 +22,5 @@ def blog_post_detail(request, day, month, year, blog_post):
                                   publish__year=year,
                                   publish__month=month,
                                   publish__day=day)
-    return render(request, 'gamersblog/blogpost/blogpostdetail.html')
+    return render(request, 'gamersblog/blogposts/blogpostdetail.html',
+                           {'blog_post', blog_post})
