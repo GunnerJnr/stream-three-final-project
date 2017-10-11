@@ -7,6 +7,21 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+
+# Create our own custom manager, this will allow us to query our data
+# using our own custom filter ('published') in this case.
+class PublishedBlogPostManager(models.Manager):
+    """
+    get_queryset(): Override the defaultdjango queryset
+    so we can apply a custom filter when calling queries.
+    """
+
+    def get_queryset(self):
+        return super(PublishedBlogPostManager, self).get_queryset()\
+                                                    .filter(status='published')
+
+
+# Create the main class to handle our BlogPosts
 class BlogPost(models.Model):
     """
     post_title: The blog post title.
@@ -38,6 +53,10 @@ class BlogPost(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
+
+    # define our objects
+    objects = models.Manager()  # default Django Manager
+    published = PublishedBlogPostManager()  # Our Custom Manager
 
     class Meta:
         """
