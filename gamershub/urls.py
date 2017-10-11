@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from home import views as home_views
 
 urlpatterns = [
     # add the url to access the admin panel
     url(r'^admin/', include(admin.site.urls)),
+
+    # home app urls
+    url(r'^$', home_views.get_index, name='home'),
 
     # here we want to add the urls from gamersblog app, we also assign
     # a namespace so we can easily access this group of urls

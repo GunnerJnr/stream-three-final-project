@@ -15,22 +15,23 @@
         <!-- Main Site Title -->
         <title>{% block title %}{% endblock %}</title>
 
+        <!--<link href="#" rel="stylesheet">-->
+
         <!-- Link to our custom stylesheet -->
         <link href="{% static "css/gamershub.css" %}" rel="stylesheet">
+
+        {% block head_js %}{% endblock %}
     </head>
     <body>
-        <!-- The main content of the body -->
-        <div id="content">
-            <!-- Here we inject the content we want to display -->
-            {% block content %}
-            {% endblock %}
-            <!-- End content injection here -->
-        </div>
+        <!-- Here we inject the content we want to display -->
+        {% block content %}
+        {% endblock %}
+        <!-- End content injection here -->
 
-        <!-- Side bar content here-->
-        <div id="sidebar">
-            <h2>Gamers Hub Blog</h2>
-            <p>Welcome to the Gamers Hub Blog!</p>
-        </div>
+        <!-- Here we inject the content we want to display
+            at present only the blog has a sidebar -->
+        {% block sidebar %}
+        {% endblock %}
+        <!-- End content injection here -->
     </body>
 </html>
