@@ -1,18 +1,28 @@
+<!-- tell django we wish to extend the base.html file -->
 {% extends "base.html" %}
 
+<!-- Main Title for the page -->
 {% block title %}Gamers Hub Blog{% end block %}
 
+<!-- The main content we wish to inject -->
 {% block content %}
     <h1>Gamers Hub Blog</h1>
+    <!-- Here we create a for block to loop through all the blog posts
+         and return them by absolute URL and post title -->
     {% for post in  blogposts %}
         <h2>
             <a href="{{ post.get_absolute_url }}">
                 {{ post.title }}
             </a>
         </h2>
+        <!-- For a nice added touch we display the published date
+             and post author -->
         <p class="date">
             Published {{ post.publish }} by {{ post.post_author }}
         </p>
+        <!-- Here we wish to truncate the post content as it is a preview -->
         {{ post.post_body|truncatewords:30|linebreaks }}
     {% end for %}
+    <!-- End for block -->
 {% end block %}
+<!-- Main content injection end -->
