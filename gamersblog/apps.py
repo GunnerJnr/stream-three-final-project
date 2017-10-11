@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class GamersBlogConfig(AppConfig):
-    name = 'gamers_blog'
+    name = 'gamersblog'
