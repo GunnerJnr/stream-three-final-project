@@ -19,7 +19,7 @@ class PublishedBlogPostManager(models.Manager):
 
     def get_queryset(self):
         return super(PublishedBlogPostManager, self).get_queryset()\
-                                                    .filter(status='published')
+                                                    .filter(post_status='published')
 
 
 # Create the main class to handle our BlogPosts
@@ -59,13 +59,6 @@ class BlogPost(models.Model):
     objects = models.Manager()  # default Django Manager
     published = PublishedBlogPostManager()  # Our Custom Manager
 
-    def get_absolute_url(self):
-        return reverse('gamersblog:blogpost_detail',
-                       args=[self.publish.strftime('%d'),
-                             self.publish.strftime('%m'),
-                             self.publish.year,
-                             self.post_slug])
-
     class Meta:
         """
         post_order: Here we want to sort the blog posts, in this instance we
@@ -74,5 +67,12 @@ class BlogPost(models.Model):
         """
         ordering = ('-publish',)
 
-        def __unicode__(self):
-            return self.title
+    def get_absolute_url(self):
+        return reverse('gamersblog:blog_post_detail',
+                       args=[self.publish.strftime('%d'),
+                             self.publish.strftime('%m'),
+                             self.publish.year,
+                             self.post_slug])
+
+    def __unicode__(self):
+        return self.title

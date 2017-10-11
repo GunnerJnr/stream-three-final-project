@@ -13,7 +13,7 @@
         <meta name="David Gunner Jnr" content="TODO SHORT CONTENT HERE">
 
         <!-- Main Site Title -->
-        <title>{% block title %}{% end block %}</title>
+        <title>{% block title %}{% endblock %}</title>
 
         <!-- Link to our custom stylesheet -->
         <link href="{% static "css/gamershub.css" %}" rel="stylesheet">
@@ -23,7 +23,7 @@
         <div id="content">
             <!-- Here we inject the content we want to display -->
             {% block content %}
-            {% end block %}
+            {% endblock %}
             <!-- End content injection here -->
         </div>
 
