@@ -42,8 +42,8 @@ class BlogPost(models.Model):
     class Meta:
         """
         post_order: Here we want to sort the blog posts, in this instance we
-        chose descending order, we can easily use ascending by choosing a plus
-        sign prefix. (e.g. '+publish').
+        chose descending order, we can easily use ascending by choosing:
+        (e.g. 'publish').
         """
         ordering = ('-publish',)
 
