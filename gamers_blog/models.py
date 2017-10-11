@@ -26,15 +26,15 @@ class BlogPost(models.Model):
     # publishing it right away.
     STATUS_CHOICES = (
         ('save_draft', 'Draft'),
-        ('post_published', 'Published'),
+        ('published', 'Published'),
     )
 
     # Create our settings that will be used in our blog posts.
     post_title = models.CharField(max_length=250)
-    post_slug = models.SlugField(max_length=250, unique_for_date='published_date')
+    post_slug = models.SlugField(max_length=250, unique_for_date='publish')
     post_author = models.ForeignKey(User, related_name='blog_posts')
     post_body = models.TextField()
-    published_date = models.DateTimeField(default=timezone.now)
+    publish = models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
@@ -43,9 +43,9 @@ class BlogPost(models.Model):
         """
         post_order: Here we want to sort the blog posts, in this instance we
         chose descending order, we can easily use ascending by choosing a plus
-        sign prefix. (e.g. '+published_date').
+        sign prefix. (e.g. '+publish').
         """
-        ordering = ('-published_date',)
+        ordering = ('-publish',)
 
         def __unicode__(self):
             return self.title
