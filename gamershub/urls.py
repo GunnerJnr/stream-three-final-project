@@ -26,7 +26,7 @@ urlpatterns = [
 
     # here we want to add the urls from gamersblog app, we also assign
     # a namespace so we can easily access this group of urls
-    url(r'^gamersblog/', include('gamersblog.urls',
-                                 namespace='gamersblog',
-                                 app_name='gamersblog'))
+    url(r'^blog/', include('gamersblog.urls',
+                                           namespace='gamersblog',
+                                           app_name='gamersblog'))
 ]
