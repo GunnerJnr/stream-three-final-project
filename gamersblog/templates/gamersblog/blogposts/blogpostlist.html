@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Gamers Hub Blog{% end block %}
+
+{% block content %}
+    <h1>Gamers Hub Blog</h1>
+    {% for post in  blogposts %}
+        <h2>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h2>
+        <p class="date">
+            Published {{ post.publish }} by {{ post.post_author }}
+        </p>
+        {{ post.post_body|truncatewords:30|linebreaks }}
+    {% end for %}
+{% end block %}
