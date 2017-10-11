@@ -14,4 +14,4 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 
 # Register our BlogPost & BlogPostAdmin to the admin area.
-admin.site.register(BlogPost)
+admin.site.register(BlogPost, BlogPostAdmin)
