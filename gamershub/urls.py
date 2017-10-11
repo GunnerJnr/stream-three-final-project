@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # add the url to access the admin panel
+    url(r'^admin/', include(admin.site.urls)),
+
+    # here we want to add the urls from gamersblog app, we also assign
+    # a namespace so we can easily access this group of urls
+    url(r'^gamersblog/', include('gamersblog.urls',
+                                 namespace='gamersblog',
+                                 app_name='gamersblog'))
 ]
