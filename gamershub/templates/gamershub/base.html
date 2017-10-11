@@ -1,3 +1,4 @@
+<!-- Tell Django we want to load the static files -->
 {% load staticfiles %}
 <DOCTYPE html>
 <html lang="en-gb">
@@ -11,15 +12,22 @@
         <meta name="TODO SHORT META DESCRIPTION HERE" content="TODO SHORT CONTENT HERE">
         <meta name="David Gunner Jnr" content="TODO SHORT CONTENT HERE">
 
+        <!-- Main Site Title -->
         <title>{% block title %}{% end block %}</title>
 
-        <link href="{% static "css/gamersblog.css" %}" rel="stylesheet">
+        <!-- Link to our custom stylesheet -->
+        <link href="{% static "css/gamershub.css" %}" rel="stylesheet">
     </head>
     <body>
+        <!-- The main content of the body -->
         <div id="content">
+            <!-- Here we inject the content we want to display -->
             {% block content %}
             {% end block %}
+            <!-- End content injection here -->
         </div>
+
+        <!-- Side bar content here-->
         <div id="sidebar">
             <h2>Gamers Hub Blog</h2>
             <p>Welcome to Gamers Hub Blog!</p>
