@@ -37,7 +37,7 @@ class BlogPost(models.Model):
     published_date = models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
-    post_status = models.CharField(max_length=10, user_choice=STATUS_CHOICES)
+    post_status = models.CharField(max_length=10, choice=STATUS_CHOICES)
 
     class Meta:
         """
