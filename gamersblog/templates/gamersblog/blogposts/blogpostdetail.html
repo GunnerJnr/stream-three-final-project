@@ -1,0 +1,29 @@
+<!-- tell django we want to extend base.html -->
+{% extends "gamershub/base.html" %}
+
+<!-- The main post tile -->
+{% block title %}{{ post.post_title }}{% endblock %}
+
+<!-- The main post content to be injected -->
+{% block content %}
+<!-- The main content of the body -->
+    <div id="content">
+        <h1>{{ post.post_title }}</h1>
+        <p class="date">
+            Published {{ post.publish }} by {{ post.post_author }}
+        </p>
+        {{ post.post_body|linebreaks }}
+        <button class="btn btn-default" onclick="location.href='/blog/'">Back To Blog</button>
+    </div>
+{% endblock %}
+<!-- end block content injection -->
+
+{% block sidebar %}
+<!-- Side bar content here-->
+<div id="sidebar">
+    <h2>Gamers Hub Blog</h2>
+    <p>Welcome to the Gamers Hub Blog!</p>
+</div>
+{% endblock %}
+
+
