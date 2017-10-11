@@ -11,6 +11,7 @@ from .models import BlogPost
 class BlogPostAdmin(admin.ModelAdmin):
     """
     list_display: specifies the fields we wish to display in the admin panel
+    list_filter: lets us customise the sidebar filter
     prepopulated_fields: use our posttitle as the post slug
     raw_id_fields: set the users id key as a number
     date_hierarchy: helps search quickly using the dates bar
