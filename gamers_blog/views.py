@@ -7,7 +7,7 @@ from .models import BlogPost
 
 # Create your views here.
 
-# define a view to return a list of our blog posts
+# define a view to return a list of our blog posts with the 'published' status
 def blog_post_list(request):
     blog_posts = BlogPost.published.all()
     return render(request, 'gamers_blog/blog_post/blog_post_list.html',
