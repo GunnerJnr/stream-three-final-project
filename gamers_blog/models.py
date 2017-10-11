@@ -43,9 +43,9 @@ class BlogPost(models.Model):
         """
         post_order: Here we want to sort the blog posts, in this instance we
         chose descending order, we can easily use ascending by choosing a plus
-        sign prefix. (e.g. '+publish').
+        sign prefix. (e.g. '+published_date').
         """
-        blog_post_order = ('-publish',)
+        ordering = ('-published_date',)
 
         def __unicode__(self):
             return self.title
