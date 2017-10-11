@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 
 # Create your models here.
@@ -57,6 +58,13 @@ class BlogPost(models.Model):
     # define our objects
     objects = models.Manager()  # default Django Manager
     published = PublishedBlogPostManager()  # Our Custom Manager
+
+    def get_absolute_url(self):
+        return reverse('gamersblog:blogpost_detail',
+                       args=[self.publish.strftime('%d'),
+                             self.publish.strftime('%m'),
+                             self.publish.year,
+                             self.post_slug])
 
     class Meta:
         """
