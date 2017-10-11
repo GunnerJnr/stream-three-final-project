@@ -31,7 +31,7 @@ class BlogPost(models.Model):
 
     # Create our settings that will be used in our blog posts.
     post_title = models.CharField(max_length=250)
-    post_slug = models.SlugField(max_length=250, unique_for_date='publish')
+    post_slug = models.SlugField(max_length=250, unique_for_date='published_date')
     post_author = models.ForeignKey(User, related_name='blog_posts')
     post_body = models.TextField()
     published_date = models.DateTimeField(default=timezone.now)
