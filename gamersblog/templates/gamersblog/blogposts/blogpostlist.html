@@ -4,37 +4,44 @@
 <!-- Main Title for the page -->
 {% block title %}Gamers Hub Blog{% endblock %}
 
+{% load staticfiles %}
 <!-- The main content we wish to inject -->
 {% block content %}
-    <!-- The main content of the body -->
-    <div id="content">
+    <div id="blog-post-content">
+        <!-- The main content of the body -->
         <h1>Gamers Hub Blog</h1>
-        <!-- Here we create a for block to loop through all the blog posts
-            and return them by absolute URL and post title -->
+        <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
-            <h2>
-                <a href="{{ post.get_absolute_url }}">
-                    {{ post.post_title }}
-                </a>
-            </h2>
-            <!-- For a nice added touch we display the published date
-                and post author -->
+        <div class="col-md-4">
+            <div id="blog-post-title">
+                <h2>
+                    <a href="{{ post.get_absolute_url }}">
+                        {{ post.post_title }}
+                    </a>
+                </h2>
+            </div>
+
+            <hr>
+
+            <!-- add an image to the post preview for a nice touch -->
+            <img src="{% static "img/logo/blog-post-placeholder.png" %}" alt="post-image">
+
+            <!-- For a nice added touch we display the published date and post author -->
             <p class="date">
                 Published {{ post.publish }} by {{ post.post_author }}
             </p>
-            <!-- Here we wish to truncate the post content as it is a preview -->
-            {{ post.post_body|truncatewords:30|linebreaks }}
+
+            <div id="blog-post-preview">
+                <!-- Here we wish to truncate the post content as it is a preview -->
+                {{ post.post_body|truncatewords:30|linebreaks }}
+            </div>
+        </div>
         {% endfor %}
         <!-- End for block -->
-        {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
+
+        <div class="col-md-12">
+            {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
+        </div>
     </div>
 {% endblock %}
 <!-- Main content injection end -->
-
-{% block sidebar %}
-    <!-- Side bar content here-->
-    <div id="sidebar">
-        <h2>Gamers Hub Blog</h2>
-        <p>Welcome to the Gamers Hub Blog!</p>
-    </div>
-{% endblock %}

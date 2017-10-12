@@ -26,46 +26,44 @@
     </head>
     <body>
         <!-- FIXED NAV BAR BEGIN -->
-    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'home' %}"><img alt="Brand" src="{% static "img/logo/nav-logo.png" %}"></a>
+                </div>
+                <!-- NAV COLLAPSE BEGIN-->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </div>
+                <!--NAV COLLAPSE END -->
+            </div>
+        </nav>
+        <!-- FIXED NAV END-->
+
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'home' %}"><img alt="Brand" src="{% static "img/logo/nav-logo.png" %}"></a>
+            <div class="row">
+                <!-- Here we inject the content we want to display -->
+                {% block content %}
+                {% endblock %}
+                <!-- End content injection here -->
             </div>
-            <!-- NAV COLLAPSE BEGIN-->
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Forums</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </div>
-            <!--NAV COLLAPSE END -->
         </div>
-    </nav>
-    <!-- FIXED NAV END-->
-
-        <!-- Here we inject the content we want to display -->
-        {% block content %}
-        {% endblock %}
-        <!-- End content injection here -->
-
-        <!-- Here we inject the content we want to display
-            at present only the blog has a sidebar -->
-        {% block sidebar %}
-        {% endblock %}
-        <!-- End content injection here -->
 
         <footer class="footer navbar-fixed-bottom navbar-inverse">
             <div class="container">
