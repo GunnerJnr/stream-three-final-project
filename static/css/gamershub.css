@@ -1,11 +1,18 @@
-html,
-body {
+html {
   position: relative;
   min-height: 100%;
+}
+
+body {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
+  padding-top: 60px;
+  margin-bottom: 60px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
 }
 
 #navbar ul li {
@@ -20,6 +27,10 @@ body {
   vertical-align: middle;
 }
 
+[class*="col-"] {
+  margin: 5px 0;
+}
+
 #blog-post-title {
   min-height: 60px;
 }
@@ -27,12 +38,9 @@ body {
 #blog-post-title h2 {
   font-size: 1.8em;
   font-weight: normal;
+  text-align: center;
   margin-top: 15px;
   margin-bottom: 5px;
-}
-
-#blog-post-preview {
-  min-height: 80px;
 }
 
 .navbar-brand img {
@@ -40,23 +48,32 @@ body {
 }
 
 #blog-post-content img {
-  width: 250px;
-  height: 250px;
-  border: 1px solid rgba(172, 143, 77, 0.13);
-  border-radius: 5%;
+  width: 200px;
+  height: 200px;
   margin: 10px 0;
+}
+
+p.date {
+  color: #ccc;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#blog-post-preview {
+  min-height: 100px;
 }
 
 #blog-post-content {
   width: 100%;
   text-align: center;
+  margin: 0 5px;
 }
 
-[class*="col-"],
-hr {
-  border: 1px solid rgba(172, 143, 77, 0.13);
-  border-radius: 5px;
-  margin: 5px 0;
+/* pagination */
+.pagination {
+  margin: 40px 0;
+  font-weight: bold;
 }
 
 .footer {
@@ -69,62 +86,4 @@ hr {
 
 .container .text-muted {
   margin: 20px 0;
-}
-
-p.date {
-  color: #ccc;
-  font-family: georgia, serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* pagination */
-.pagination {
-  margin: 40px 0;
-  font-weight: bold;
-}
-
-/* forms */
-label {
-  float: left;
-  clear: both;
-  color: #333;
-  margin-bottom: 4px;
-}
-input,
-textarea {
-  clear: both;
-  float: left;
-  margin: 0 0 10px;
-  background: #ededed;
-  border: 0;
-  padding: 6px 10px;
-  font-size: 12px;
-}
-input[type="submit"] {
-  font-weight: bold;
-  background: #00abff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-.errorlist {
-  color: #cc0033;
-  float: left;
-  clear: both;
-  padding-left: 10px;
-}
-
-/* comments */
-.comment {
-  padding: 10px;
-}
-.comment:nth-child(even) {
-  background: #efefef;
-}
-.comment .info {
-  font-weight: bold;
-  font-size: 12px;
-  color: #666;
 }
