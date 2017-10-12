@@ -1,11 +1,20 @@
 <!-- Tell Django we want to extend the base.html file -->
 {% extends 'gamershub/base.html' %}
+{% load staticfiles %}
 
 <!-- block content begin -->
 {% block content %}
-    <div id="content"></div>
-        <h1>Gamers Hub</h1>
-        <p>Welcome to Gamers Hub!</p>
+    <div class="col-md-12"></div>
+    <img id="homepage-img" src="{% static "img/homepage-bg.jpg" %}">
+    <img  id="homepage-logo" src="{% static "img/logo/logo.svg" %}">
+    <hr>
+    <h1 id="homepage-h1"><span>WELCOME TO </span></h1>
+        <p>
+            Hello and welcome to Gamers Hub! We are very excited to have you. We hope that you will
+            enjoy all your gaming needs. The should be enough content and fun for you to satisfy your
+            needs as a gaming nut.
+        </p>
+        <hr>
     </div>
 {% endblock %}
 <!-- block content end -->
