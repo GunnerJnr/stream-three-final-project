@@ -16,6 +16,17 @@
         <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
             <div class="col-md-3">
+
+                <!-- add an image to the post preview for a nice touch -->
+                <a href="{{ post.get_absolute_url }}">
+                    <img src="http://via.placeholder.com/200x200" alt="post-image">
+                </a>
+
+                <!-- For a nice added touch we display the published date and post author -->
+                <p class="date">
+                    Published {{ post.publish }} by {{ post.post_author }}
+                </p>
+
                 <div id="blog-post-title">
                     <h2>
                         <a href="{{ post.get_absolute_url }}">
@@ -24,24 +35,18 @@
                     </h2>
                 </div>
 
-                <!-- add an image to the post preview for a nice touch -->
-                <img src="{% static "img/logo/blog-post-placeholder.png" %}" alt="post-image">
-
-                <!-- For a nice added touch we display the published date and post author -->
-                <p class="date">
-                    Published {{ post.publish }} by {{ post.post_author }}
-                </p>
-
                 <div id="blog-post-preview">
-                    <!-- Here we wish to truncate the post content as it is a preview -->
-                    {{ post.post_body|truncatewords:30|linebreaks }}
+                        <a href="{{ post.get_absolute_url }}">
+                            <!-- Here we wish to truncate the post content as it is a preview -->
+                            {{ post.post_body|truncatewords:30|linebreaks }}
+                        </a>
                 </div>
+                <hr>
             </div>
         {% endfor %}
         <!-- End for block -->
 
         <div class="col-md-12">
-            <hr>
             {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
         </div>
     </div>

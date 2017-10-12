@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
 }
 
 #navbar ul li {
@@ -23,34 +23,28 @@ body {
   font-size: 1.5em;
 }
 
+.navbar-brand img {
+  vertical-align: middle;
+}
+
 #navbar-btn .btn {
   vertical-align: middle;
+}
+
+#blog-post-content {
+  width: 100%;
+  text-align: center;
 }
 
 [class*="col-"] {
   margin: 5px 0;
 }
 
-#blog-post-title {
-  min-height: 60px;
-}
-
-#blog-post-title h2 {
-  font-size: 1.8em;
-  font-weight: normal;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-.navbar-brand img {
-  vertical-align: middle;
-}
-
 #blog-post-content img {
-  width: 200px;
+  width: 100%;;
   height: 200px;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;;
 }
 
 p.date {
@@ -60,19 +54,37 @@ p.date {
   font-style: italic;
 }
 
-#blog-post-preview {
-  min-height: 100px;
+#blog-post-title {
+  min-height: 60px;
 }
 
-#blog-post-content {
+#blog-post-title h2 {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#blog-post-title a {
+  text-decoration: none;
+}
+
+#blog-post-preview {
   width: 100%;
-  text-align: center;
-  margin: 0 5px;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#blog-post-content a {
+  text-decoration: none;
 }
 
 /* pagination */
 .pagination {
-  margin: 40px 0;
+  margin: 20px 0;
   font-weight: bold;
 }
 
