@@ -26,6 +26,7 @@
             {{ post.post_body|truncatewords:30|linebreaks }}
         {% endfor %}
         <!-- End for block -->
+        {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
     </div>
 {% endblock %}
 <!-- Main content injection end -->

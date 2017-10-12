@@ -1,0 +1,16 @@
+<div class="pagination">
+    <span class="step-links">
+      <!--Here we display the current page of however many pages exist -->
+      <span class="current">
+        Page {{ page.number }} of {{ page.paginator.num_pages }}.
+      </span>
+      <!-- If there is a previous page to navigate to then display previous link -->
+      {% if page.has_previous %}
+        <a href="?page={{ page.previous_page_number }}">Previous</a>
+      {% endif %}
+      <!-- if there is a next page to navigate too then show the next link -->
+      {% if page.has_next %}
+        <a href="?page={{ page.next_page_number }}">Next</a>
+      {% endif %}
+    </span>
+  </div>
