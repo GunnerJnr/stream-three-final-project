@@ -11,13 +11,19 @@ from accounts.forms import UserLoginForm
 # Create a view to handle the users login.
 def user_login(request):
     """
-    user_login():
-    we initialise the submitted data with our form login request,
-    we also check if the data entered is valid, if not return the
-    errors to the user. If the data is valid we check it against the db
-    and return success.We also check if the users status is active or
-    disabled and return a message. We then log into the site if is_active
-    is True.
+    UserLoginForm():
+         We initialise the submitted data with our form login request,
+    if form.is_valid():
+        we also check if the data entered is valid, if not return the
+        errors to the user.
+    user is not None:
+        If the data is valid we check it against the db
+         and return success.
+    user.is_active:
+        We also check if the users status is active or disabled and
+        return a message.
+    HttpResponse():
+        We then log into the site if is_active is True.
     """
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
