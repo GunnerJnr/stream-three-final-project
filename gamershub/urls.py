@@ -21,11 +21,14 @@ urlpatterns = [
     # add the url to access the admin panel
     url(r'^admin/', include(admin.site.urls)),
 
+    # accounts app urls
+    url(r'^accounts/', include('accounts.urls'))
+
     # home app urls
     url(r'^$', home_views.get_index, name='home'),
 
     # here we want to add the urls from gamersblog app, we also assign
     # a namespace so we can easily access this group of urls
-    url(r'^blog/', include('gamersblog.urls', namespace='gamersblog',
-                           app_name='gamersblog'))
+    url(r'^blog/', include('gamersblog.urls', namespace='gamersblog', app_name='gamersblog'))
+
 ]
