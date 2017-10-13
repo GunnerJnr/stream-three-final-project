@@ -1,5 +1,5 @@
 """
-    Froms.py:
+    Forms.py:
     This will handle user authenticationagainst our DB
 """
 from django import forms
