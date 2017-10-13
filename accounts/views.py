@@ -13,7 +13,7 @@ def user_login(request):
     """
     UserLoginForm():
          We initialise the submitted data with our form login request,
-    if form.is_valid():
+    form.is_valid():
         we also check if the data entered is valid, if not return the
         errors to the user.
     user is not None:
