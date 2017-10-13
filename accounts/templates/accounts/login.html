@@ -1,0 +1,20 @@
+<!-- Tell django we wish to extend the Base.html file -->
+{% extends "gamershub/base.html" %}
+
+<!-- Sets the main site title -->
+{% block title %}Log-in{% endblock %}
+
+<!-- start our login page content injection -->
+{% block content %}
+  <div class="col-md-12">
+    <h1>Gamers Hub Login</h1>
+    <p>Please login using the form below</p>
+
+    <form action="." method="post">
+      {{ form.as_p }}
+      <!-- CSRF protection -->
+      {% csrf_token %}
+      <p><input type="submit" value="Login"></p>
+    </form>
+  </div>
+{% endblock %}
