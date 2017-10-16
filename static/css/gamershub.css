@@ -1,29 +1,56 @@
-html {
-  position: relative;
-  min-height: 100%;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  /* Set a specified height, or the minimum height for the background image */
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px;
-  margin-bottom: 60px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-p {
-  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
 }
 
-.container {
-  width: 90%;
+.theme-showcase > p > .btn {
+  margin: 5px 0;
 }
 
-#navbar ul li {
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+/* Redeclare since we override the float above */
+
+.navbar {
+  border-bottom: solid;
+  border-width: thin;
+  border-color: #777;
+  margin: auto;
+}
+
+.navbar li {
   padding-left: 0;
 }
 
-#navbar ul li a {
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+.navbar ul li a {
   font-size: 1.5em;
 }
 
@@ -35,23 +62,67 @@ p {
   vertical-align: middle;
 }
 
-#homepage-img {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  margin-bottom: 10px;
-  opacity: 0.75;
+p {
+  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
 }
 
-#homepage-logo {
+p.date {
+  color: #ccc;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+[class*="col-"] {
+  margin: 0;
+}
+
+#login-img {
+	width: 100%;
+	min-height: 100%;
+	background: url("/static/img/borderlands-two.jpg");
+	margin: auto;
+	opacity: 0.9;
+}
+
+#login-form {
+	width: 400px;
+	height: 200px;
+	background-color: rgba(255, 251, 251, 0.767);
+	margin: auto;
+	margin-top: 200px;
+	color: #fa921a;
+	text-align: center;
+}
+
+#login-form h1,
+#login-form p {
+	-webkit-text-fill-color: #fa911aa1; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 0.3px;
+	-webkit-text-stroke-color: #111;
+}
+
+#homepage-img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+#homepage-logo img {
+  width: 300px;
+  height: 200px;
   position: absolute;
-  top: 50px;
-  left: 10px;
+  left: 50%;
+  top: 55%;
+  margin-left: -150px;
+  margin-top: -130px;
 }
 
 #homepage-h1 {
   position: absolute;
-  top: 175px;
+  top: 130px;
   left: 13.5px;
   width: 100%;
 }
@@ -60,32 +131,20 @@ p {
   color: white;
   font: bold 24px/45px "Franklin Gothic Medium", "Helvetica", "Sans-Serif";
   letter-spacing: -1px;
-  background: reg(0, 0, 0);  /*fallback color */
+  background: reg(0, 0, 0); /*fallback color */
   background: rgba(0, 0, 0, 0.7);
-  padding: 10px;
+  padding: 12px;
 }
 
 #blog-post-content {
-  width: 100%;
   text-align: center;
 }
 
-[class*="col-"] {
-  margin: 5px 0;
-}
-
 #blog-post-content img {
-  width: 100%;;
+  width: 100%;
   height: 200px;
   margin-top: 10px;
-  margin-bottom: 10px;;
-}
-
-p.date {
-  color: #ccc;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, georgia, serif;
-  font-size: 12px;
-  font-style: italic;
+  margin-bottom: 10px;
 }
 
 #blog-post-title {
@@ -100,12 +159,7 @@ p.date {
   margin-bottom: 5px;
 }
 
-#blog-post-title a {
-  text-decoration: none;
-}
-
 #blog-post-preview {
-  width: 100%;
   min-height: 100px;
   margin-left: auto;
   margin-right: auto;
@@ -113,27 +167,71 @@ p.date {
 }
 
 #blog-post-content p {
-  font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif, georgia, serif;
+  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif, georgia,
+    serif;
 }
 
+#blog-post-title a,
 #blog-post-content a {
   text-decoration: none;
 }
 
-/* pagination */
 .pagination {
-  margin: 20px 0;
+  margin: 10px 0;
   font-weight: bold;
 }
 
 .footer {
   position: absolute;
-  width: 100%;
-  bottom: 0;
   height: 60px;
   background-color: #f5f5f5;
+  bottom: 0;
 }
 
 .container .text-muted {
   margin: 20px 0;
+}
+
+/* Responsive Breakpoint Design Elements */
+
+/* Extra small devices (phones, etc. less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* So we will make our own custom to handle these devices */
+@media screen and (min-width: 278px) and (max-width: 400px) {
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Small devices (tablets, etc.) */
+@media screen and (min-width: 401px) and (max-width: 768px) {
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Medium devices (desktops, 769px and up) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Large devices (large desktops, 993px and up) */
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Even larger devices (ott desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
