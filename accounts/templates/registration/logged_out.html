@@ -1,0 +1,18 @@
+<!-- Tell Django we want to extend the Base.html -->
+{% extends "gamershub/base.html" %}
+
+{% block title %}
+	Logged out
+{% endblock %}
+
+{% block content %}
+	<div id="loggedout-img">
+		<div id="loggedout-form">
+			<h1>Logged out</h1>
+			<p>
+				Thank You for visiting Gamers Hub.
+				You have successfully logged out.
+			</p>
+		</div>
+	</div>
+{% endblock %}

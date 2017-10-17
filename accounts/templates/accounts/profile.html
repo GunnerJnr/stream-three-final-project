@@ -1,0 +1,13 @@
+<!-- Tell Django we want to extend Base.html -->
+{% extends "gamershub/base.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+    <h1>{{ request.user.get_username }}'s Profile</h1>
+    <p>Welcome to your profile {{ request.user.first_name }}.</p>
+</div>
+{% endblock %}

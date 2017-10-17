@@ -42,13 +42,20 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="/blog/">Blog</a></li>
-                        <li><a href="#">Store</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Forums</a></li>
+                        {% if request.user.is_authenticated %}
+                            <li><a href="#">Store</a></li>
+                            <li><a href="#">Forums</a></li>
+                        {% endif %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Register</a></li>
-                        <li><a href="{% url 'login' %}">Login</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'user_profile' %}">Profile</a></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+                        {% else %}
+                            <li><a href="#">Register</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                        {% endif %}
                     </ul>
                 </div>
                 <!--NAV COLLAPSE END -->
