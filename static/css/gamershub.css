@@ -78,7 +78,8 @@ p.date {
   margin: 0;
 }
 
-#login-img {
+#login-img,
+#loggedout-img {
 	position: fixed;
 	top: 0;
 	left: 0;
