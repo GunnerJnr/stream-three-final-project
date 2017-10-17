@@ -110,7 +110,8 @@ fabric.properties
 /src/third_party/*/*.lastbuildstate
 config.log
 log_config.py
-settings.py
+# settings.py
+secret.py
 /tags
 TAGS
 failfile.smoke
