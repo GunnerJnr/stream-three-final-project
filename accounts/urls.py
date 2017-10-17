@@ -1,7 +1,11 @@
 from django.conf.urls import url
-from accounts import views as accounts_views
+from django.contrib.auth.views import login, logout, logout_then_login
 
 urlpatterns = [
     # accounts app URLs
-    url(r'^login/$', accounts_views.user_login, name='login'),
+    # django login views
+    url(r'^login/$', login, name='login'),
+    # django logout views
+    url(r'^logout/$', logout, name='logout'),
+    url(r'^logout-then-login', logout_then_login, name='logout_then_login'),
 ]
