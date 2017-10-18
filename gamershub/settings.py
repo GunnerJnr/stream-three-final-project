@@ -117,6 +117,20 @@ LOGIN_REDIRECT_URL = reverse_lazy('user_profile')
 LOGIN_URL = reverse_lazy('login')
 LOGOUT_URL = reverse_lazy('logout')
 
+# SMTP Email Settings
+# https://docs.djangoproject.com/en/1.11/topics/email/#django.core.mail.backends.smtp.EmailBackend
+
+# EMAIL_HOST = '<smtp.my-provider.com>'
+# EMAIL_HOST_USER = '<my-account@my-provider.com>'
+# EMAIL_HOST_PASSWORD = '<password>'
+# EMAIL_PORT = 587  # default SMTP port
+# EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when
+# talking to the SMTP server
+
+# A nifty Django feature that allows the sending of emails to be displayed in
+# the console, a bit like a fake SMTP server
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
