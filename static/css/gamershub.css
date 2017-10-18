@@ -78,8 +78,7 @@ p.date {
   margin: 0;
 }
 
-#login-img,
-#loggedout-img {
+.borderlands-img {
 	position: fixed;
 	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -95,8 +94,7 @@ p.date {
 	opacity: 0.9;
 }
 
-#login-form,
-#loggedout-form {
+.custom-form {
 	background-color: rgba(255, 251, 251, 0.767);
   color: #fa921a;
   border-radius: 20px;
