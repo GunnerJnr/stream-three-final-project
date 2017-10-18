@@ -8,7 +8,14 @@
 {% block content %}
 <div class="col-md-12">
     <h1>{{ request.user.get_username }}'s Profile</h1>
-    <p>Welcome to your profile {{ request.user.first_name }}.</p>
+    <p>
+        Welcome to your profile
+        {% if request.user.first_name %}
+            {{ request.user.first_name }}.
+        {% else %}
+            {{ request.user.get_username }}.
+        {% endif %}
+    </p>
     <br />
     <button class="btn btn-default" onclick="location.href='/accounts/password-change/'">Change Password</button>
 </div>
