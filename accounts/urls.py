@@ -5,11 +5,11 @@ from accounts import views as accounts_views
 
 # accounts app URLs
 urlpatterns = [
+    # views using the built in django authentication - see link for reference
+    # https://docs.djangoproject.com/en/1.11/topics/auth/default/#module-django.contrib.auth.views
+
     # django login views
     url(r'^login/$', auth_views.login, name='login'),
-
-    # accounts/profile views
-    url(r'^$', accounts_views.user_profile, name='user_profile'),
 
     # django logout views
     url(r'^logout/$', auth_views.logout, name='logout'),
@@ -18,4 +18,9 @@ urlpatterns = [
     # change password views
     url(r'^password-change/$', auth_views.password_change, name='password_change'),
     url(r'^password-change/done/$', auth_views.password_change_done, name='password_change_done'),
+
+    # custom user views
+
+    # accounts/profile views
+    url(r'^$', accounts_views.user_profile, name='user_profile'),
 ]
