@@ -1,0 +1,25 @@
+<!-- Tell Django we want to extend Base.html -->
+{% extends "gamershub/base.html" %}
+
+<!-- Sets the main site title -->
+{% block title %}
+	Welcome to Gamers Hub
+{% endblock %}
+
+<!-- start our login page content injection -->
+{% block content %}
+	<div class="borderlands-img">
+		<div class="custom-form">
+            <h1>Welcome to Gamers Hub, {{ new_user.first_name }}</h1>
+			<p>
+                Your account has been successfully created.
+                You are now able to <a href="{% url "login" %}">login.</a>
+            </p>
+			<form action="." method="post">
+				{{ user_form.as_p }}
+				<!-- CSRF protection -->
+				{% csrf_token %}
+			</form>
+		</div>
+	</div>
+{% endblock %}
