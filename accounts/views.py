@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from accounts.forms import UserRegisterForm
 
 
+# this method handles user registration
 def register(request):
     if request.method == 'POST':
         user_form = UserRegisterForm(request.POST)
@@ -24,6 +25,8 @@ def register(request):
     return render(request, 'accounts/register.html',  {'user_form': user_form})
 
 
+# here we specify that login is required
 @login_required
+# this method redirects the user to their profile page on successful login
 def user_profile(request):
     return render(request, 'accounts/profile.html',  {'section': 'profile'})
