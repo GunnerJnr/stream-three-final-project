@@ -1,10 +1,12 @@
 <!-- Tell Django we want to extend Base.html -->
 {% extends "gamershub/base.html" %}
 
+<!-- Sets the main site title -->
 {% block title %}
     Profile
 {% endblock %}
 
+<!-- start our login page content injection -->
 {% block content %}
 <div class="col-md-12">
     <h1>{{ request.user.get_username }}'s Profile</h1>
