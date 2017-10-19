@@ -120,10 +120,10 @@ LOGOUT_URL = reverse_lazy('logout')
 # SMTP Email Settings
 # https://docs.djangoproject.com/en/1.11/topics/email/#django.core.mail.backends.smtp.EmailBackend
 
-# EMAIL_HOST = '<smtp.my-provider.com>'
-# EMAIL_HOST_USER = '<my-account@my-provider.com>'
-# EMAIL_HOST_PASSWORD = '<password>'
-# EMAIL_PORT = 587  # default SMTP port
+# EMAIL_HOST = 'GAMERSHUB_MAIL_HOST'
+# EMAIL_HOST_USER = 'GAMERSHUB_EMAIL_ADDRESS'
+# EMAIL_HOST_PASSWORD = 'GAMERSHUB_EMAIL_PASSWORD'
+# EMAIL_PORT = 465  # default SMTP port 587
 # EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when
 # talking to the SMTP server
 
