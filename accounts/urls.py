@@ -35,4 +35,5 @@ urlpatterns = [
     # custom user views
     # accounts/profile views
     url(r'^$', accounts_views.user_profile, name='user_profile'),
+    url(r'^register/$', accounts_views.register, name='register'),
 ]
