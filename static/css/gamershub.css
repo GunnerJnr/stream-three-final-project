@@ -78,6 +78,10 @@ p.date {
   margin: 0;
 }
 
+form {
+  overflow:auto;
+}
+
 .borderlands-img {
 	position: fixed;
 	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
@@ -85,7 +89,7 @@ p.date {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	/* Preserve aspet ratio */
+	/* Preserve aspect ratio */
 	min-width: 100%;
 	min-height: 100%;
 	margin: auto;
@@ -95,16 +99,76 @@ p.date {
 }
 
 .custom-form {
-	background-color: rgba(255, 251, 251, 0.767);
-  color: #fa921a;
-  border-radius: 20px;
-	width: 400px;
+  text-align: center;
+	background-color: rgba(201, 201, 200, 0.85);
+  color: #4C70E5;
+  border-radius: 10px;
+  width: 440px;
 	height: auto;
 	margin: auto;
-	text-align: center;
-  margin-top: 250px;
+  margin-top: 200px;
   padding: 20px;
 }
+
+.custom-form p{
+  width:100%;
+  overflow:auto;
+}
+
+.custom-form label {
+  width:100%;
+  float:left;
+  clear:both;
+  margin: auto;
+  margin-bottom:2.5px;
+}
+
+.custom-form input,
+.custom-form textarea {
+  float:left;
+  clear:both;
+  width:100%;
+  margin: 3px 0;
+  background:#efefef;
+  border:0;
+  padding:6px 10px;
+  font-size:14px;
+}
+
+.custom-form input[type=submit],
+.custom-form a.button {
+  font-weight:bold;
+  background:#12c064;
+  color:#fff;
+  padding:10px 20px;
+  font-size:14px;
+  text-transform:uppercase;
+}
+
+.custom-form .errorlist {
+  color:#cc0033;
+  float:left;
+  clear:both;
+  padding-left:10px;
+}
+
+.custom-form .helptext {
+  margin:0 0 20px 0;
+  color:rgb(33, 9, 247);
+  clear:both;
+  float:left;
+  font-size:13px;
+}
+
+ul.messages {
+  margin:10px 100px;
+  padding:0;
+  list-style-type:
+  none;
+}
+ul.messages li.success,
+ul.messages li.warning,
+ul.messages li.error,
 
 #login-form h1, #loggedout-form h1,
 #login-form p, #loggedout-form p {
