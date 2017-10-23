@@ -72,6 +72,16 @@ p .date {
 	font-size: 12px;
 }
 
+a {
+	color: rgb(46, 83, 132);
+	text-decoration:  none;
+}
+
+a:hover {
+	color: rgb(238, 58, 58);
+	text-decoration:  none;
+}
+
 /********** md-col Style **********/
 
 [class*="col-"] {
