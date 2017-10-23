@@ -66,10 +66,22 @@
         </nav>
         <!-- FIXED NAV END-->
 
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}">
+                        {{ message|safe }}
+                        <a href="{{ request.get_full_path }}" class="close">×</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         <div class="container-fluid">
             <div class="row">
                 <!-- Here we inject the content we want to display -->
                 {% block content %}
+
                 {% endblock %}
                 <!-- End content injection here -->
             </div>
