@@ -4,6 +4,7 @@
 """
 from django import forms
 from django.contrib.auth.models import User
+from accounts.models import Profile
 
 
 # This class will be responsible for handling the registration of a new user
@@ -44,3 +45,23 @@ class UserLoginForm(forms.Form):
     """
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+
+class EditUserForm(forms.ModelForm):
+    class Meta:
+        """
+        model: the User model
+        fields: allow users to edit first and last names as well as email address
+        """
+        model = User
+        fields = ('first_name', 'last_name', 'email')
+
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        """
+        model: UserProfile model
+        fields: allows the user to edit their dob and profile image
+        """
+        model = Profile
+        fields = ('date_of_birth', 'profile_image')
