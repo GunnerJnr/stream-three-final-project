@@ -1,5 +1,6 @@
 <!-- Tell Django we want to extend Base.html -->
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
 
 <!-- Sets the main site title -->
 {% block title %}
@@ -8,17 +9,38 @@
 
 <!-- start our login page content injection -->
 {% block content %}
-<div class="col-md-12">
-    <h1>{{ request.user.get_username }}'s Profile</h1>
-    <p>
-        Welcome to your profile
-        {% if request.user.first_name %}
-            {{ request.user.first_name }}.
-        {% else %}
-            {{ request.user.get_username }}.
-        {% endif %}
-    </p>
-    <br />
-    <button class="btn btn-default" onclick="location.href='/accounts/password-change/'">Change Password</button>
-</div>
+    <div class="col-md-12">
+        <div id="profile-img-container">
+            <h1>{{ user.get_username }}'s Profile</h1>
+            {% if user.profile.profile_image  %}
+                <img id="profile-img" src="{{ user.profile.profile_image.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
+            {% else %}
+                <img id="profile-img" src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
+            {% endif %}
+            </div>
+
+        <div id="user-details-container">
+            <h2 id="profile-text">
+                Welcome to your profile
+                {% if user.first_name %}
+                    {{ user.first_name }}
+                {% else %}
+                    {{ user.get_username }}
+                {% endif %}
+            </h2>
+            <p>
+                {% if user.profile.date_of_birth %}
+                    Date of Birth: {{ user.profile.date_of_birth }}
+                {% else %}
+                    Date of Birth: Not Entered
+                {% endif %}
+            </p>
+        </div>
+
+        <div id="profile-links-container">
+            <a href="{% url 'edit-profile' %}">Edit your profile</a>
+            <br />
+            <a href="{% url 'password_change' %}">Change your password</a>
+        </div>
+    </div>
 {% endblock %}

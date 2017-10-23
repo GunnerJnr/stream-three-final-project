@@ -1,23 +1,21 @@
 <!-- tell django we wish to extend the base.html file -->
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
 
 <!-- Main Title for the page -->
 {% block title %}
     Gamers Hub Blog
 {% endblock %}
 
-{% load staticfiles %}
 <!-- The main content we wish to inject -->
 {% block content %}
     <div id="blog-post-content">
         <!-- The main content of the body -->
         <h1>Gamers Hub Blog</h1>
 
-        <hr>
-
         <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
-            <div class="col-md-3">
+            <div class="col-md-3 blog-post-container">
 
                 <!-- add an image to the post preview for a nice touch -->
                 <a href="{{ post.get_absolute_url }}">
@@ -26,8 +24,13 @@
 
                 <!-- For a nice added touch we display the published date and post author -->
                 <p class="date">
-                    Published {{ post.publish }} by {{ post.post_author }}
+                    Published {{ post.publish }}
                 </p>
+                <p class="date">
+                    by {{ post.post_author }}
+                </p>
+
+                <hr>
 
                 <div id="blog-post-title">
                     <h2>
@@ -43,7 +46,6 @@
                             <p>{{ post.post_body|truncatewords:30|linebreaks }}</p>
                         </a>
                 </div>
-                <hr>
             </div>
         {% endfor %}
         <!-- End for block -->

@@ -1,92 +1,86 @@
+/********** Default Element Style **********/
+
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 html {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 body {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  box-sizing: border-box;
+	position: relative;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	box-sizing: border-box;
 }
 
-.container-fluid {
-  /* Set a specified height, or the minimum height for the background image */
-  min-height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.theme-dropdown .dropdown-menu {
-  position: static;
-  display: block;
-  margin-bottom: 20px;
-}
-
-.theme-showcase > p > .btn {
-  margin: 5px 0;
-}
-
-.theme-showcase .navbar .container {
-  width: auto;
-}
-
-/* Redeclare since we override the float above */
+/********** Nav Bar Style **********/
 
 .navbar {
-  border-bottom: solid;
-  border-width: thin;
-  border-color: #777;
-  margin: auto;
+	height: 60px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	border-bottom: solid;
+	border-width: thin;
+	border-color: #ff8400;
+	margin: auto;
 }
 
 .navbar li {
-  padding-left: 0;
+	padding-left: 0;
 }
 
 .navbar-nav.navbar-right {
-  float: right;
+	float: right;
 }
 
 .navbar ul li a {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .navbar-brand img {
-  vertical-align: middle;
+	float: left;
+	vertical-align: middle;
 }
 
-#navbar-btn .btn {
-  vertical-align: middle;
+/********** Footer Style **********/
+
+footer {
+	position: fixed;
+	height: 60px;
+	background-color: #f5f5f5;
+	bottom: 0;
+	border-bottom: solid;
+	border-width: thin;
+	border-color: #ff8400;
+	margin: auto;
 }
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+/********** Paragraph Style **********/
 
 p {
-  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+	font-family: "Franklin Gothic", "Arial Narrow", Arial, "sans-serif";
 }
 
-p.date {
-  color: #ccc;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
-    georgia, serif;
-  font-size: 12px;
-  font-style: italic;
+.date {
+	color: #ccc;
+	font-size: 12px;
 }
+
+/********** md-col Style **********/
 
 [class*="col-"] {
-  margin: 0;
-}
-
-form {
-  overflow:auto;
+	margin-top: 0;
 }
 
 .borderlands-img {
-	position: fixed;
+	position: static;
 	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -95,225 +89,244 @@ form {
 	/* Preserve aspect ratio */
 	min-width: 100%;
 	min-height: 100%;
-	margin: auto;
-	top: 0;
-	left: 0;
 	opacity: 0.9;
 }
 
+/********** Forms Style **********/
+
 .custom-form {
-  text-align: center;
-	background-color: rgba(201, 201, 200, 0.85);
-  color: #4C70E5;
-  border-radius: 10px;
-  width: 440px;
-	height: auto;
+	text-align: center;
+	background-color: rgba(201, 201, 200, 0.65);
+	color: rgb(46, 83, 132);
+	border-radius: 10px;
+	max-width: 60%;
 	margin: auto;
-  margin-top: 200px;
-  padding: 20px;
+	margin-top: 200px;
+	padding: 10px;
 }
 
 .custom-form p{
-  width:100%;
-  overflow:auto;
+	width:90%;
+	overflow:auto;
+	margin:auto;
 }
 
 .custom-form label {
-  width:100%;
-  float:left;
-  clear:both;
-  margin: auto;
-  margin-bottom:2.5px;
+	width:100%;
+	float:left;
+	clear:both;
+	margin: auto;
+	margin-bottom:2.5px;
 }
 
 .custom-form input,
 .custom-form textarea {
-  float:left;
-  clear:both;
-  width:100%;
-  margin: 3px 0;
-  background:#efefef;
-  border:0;
-  padding:6px 10px;
-  font-size:14px;
+	float:left;
+	clear:both;
+	width:100%;
+	margin: 4px 0;
+	background:#efefef;
+	border:0;
+	padding:6px 10px;
+	font-size:14px;
 }
 
 .custom-form input[type=submit],
 .custom-form a.button {
-  font-weight:bold;
-  background:#12c064;
-  color:#fff;
-  padding:10px 20px;
-  font-size:14px;
-  text-transform:uppercase;
+	font-weight:bold;
+	background:#12c064;
+	color:#fff;
+	padding:10px 20px;
+	font-size:14px;
+	text-transform:uppercase;
 }
 
 .custom-form .errorlist {
-  color:#cc0033;
-  float:left;
-  clear:both;
-  padding-left:10px;
+	color:#cc0033;
+	float:left;
+	clear:both;
+	padding-left:10px;
 }
 
 .custom-form .helptext {
-  margin:0 0 20px 0;
-  color:rgb(33, 9, 247);
-  clear:both;
-  float:left;
-  font-size:13px;
+	margin:0 0 20px 0;
+	color:rgb(33, 9, 247);
+	clear:both;
+	float:left;
+	font-size:13px;
 }
 
+/********** Validation Message Style **********/
+
 ul.messages {
-  margin:10px 100px;
-  padding:0;
-  list-style-type:
-  none;
+	position: block;
+	background-color: rgba(201, 201, 200, 0.85);
+	color: rgb(255, 0, 0);
+	margin: 20px 100px;
+	padding: 20px;
+	list-style-type: none;
 }
 ul.messages li.success,
 ul.messages li.warning,
 ul.messages li.error,
 
-#login-form h1, #loggedout-form h1,
-#login-form p, #loggedout-form p {
-	-webkit-text-fill-color: #fa911aa1; /* Will override color (regardless of order) */
+/********** Log in & Log out Page Style **********/
+
+#login-form h1,
+#loggedout-form h1,
+#login-form p,
+#loggedout-form p {
+  	/* Will override color (regardless of order) */
+	-webkit-text-fill-color: #ff8400;
 	-webkit-text-stroke-width: 0.3px;
-  -webkit-text-stroke-color: #111;
-  padding: 5px;
+  	-webkit-text-stroke-color: #111;
+  	padding: 5px;
 }
 
+/********** Home Page Style **********/
+
 #homepage-img {
-	/* Preserve aspet ratio */
 	min-width: 100%;
 	height: 450px;
-	margin: auto;
-	top: 0;
-	left: 0;
 	opacity: 0.9;
-  margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 #homepage-logo img {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  left: 50%;
-  top: 45%;
-  margin-left: -150px;
-  margin-top: -155px;
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	margin-top: -155px;
+	margin-left: -150px;
+	top: 45%;
+	left: 50%;
 }
 
 #homepage-h1 {
-  position: absolute;
-  width: 100%;
-  left: 13.5px;
-  top: 20%;
+	position: absolute;
+	width: 100%;
+	left: 13.5px;
+	top: 20%;
 }
 
 #homepage-h1 span {
-  color: white;
-  font: bold 24px/45px "Franklin Gothic Medium", "Helvetica", "Sans-Serif";
-  letter-spacing: -1px;
-  background: reg(0, 0, 0); /*fallback color */
-  background: rgba(0, 0, 0, 0.7);
-  padding: 12px;
+	background: reg(0, 0, 0); /*fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	font: bold 24px/45px "Franklin Gothic Medium", "Helvetica", "Sans-Serif";
+	letter-spacing: -1px;
+	padding: 12px;
 }
 
+/********** Blog Style **********/
+
 #blog-post-content {
-  text-align: center;
+	max-height: 100%;
+	text-align: center;
+}
+
+.blog-post-container {
+	border: solid 0.05px rgba(224, 221, 221, 0.25);
 }
 
 #blog-post-content img {
-  width: 100%;
-  height: 200px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 #blog-post-title {
-  min-height: 60px;
+	min-height: 60px;
 }
 
 #blog-post-title h2 {
-  font-size: 1.2em;
-  font-weight: normal;
-  text-align: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
+	font-weight: normal;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 
 #blog-post-preview {
-  min-height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
+	min-height: 100px;
+	margin: auto;
+	text-align: center;
 }
 
 #blog-post-content p {
-  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif, georgia,
-    serif;
+	font-size: 14px;
+	font-weight: bold;
 }
 
 #blog-post-title a,
 #blog-post-content a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .pagination {
-  margin: 10px 0;
-  font-weight: bold;
+	height: 100px;
+	font-weight: bold;
 }
 
-.footer {
-  position: absolute;
-  height: 60px;
-  background-color: #f5f5f5;
-  bottom: 0;
+/********** Profile Image Style **********/
+
+#profile-img-container {
+	min-width: 100%;
+	margin: 10px auto;
+	text-align: center;
 }
 
-.container .text-muted {
-  margin: 20px 0;
+#user-details-container {
+	position: block;
+	min-width: 100%;
+	margin: 10px auto;
+	text-align: center;
 }
 
-/* Responsive Breakpoint Design Elements */
+#profile-links-container {
+	position: block;
+	min-width: 100%;
+	margin: 10px auto;
+	text-align: center;
+}
+
+#profile-img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin: 30px;
+}
+
+#profile-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#edit-profile-note-text {
+	color: rgb(255, 0, 0);
+}
+
+/********** Responsive Breakpoint Design Elements **********/
 
 /* Extra small devices (phones, etc. less than 768px) */
 /* No media query since this is the default in Bootstrap */
 /* So we will make our own custom to handle these devices */
 @media screen and (min-width: 278px) and (max-width: 400px) {
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 
 /* Small devices (tablets, etc.) */
 @media screen and (min-width: 401px) and (max-width: 768px) {
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 
 /* Medium devices (desktops, 769px and up) */
 @media screen and (min-width: 769px) and (max-width: 992px) {
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 
 /* Large devices (large desktops, 993px and up) */
 @media screen and (min-width: 993px) and (max-width: 1199px) {
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-  }
 }
 
 /* Even larger devices (ott desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
-  .container-fluid {
-    width: 100%;
-    margin: 0 auto;
-  }
 }

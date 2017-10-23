@@ -1,0 +1,24 @@
+<!-- Tell Django we want to extend Base.html -->
+{% extends "gamershub/base.html" %}
+
+<!-- Sets the main site title -->
+{% block title %}
+    Edit Your Profile
+{% endblock %}
+
+<!-- start our login page content injection -->
+{% block content %}
+<div class="col-md-12 borderlands-img">
+    <div class="custom-form">
+        <h1>Edit Your Profile</h1>
+        <p>You can edit your account using the following form:</p>
+        <form action="." method="post" enctype="multipart/form-data">
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+            <p id="edit-profile-note-text">NOTE: for best display, images should be no larger than 200x200 pixels.</p>
+            {% csrf_token %}
+            <button class="btn btn-default" type="submit" value="Save changes">Save</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
