@@ -15,6 +15,7 @@
         <form action="." method="post" enctype="multipart/form-data">
             {{ user_form.as_p }}
             {{ profile_form.as_p }}
+            <!--Notify the user that the best image size is 200x200px -->
             <p id="edit-profile-note-text">NOTE: for best display, images should be no larger than 200x200 pixels.</p>
             {% csrf_token %}
             <button class="btn btn-default" type="submit" value="Save changes">Save</button>
