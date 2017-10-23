@@ -36,4 +36,5 @@ urlpatterns = [
     # accounts/profile views
     url(r'^$', accounts_views.user_profile, name='user_profile'),
     url(r'^register/$', accounts_views.register, name='register'),
+    url(r'^edit-profile/$', accounts_views.edit, name='edit-profile'),
 ]
