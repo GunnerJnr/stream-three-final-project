@@ -67,9 +67,9 @@ p {
 	font-style: normal;
 }
 
-p .date {
+p.date {
 	color: #ccc;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 a {
@@ -251,16 +251,15 @@ ul.messages li.error,
 
 #blog-post-title h2 {
 	font-weight: normal;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	text-align: center;
 	margin-top: 20px;
-	margin-bottom: 5px;
 }
 
 #blog-post-preview {
 	min-height: 100px;
 	margin: auto;
-	text-align: center;
+	text-align: left;
 }
 
 #blog-post-content p {
