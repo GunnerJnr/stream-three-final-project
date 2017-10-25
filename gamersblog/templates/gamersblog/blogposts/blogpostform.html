@@ -3,17 +3,18 @@
 
 <!-- The main post tile -->
 {% block title %}
-    {{ post.post_title }}
+    Add A New Blog Post
 {% endblock %}
 
 <!-- The main post content to be injected -->
 {% block content %}
+    {% load bootstrap_tags %}
 <!-- The main content of the body -->
     <div class="col-md-12">
-        <h1>{{ post.post_title }}</h1>
+        <h1>Add A New Blog Post</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form | as_bootstrap }}
             <button class="btn btn-default" type="submit" value="save">Save</button>
         </form>
     </div>
