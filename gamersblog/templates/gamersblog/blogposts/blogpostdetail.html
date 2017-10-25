@@ -11,11 +11,14 @@
 <!-- The main content of the body -->
     <div class="col-md-12">
         <h1>{{ post.post_title }}</h1>
+        <hr>
         <p class="date">
-            Published {{ post.publish }} by {{ post.post_author }}
+            Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }}
         </p>
+        <br />
         {{ post.post_body|linebreaks }}
-        <button class="btn btn-default" onclick="location.href='/blog/'">Back To Blog</button>
+        <br />
+        <button class="btn btn-default" onclick="location.href='{{ request.META.HTTP_REFERER }}'">Back</button>
     </div>
 {% endblock %}
 <!-- end block content injection -->
