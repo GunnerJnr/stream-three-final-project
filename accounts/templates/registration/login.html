@@ -23,6 +23,7 @@
                     If you don't have an account with us please <a href="{% url "register" %}">register</a>:
                 </p>
             {% endif %}
+            <br />
             <form action="{% url 'login' %}" method="post">
                 {{ form.as_p }}
                 <!-- CSRF protection -->
