@@ -14,7 +14,8 @@
 			<p>
                 Your account has been successfully created.
                 You are now able to <a href="{% url "login" %}">login.</a>
-            </p>
+			</p>
+			<br />
 			<form action="." method="post">
 				{{ user_form.as_p }}
 				<!-- CSRF protection -->
