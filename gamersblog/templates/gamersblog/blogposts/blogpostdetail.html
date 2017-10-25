@@ -13,7 +13,7 @@
         <h1>{{ post.post_title }}</h1>
         <hr>
         <p class="date">
-            Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }}
+            Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
         <br />
         {{ post.post_body|linebreaks }}

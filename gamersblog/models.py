@@ -54,6 +54,7 @@ class BlogPost(models.Model):
     updated_date = models.DateTimeField(auto_now=True)
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
     post_views = models.IntegerField(default=0)  # record the number of post views
+    post_tags = models.CharField(max_length=30, blank=True, null=True)
 
     # define our objects
     objects = models.Manager()  # default Django Manager
