@@ -81,6 +81,14 @@ DATABASES = {
     }
 }
 
+# Authentication Backends for our custom user authentication
+# https://docs.djangoproject.com/en/1.8/topics/auth/customizing/#other-authentication-sources
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.EmailAuth',
+)
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
