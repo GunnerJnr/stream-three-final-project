@@ -3,6 +3,13 @@ from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
+from gamersblog.forms import BlogPostForm
+
+
+# define a new view to handle the creation of a new blog post
+def new_post(request):
+    form = BlogPostForm()
+    return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
 
 
 # define a view to return a list of our blog posts with the 'published' status

@@ -44,6 +44,9 @@ class BlogPost(models.Model):
         ('published', 'Published'),
     )
 
+    image_height = 500
+    image_width = 300
+
     # Create our settings that will be used in our blog posts.
     post_title = models.CharField(max_length=40)
     post_slug = models.SlugField(max_length=50, unique_for_date='publish')
@@ -55,6 +58,7 @@ class BlogPost(models.Model):
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
     post_views = models.IntegerField(default=0)  # record the number of post views
     post_tags = models.CharField(max_length=30, blank=True, null=True)
+    post_images = models.ImageField(upload_to='users/blog_post_images/%d/%m/%Y', height_field='image_height', width_field='image_width', blank=True)
 
     # define our objects
     objects = models.Manager()  # default Django Manager

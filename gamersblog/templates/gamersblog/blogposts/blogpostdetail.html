@@ -15,6 +15,11 @@
         <p class="date">
             Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
+        <div>
+            {% if post.post_images %}
+                <img src="/media/{{ post.post_images}}">
+            {% endif %}
+        </div>
         <br />
         {{ post.post_body|linebreaks }}
         <br />

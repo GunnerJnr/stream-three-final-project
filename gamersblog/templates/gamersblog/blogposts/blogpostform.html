@@ -1,0 +1,21 @@
+<!-- tell django we want to extend base.html -->
+{% extends "gamershub/base.html" %}
+
+<!-- The main post tile -->
+{% block title %}
+    {{ post.post_title }}
+{% endblock %}
+
+<!-- The main post content to be injected -->
+{% block content %}
+<!-- The main content of the body -->
+    <div class="col-md-12">
+        <h1>{{ post.post_title }}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-default" type="submit" value="save">Save</button>
+        </form>
+    </div>
+{% endblock %}
+<!-- end block content injection -->
