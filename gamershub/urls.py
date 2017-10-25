@@ -37,9 +37,6 @@ urlpatterns = [
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-
-    # Django Avatar url's
-    url(r'^avatar/', include('avatar.urls')),
 ]
 
 if settings.DEBUG:

@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'accounts',
     'home',
     'gamersblog',
-    'avatar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
