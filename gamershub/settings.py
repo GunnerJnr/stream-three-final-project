@@ -33,8 +33,10 @@ INSTALLED_APPS = [
     'accounts',
     'home',
     'gamersblog',
+    'disqus',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -110,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
 TIME_ZONE = 'GB'
 
@@ -153,3 +155,7 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Django Disqus Settings
+DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
+SITE_ID = 1

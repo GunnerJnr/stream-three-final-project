@@ -19,6 +19,9 @@
         {{ post.post_body|linebreaks }}
         <br />
         <button class="btn btn-default" onclick="location.href='{{ request.META.HTTP_REFERER }}'">Back</button>
+        {% load disqus_tags %}
+        {% set_disqus_title post.post_title %}
+        {% disqus_show_comments %}
     </div>
 {% endblock %}
 <!-- end block content injection -->
