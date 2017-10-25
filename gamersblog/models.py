@@ -18,8 +18,7 @@ class PublishedBlogPostManager(models.Manager):
     """
 
     def get_queryset(self):
-        return super(PublishedBlogPostManager, self).get_queryset()\
-                                                    .filter(post_status='published')
+        return super(PublishedBlogPostManager, self).get_queryset().filter(post_status='published')
 
 
 # Create the main class to handle our BlogPosts
@@ -54,6 +53,7 @@ class BlogPost(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
+    post_views = models.IntegerField(default=0)  # record the number of post views
 
     # define our objects
     objects = models.Manager()  # default Django Manager

@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
 
-
-# Create your views here.
 
 # define a view to return a list of our blog posts with the 'published' status
 def blog_post_list(request):
@@ -22,8 +19,7 @@ def blog_post_list(request):
     except EmptyPage:
         # if page is out of range deliver the last page of results
         blog_posts = paginator.page(paginator.num_pages)
-    return render(request, 'gamersblog/blogposts/blogpostlist.html',
-                           {'page': page, 'blog_posts': blog_posts})
+    return render(request, 'gamersblog/blogposts/blogpostlist.html', {'page': page, 'blog_posts': blog_posts})
 
 
 # define a view that will return a single blog post
@@ -34,5 +30,6 @@ def blog_post_detail(request, day, month, year, post):
                              publish__year=year,
                              publish__month=month,
                              publish__day=day)
-    return render(request, 'gamersblog/blogposts/blogpostdetail.html',
-                           {'post': post})
+    post.post_views += 1  # increment the post views by 1, each time one is seen
+    post.save()
+    return render(request, 'gamersblog/blogposts/blogpostdetail.html', {'post': post})
