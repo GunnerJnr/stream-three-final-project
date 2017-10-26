@@ -159,4 +159,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Django Disqus Settings
 DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
-SITE_ID = 2
+SITE_ID = 1
