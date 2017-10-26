@@ -11,9 +11,12 @@ html {
 
 body {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	padding-top: 60px;
 	padding-bottom: 60px;
 	box-sizing: border-box;
+}
+
+.container-fluid {
+	padding-top: 50px;
 }
 
 /********** Nav Bar Style **********/
@@ -37,6 +40,7 @@ body {
 
 .navbar ul li a {
 	font-size: 1.2em;
+	text-transform: none;
 }
 
 .navbar-brand img {
@@ -75,11 +79,17 @@ p.date {
 a {
 	color: rgb(46, 83, 132);
 	text-decoration:  none;
+	text-transform:uppercase;
 }
 
 a:hover {
 	color: rgb(238, 58, 58);
 	text-decoration:  none;
+	text-transform:uppercase;
+}
+
+li {
+	list-style:  none;
 }
 
 /********** md-col Style **********/
@@ -115,7 +125,7 @@ a:hover {
 }
 
 .custom-form p{
-	width:90%;
+	width:100%;
 	overflow:auto;
 	margin:auto;
 }
@@ -126,14 +136,14 @@ a:hover {
 	clear:both;
 	margin: auto;
 	margin-bottom:2.5px;
+	text-transform:uppercase;
 }
 
 .custom-form input,
 .custom-form textarea {
-	float:left;
 	clear:both;
-	width:100%;
-	margin: 4px 0;
+	width:80%;
+	margin: 4px auto;
 	background:#efefef;
 	border:0;
 	padding:6px 10px;
@@ -141,12 +151,19 @@ a:hover {
 }
 
 .custom-form input[type=submit],
-.custom-form a.button {
-	font-weight:bold;
-	background:#12c064;
-	color:#fff;
+.custom-form button {
+	background:#BFACB1;
+	color:#436591;
 	padding:10px 20px;
 	font-size:14px;
+	text-transform:uppercase;
+}
+
+.custom-form button:hover {
+	background:rgb(224, 206, 212);
+	color: rgb(238, 58, 58);
+	padding:10px 20px;
+	font-size:14.5px;
 	text-transform:uppercase;
 }
 
@@ -157,12 +174,13 @@ a:hover {
 	padding-left:10px;
 }
 
-.custom-form .helptext {
+.custom-form .help-block {
 	margin:0 0 20px 0;
 	color:rgb(33, 9, 247);
 	clear:both;
 	float:left;
 	font-size:13px;
+	list-style:  none;
 }
 
 /********** Validation Message Style **********/
