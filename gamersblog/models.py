@@ -24,14 +24,19 @@ class PublishedBlogPostManager(models.Manager):
 # Create the main class to handle our BlogPosts
 class BlogPost(models.Model):
     """
+    post_author: The blog post author (creates foreign key).
     post_title: The blog post title.
     post_slug: Generates a slug for cleaner URLS (good for SEO).
-    post_author: The blog post author (creates foreign key).
     post_body: The main body/content of the blog post.
-    published_date: States when the post was published.
     created_date: The date the post was created.
     updated_date: States the date/time the post was last updated.
+    published: States when the post was published.
     post_status: Returns the status, meaning is it in draft or published state.
+    image_width:
+    image_height:
+    post_images:
+    post_views:
+    post_tags:
 
     We also added a unique_for_date field to our slug so this will be appended
     to the URL, this just helps to keep it unique.
@@ -44,21 +49,20 @@ class BlogPost(models.Model):
         ('published', 'Published'),
     )
 
-    image_height = 500
-    image_width = 300
-
     # Create our settings that will be used in our blog posts.
+    post_author = models.ForeignKey(User, related_name='blog_posts')
     post_title = models.CharField(max_length=40)
     post_slug = models.SlugField(max_length=50, unique_for_date='publish')
-    post_author = models.ForeignKey(User, related_name='blog_posts')
     post_body = models.TextField()
-    publish = models.DateTimeField(default=timezone.now)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
+    publish = models.DateTimeField(default=timezone.now)
     post_status = models.CharField(max_length=10, choices=STATUS_CHOICES)
+    image_height = 500
+    image_width = 300
+    post_images = models.ImageField(upload_to='users/blog_post_images/%d/%m/%Y', height_field='image_height', width_field='image_width', blank=True)
     post_views = models.IntegerField(default=0)  # record the number of post views
     post_tags = models.CharField(max_length=30, blank=True, null=True)
-    post_images = models.ImageField(upload_to='users/blog_post_images/%d/%m/%Y', height_field='image_height', width_field='image_width', blank=True)
 
     # define our objects
     objects = models.Manager()  # default Django Manager

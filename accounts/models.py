@@ -7,6 +7,11 @@ from django.conf import settings
 # Create your models here.
 class Profile(models.Model):
     """
+    user:
+    date_of_birth:
+    image_width:
+    image_height:
+    profile_image:
     """
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     date_of_birth = models.DateField(blank=True, null=True)
