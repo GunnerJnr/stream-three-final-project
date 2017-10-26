@@ -14,7 +14,6 @@ def new_post(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.post_author = request.user
-            post.post_slug = ('post_title')
             post.save()
             return redirect(post.get_absolute_url())
     else:
@@ -40,9 +39,8 @@ def blog_post_list(request):
 
 
 # define a view that will return a single blog post
-def blog_post_detail(request, day, month, year, post):
-    post = get_object_or_404(BlogPost,
-                             post_slug=post,
+def blog_post_detail(request, day, month, year, slug):
+    post = get_object_or_404(BlogPost, post_slug=slug,
                              post_status='published',
                              publish__year=year,
                              publish__month=month,
