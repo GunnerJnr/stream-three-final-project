@@ -15,7 +15,7 @@
         <p class="date">
             Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
-        <div>
+        <div  id="blog-post-detail-img">
             {% if post.post_images %}
                 <img src="/media/{{ post.post_images}}">
             {% endif %}

@@ -19,7 +19,11 @@
 
                 <!-- add an image to the post preview for a nice touch -->
                 <a href="{{ post.get_absolute_url }}">
-                    <img src="http://via.placeholder.com/500x200" alt="blog-post-thumbs">
+                    {% if post.post_images %}
+                        <img src="/media/{{ post.post_images}}">
+                    {% else %}
+                        <img src="http://via.placeholder.com/500x200" alt="blog-post-thumbs">
+                    {% endif %}
                 </a>
 
                 <!-- For a nice added touch we display the published date and post author -->
@@ -43,7 +47,7 @@
                 <div id="blog-post-preview">
                         <a href="{{ post.get_absolute_url }}">
                             <!-- Here we wish to truncate the post content as it is a preview -->
-                            <p>{{ post.post_body|truncatewords:30|linebreaks }}</p>
+                            <p>{{ post.post_body|truncatewords:50|linebreaks }}</p>
                         </a>
                 </div>
             </div>
