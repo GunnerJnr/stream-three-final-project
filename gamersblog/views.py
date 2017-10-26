@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
@@ -8,6 +9,7 @@ from gamersblog.forms import BlogPostForm
 
 
 # define a new view to handle the creation of a new blog post
+@login_required
 def new_post(request):
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES)
@@ -39,8 +41,9 @@ def blog_post_list(request):
 
 
 # define a view that will return a single blog post
-def blog_post_detail(request, day, month, year, slug):
+def blog_post_detail(request, day, month, year, pk, slug):
     post = get_object_or_404(BlogPost, post_slug=slug,
+                             pk=pk,
                              post_status='published',
                              publish__year=year,
                              publish__month=month,

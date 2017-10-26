@@ -52,7 +52,7 @@ class BlogPost(models.Model):
     # Create our settings that will be used in our blog posts.
     post_author = models.ForeignKey(User, related_name='blog_posts')
     post_title = models.CharField(max_length=40)
-    post_slug = models.SlugField(max_length=50, unique_for_date='publish')
+    post_slug = models.SlugField(max_length=50, unique=True, unique_for_date='publish')
     post_body = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
@@ -86,6 +86,7 @@ class BlogPost(models.Model):
                                 'day': self.publish.strftime('%d'),
                                 'month': self.publish.strftime('%m'),
                                 'year': self.publish.year,
+                                'pk': self.pk,
                                 'slug': self.post_slug,
                                 })
 
