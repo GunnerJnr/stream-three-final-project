@@ -275,7 +275,7 @@ ul.messages li.error,
 }
 
 #blog-post-preview {
-	min-height: 150px;
+	min-height: 180px;
 	margin: auto;
 	text-align: left;
 }
