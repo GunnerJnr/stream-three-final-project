@@ -77,7 +77,7 @@ class BlogPost(models.Model):
         ordering = ('-publish',)
 
     def get_absolute_url(self):
-        return reverse('gamersblog:blog_post_detail',
+        return reverse('blog_post_detail',
                        args=[self.publish.strftime('%d'),
                              self.publish.strftime('%m'),
                              self.publish.year,

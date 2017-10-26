@@ -31,9 +31,8 @@ urlpatterns = [
     # home app urls
     url(r'^$', home_views.get_index, name='home'),
 
-    # here we want to add the urls from gamersblog app, we also assign
-    # a namespace so we can easily access this group of urls
-    url(r'^blog/', include('gamersblog.urls', namespace='gamersblog', app_name='gamersblog')),
+    # here we want to add the urls from gamersblog app
+    url(r'^blog/', include('gamersblog.urls'), name='gamersblog'),
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
