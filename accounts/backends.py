@@ -8,12 +8,14 @@ class EmailAuth(object):
     Authenticate the users using an email address
     """
     def authenticate(self, username=None, password=None):
+        """
+        Get an instance of User using the supplied email and check its password
+        """
         try:
             user = User.objects.get(email=username)
-
             if user.check_password(password):
                 return user
-            return None
+
         except User.DoesNotExist:
             raise None
 
@@ -22,6 +24,9 @@ class EmailAuth(object):
         Used by the django authentication system to retrieve an instance of User
         """
         try:
-            return User.objects.get(pk=user_id)
+            user = User.objects.get(pk=user_id)
+            if user.is_active:
+                return user
+            return None
         except User.DoesNotExist:
             return None
