@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render, get_object_or_404
+from django.utils import timezone
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
 from gamersblog.forms import BlogPostForm
@@ -8,7 +9,16 @@ from gamersblog.forms import BlogPostForm
 
 # define a new view to handle the creation of a new blog post
 def new_post(request):
-    form = BlogPostForm()
+    if request.method == "POST":
+        form = BlogPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.post_author = request.user
+            post.post_slug = ('post_title')
+            post.save()
+            return redirect(post.get_absolute_url())
+    else:
+        form = BlogPostForm()
     return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
 
 
