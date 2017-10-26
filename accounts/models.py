@@ -14,5 +14,5 @@ class Profile(models.Model):
     image_height = 200
     profile_image = models.ImageField(upload_to='users/profile_images/%d/%m/%Y', height_field='image_height', width_field='image_width', blank=True)
 
-    def __str__(self):
+    def __unicode__(self):
         return 'Profile for user {}'.format(self.user.username)
