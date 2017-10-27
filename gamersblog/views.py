@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.utils import timezone
+from django import forms
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
-from gamersblog.forms import BlogPostForm
+from .forms import BlogPostForm
 
 
 # define a new view to handle the creation of a new blog post

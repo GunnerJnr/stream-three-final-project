@@ -11,12 +11,12 @@ html {
 
 body {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	padding-top: 50px;
 	padding-bottom: 60px;
 	box-sizing: border-box;
 }
 
 .container-fluid {
-	padding-top: 50px;
 }
 
 /********** Nav Bar Style **********/
