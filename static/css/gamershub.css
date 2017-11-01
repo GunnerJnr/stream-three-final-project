@@ -16,6 +16,10 @@ body {
 	box-sizing: border-box;
 }
 
+.container-fluid {
+	margin: auto;
+}
+
 /********** Nav Bar Style **********/
 
 .navbar {
@@ -89,7 +93,7 @@ li {
 /********** Scroll Bar Style **********/
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
