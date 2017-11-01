@@ -9,63 +9,103 @@
 
 <!-- start our login page content injection -->
 {% block content %}
-    <div class="col-md-12">
-        <div id="profile-img-container">
-            <h1>{{ user.get_username }}'s Profile</h1>
+    <div class="row">
+        <div class="col-md-12" id="profile-img-container">
             {% if user.profile.profile_image  %}
-                <img id="profile-img" src="{{ user.profile.profile_image.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
+                <img class="img-square img-responsive" src="{{ user.profile.profile_image.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
             {% else %}
-                <img id="profile-img" src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
+                <img class="img-square img-responsive" src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
             {% endif %}
         </div>
+        <div class="col-md-12" id="profile-heading">
+            <h1>{{ user.get_username.upper }}'s Profile</h1>
+            <button type="button" class="btn btn-success" onclick="location.href='{% url 'edit-profile' %}'">Edit Profile</button>
+            <button type="button" class="btn btn-info" onclick="location.href='{% url 'new_post' %}'">Write Blog Post</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='{% url 'password_change' %}'">Change Password</button>
+        </div>
+    </div>
 
-        <div id="user-details-container">
-
-            <h2 id="profile-text">
-                Welcome to your profile
-                {% if user.first_name %}
-                    {{ user.first_name }}
-                {% else %}
-                    {{ user.get_username }}
-                {% endif %}
-            </h2>
-
-
-            {% if user.profile.date_of_birth %}
-            <p>
-                Date of Birth: {{ user.profile.date_of_birth }}
-            </p>
-            {% else %}
-            <p>
-                Date of Birth: Not Entered
-            </p>
-            {% endif %}
-
-            {% if user.profile.about_me %}
-            <p>
-                About Me:
-                <p>
-                    {{ user.profile.about_me }}
-                </p>
-            </p>
-            {% else %}
-            <p>
-                About Me:
-                <p>
-                    Not Entered
-                </p>
-            </p>
-            {% endif %}
-
+    <div class="row">
+        <div class="col-md-12">
+            <div id="welcome-msg-container">
+                <h2 id="welcome-msg-text">
+                    Welcome to your profile
+                    {% if user.first_name %}
+                        {{ user.first_name }}
+                    {% else %}
+                        {{ user.get_username }}
+                    {% endif %}
+                </h2>
+            </div>
         </div>
 
-        <div id="profile-links-container">
-            <a href="{% url 'new_post' %}">Write a blog post</a>
-            <br />
-            <a href="{% url 'edit-profile' %}">Edit your profile</a>
-            <br />
-            <a href="{% url 'password_change' %}">Change your password</a>
-            <br />
+        <div class="row">
+            <div class="col-sm-3 col-md-6 col-lg-4" id="user-details-profile">
+                <!--left col-->
+                <ul class="list-group">
+                    <li class="list-group-item text-muted" contenteditable="false">Profile</li>
+                    <li class="list-group-item text-right">
+                        <span class="pull-left">
+                            <strong class="">
+                                Date of birth:
+                            </strong>
+                        </span>
+                        {% if user.profile.date_of_birth %}
+                        <p>
+                            {{ user.profile.date_of_birth }}
+                        </p>
+                        {% else %}
+                        <p>
+                            Not Entered
+                        </p>
+                        {% endif %}
+                    </li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Full Name:</strong></span>{{ user.first_name }} {{ user.last_name }}</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Favourite Game: </strong></span>{{ user.profile.fave_game }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-9 col-md-6 col-lg-8" id="user-about-me">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        {% if user.first_name %}
+                            {{ user.first_name }}'s Bio
+                        {% else %}
+                            {{ user.get_username }}'s Bio
+                        {% endif %}
+                    </div>
+                    <div class="panel-body">
+                        {% if user.profile.about_me %}
+                        <p>
+                            {{ user.profile.about_me }}
+                        </p>
+                        {% else %}
+                        <p>
+                            Not Entered
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-md-12 col-lg-12" id="user-about-me">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Social Media
+                    </div>
+                    <div class="panel-body">
+                        <i class="fa fa-facebook fa-2x"></i>
+                        <i class="fa fa-github fa-2x"></i>
+                        <i class="fa fa-twitter fa-2x"></i>
+                        <i class="fa fa-pinterest fa-2x"></i>
+                        <i class="fa fa-google-plus fa-2x"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
