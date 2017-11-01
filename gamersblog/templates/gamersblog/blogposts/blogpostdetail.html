@@ -3,30 +3,32 @@
 
 <!-- The main post tile -->
 {% block title %}
-    {{ post.post_title }}
+		{{ post.post_title }}
 {% endblock %}
 
 <!-- The main post content to be injected -->
 {% block content %}
-<!-- The main content of the body -->
-    <div class="col-md-12">
-        <h1>{{ post.post_title }}</h1>
-        <hr>
-        <p class="date">
+	<!-- The main content of the body -->
+	<div class="col-md-12">
+		<h1>{{ post.post_title }}</h1>
+		<hr>
+		<p class="date">
             Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
         <div  id="blog-post-detail-img">
             {% if post.post_images %}
-                <img src="/media/{{ post.post_images}}">
+                <img src="/media/{{ post.post_images }}">
             {% endif %}
         </div>
         <br />
         {{ post.post_body|linebreaks }}
         <br />
-        <button class="btn btn-default" onclick="location.href='{{ request.META.HTTP_REFERER }}'">Back</button>
+        <button class="btn btn-default" onclick="location.href='{% url 'blog_post_list' %}'">Back To Blog</button>
+        <!-- load disqus tags and comment begin -->
         {% load disqus_tags %}
         {% set_disqus_title post.post_title %}
         {% disqus_show_comments %}
+        <!-- load disqus tags and comment end -->
     </div>
 {% endblock %}
 <!-- end block content injection -->

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.utils import timezone
-from django import forms
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -13,11 +12,16 @@ from .forms import BlogPostForm
 @login_required
 def new_post(request):
     if request.method == "POST":
-        form = BlogPostForm(request.POST, request.FILES)
+        form = BlogPostForm(request.POST or None, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.post_author = request.user
-            post.save()
+            post_title = form.cleaned_data['post_title']
+            if BlogPost.objects.filter(post_title=post_title).exists():
+                messages.error(request, 'title already exists')
+            else:
+                post = form.save()
+                messages.success(request, 'post added successfully')
             return redirect(post.get_absolute_url())
     else:
         form = BlogPostForm()
