@@ -20,6 +20,7 @@
         </div>
 
         <div id="user-details-container">
+
             <h2 id="profile-text">
                 Welcome to your profile
                 {% if user.first_name %}
@@ -28,19 +29,43 @@
                     {{ user.get_username }}
                 {% endif %}
             </h2>
+
+
+            {% if user.profile.date_of_birth %}
             <p>
-                {% if user.profile.date_of_birth %}
-                    Date of Birth: {{ user.profile.date_of_birth }}
-                {% else %}
-                    Date of Birth: Not Entered
-                {% endif %}
+                Date of Birth: {{ user.profile.date_of_birth }}
             </p>
+            {% else %}
+            <p>
+                Date of Birth: Not Entered
+            </p>
+            {% endif %}
+
+            {% if user.profile.about_me %}
+            <p>
+                About Me:
+                <p>
+                    {{ user.profile.about_me }}
+                </p>
+            </p>
+            {% else %}
+            <p>
+                About Me:
+                <p>
+                    Not Entered
+                </p>
+            </p>
+            {% endif %}
+
         </div>
 
         <div id="profile-links-container">
+            <a href="{% url 'new_post' %}">Write a blog post</a>
+            <br />
             <a href="{% url 'edit-profile' %}">Edit your profile</a>
             <br />
             <a href="{% url 'password_change' %}">Change your password</a>
+            <br />
         </div>
     </div>
 {% endblock %}

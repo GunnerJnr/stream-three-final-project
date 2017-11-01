@@ -17,6 +17,7 @@ body {
 }
 
 .container-fluid {
+	margin: auto;
 }
 
 /********** Nav Bar Style **********/
@@ -92,6 +93,29 @@ li {
 	list-style:  none;
 }
 
+/* Scroll Bar Style */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgb(250, 106, 23);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff8400;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgb(247, 250, 46);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+        background: rgb(65, 146, 240);
+}
+
 /********** md-col Style **********/
 
 [class*="col-"] {
@@ -99,7 +123,7 @@ li {
 }
 
 .borderlands-img {
-	position: fixed;
+	position: relative;
 	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -126,7 +150,6 @@ li {
 
 .custom-form p{
 	width:100%;
-	overflow:auto;
 	margin:auto;
 }
 
@@ -186,16 +209,41 @@ li {
 /********** Validation Message Style **********/
 
 ul.messages {
-	position: block;
-	background-color: rgba(201, 201, 200, 0.85);
-	color: rgb(255, 0, 0);
-	margin: 20px 100px;
-	padding: 20px;
+	margin:10px 100px;
+    padding:0;
 	list-style-type: none;
 }
+
 ul.messages li.success,
 ul.messages li.warning,
 ul.messages li.error,
+ul.messages li.info {
+    margin:0;
+    padding:14px 20px;
+    list-style:none;
+    color:#fff;
+}
+
+ul.messages li.success { background:#81ce81; }
+ul.messages li.success a { color:#0ac33e; }
+
+ul.messages li.error { background:#a30029; color:#e9828e; }
+ul.messages li.error a { color:#e9828e; }
+
+ul.messages li.info { background:#faffae; color:#696b4e; }
+ul.messages li.info a { color:#1586de; }
+
+ul.messages li.warning { background:#de9404; }
+ul.messages li.warning a { color:#f49000; }
+
+ul.messages li a.close {
+    margin:0;
+    float:right;
+    opacity:1;
+    border:0;
+    box-shadow:none;
+    text-shadow:none;
+}
 
 /********** Log in & Log out Page Style **********/
 
@@ -280,14 +328,19 @@ ul.messages li.error,
 	text-align: left;
 }
 
+#blog-post-preview a {
+	color: rgb(46, 83, 132);
+	text-transform:none;
+}
+
+#blog-post-preview a:hover {
+	color: rgb(238, 58, 58);
+	text-transform:none;
+}
+
 #blog-post-content p {
 	font-size: 14px;
 	font-weight: bold;
-}
-
-#blog-post-title a,
-#blog-post-content a {
-	text-decoration: none;
 }
 
 .pagination {

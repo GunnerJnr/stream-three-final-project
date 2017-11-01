@@ -64,4 +64,4 @@ class EditProfileForm(forms.ModelForm):
         fields: allows the user to edit their dob and profile image
         """
         model = Profile
-        fields = ('date_of_birth', 'profile_image')
+        fields = ('date_of_birth', 'about_me', 'profile_image')
