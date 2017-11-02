@@ -1,5 +1,4 @@
 /********** Default Element Style **********/
-
 * {
 	margin: 0;
 	padding: 0;
@@ -9,64 +8,17 @@ html {
 	overflow-x: hidden;
 }
 
-body {
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	padding-top: 50px;
-	padding-bottom: 60px;
-	box-sizing: border-box;
-}
-
 .container-fluid {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-style: normal;
 	margin: auto;
+	padding: 0;
 }
-
-/********** Nav Bar Style **********/
-
-.navbar {
-	position: fixed; /* needs to be static in media query for smaller devices to push content down */
-	height: auto !important;
-	border-bottom: solid;
-	border-width: thin;
-	border-color: #ff8400;
-}
-
-.navbar li {
-	padding-left: 0;
-}
-
-.navbar-nav.navbar-right {
-	float: right;
-}
-
-.navbar ul li a {
-	font-size: 1.2em;
-	text-transform: none;
-}
-
-.navbar-brand img {
-	vertical-align: middle;
-}
-
-/********** Footer Style **********/
-
-footer {
-	position: fixed;
-	height: 60px;
-	background-color: #f5f5f5;
-	border-bottom: solid;
-	border-width: thin;
-	border-color: #ff8400;
-}
-
-.container .text-muted {
-	margin: 20px 0;
-}
-
-/********** Paragraph Style **********/
 
 p {
-	font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+
 }
 
 p.date {
@@ -76,12 +28,16 @@ p.date {
 
 a {
 	color: #2e5384;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-style: normal;
 	text-decoration:  none;
 	text-transform:uppercase;
 }
 
 a:hover {
 	color: #ee3a3a;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-style: normal;
 	text-decoration:  none;
 	text-transform:uppercase;
 }
@@ -90,39 +46,12 @@ li {
 	list-style:  none;
 }
 
-/********** Scroll Bar Style **********/
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px #fa6a17;
-    -webkit-border-radius: 5px;
-	box-shadow: inset 0 0 6px #fa6a17;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #ff8400;
-    -webkit-box-shadow: inset 0 0 6px #f7fa2e;
-	-webkit-border-radius: 5px;
-	box-shadow: inset 0 0 6px #f7fa2e;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:window-inactive {
-        background: #4192f0;
-}
-
 /********** md-col Style **********/
-
 [class*="col-"] {
 	margin-top: 0;
 }
 
 /********** Forms Style **********/
-
 .borderlands-img {
 	position: relative;
 	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
@@ -137,7 +66,7 @@ li {
 }
 
 .custom-form {
-	background-color: #c9c9c8a6;
+	background-color: rgba(201, 201, 200, 0.651);
 	color: #2e5384;
 	border-radius: 10px;
 	max-width: 60%;
@@ -200,7 +129,6 @@ li {
 }
 
 /********** Validation Message Style **********/
-
 ul.messages {
 	list-style-type: none;
 	margin:10px 100px;
@@ -239,7 +167,6 @@ ul.messages li a.close:hover {
 }
 
 /********** Log in & Log out Page Style **********/
-
 #login-form h1,
 #loggedout-form h1,
 #login-form p,
@@ -252,7 +179,6 @@ ul.messages li a.close:hover {
 }
 
 /********** Home Page Style **********/
-
 #homepage-img {
 	min-width: 100%;
 	height: 450px;
@@ -279,7 +205,7 @@ ul.messages li a.close:hover {
 
 #homepage-h1 span {
 	background: reg(0, 0, 0); /*fallback color */
-	background: #000000b3;
+	background: rgba(0, 0, 0, 0.702);
 	color: #ffffff;
 	font-size: 30px;
 	letter-spacing: -1px;
@@ -287,20 +213,19 @@ ul.messages li a.close:hover {
 }
 
 /********** Blog List and Post Style **********/
-
 #blog-post-content {
 	max-height: 100%;
 	text-align: center;
 }
 
 .blog-post-container {
-	border: solid 0.05px #e0dddd40;
+	border: solid 0.025px rgba(238, 235, 235, 0.5);
 }
 
 #blog-post-content img {
 	width: 100%;
-	height: 150px;
-	margin-top: 20px auto;
+	height: 200px;  /* 200 sm, 400 md, 500 lg */
+	margin: 20px auto;
 }
 
 #blog-post-title {
@@ -335,26 +260,26 @@ ul.messages li a.close:hover {
 	font-weight: bold;
 }
 
+#blog-post-detail {
+	margin: 0 auto;
+	text-align: center;
+
+}
+
+#blog-post-detail img {
+	width: 500px;
+	height: 300px;
+	border-top-left-radius:  25px;
+	border-bottom-right-radius: 25px;
+	margin: 0 auto;
+}
+
 .pagination {
 	height: 100px;
 	font-weight: bold;
 }
 
-#blog-post-detail-img-container {
-	margin: 0 auto;
-	text-align: center;
-}
-
-#blog-post-detail-img-container img {
-	width: 500px;
-	height: 300px;
-	vertical-align: middle;
-	border-top-left-radius:  25px;
-	border-bottom-right-radius: 25px;
-}
-
 /********** Profile Image Style **********/
-
 #profile-img-container {
 	min-width: 100%;
 	text-align: center;
@@ -374,18 +299,16 @@ ul.messages li a.close:hover {
 }
 
 #welcome-msg-container {
-	position: block;
 	min-width: 100%;
 	text-align: left;
-	margin: auto 10px;
 }
 
 #user-details-profile {
-	margin: auto;
+
 }
 
 #user-about-me {
-	margin: auto;
+
 }
 
 #welcome-msg-text {
@@ -404,20 +327,464 @@ ul.messages li a.close:hover {
 /* No media query since this is the default in Bootstrap */
 /* So we will make our own custom to handle these devices */
 @media screen and (min-width: 278px) and (max-width: 400px) {
+
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+
+	/********** Nav Bar Style **********/
+	.navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+
+	.navbar-right {
+		float: none !important;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+
+	.navbar-nav > li {
+		float: none;
+	}
+
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.collapse.in {
+		display: block !important;
+	}
+
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:window-inactive {
+			background: #4192f0;
+	}
+
+	/********** Footer Style **********/
+	footer {
+		position: static;
+		height: 20px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.container .text-muted {
+		font-size: 10px;
+		margin: 3px 0;
+	}
 }
 
 /* Small devices (tablets, etc.) */
 @media screen and (min-width: 401px) and (max-width: 768px) {
+
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+
+	/********** Nav Bar Style **********/
+	.navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+
+	.navbar-right {
+		float: none !important;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+
+	.navbar-nav > li {
+		float: none;
+	}
+
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.collapse.in {
+		display: block !important;
+	}
+
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:window-inactive {
+			background: #4192f0;
+	}
+
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 30px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.container .text-muted {
+		font-size: 12px;
+		margin: 7px 0;
+	}
 }
 
 /* Medium devices (desktops, 769px and up) */
-@media screen and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 991px) {
+
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+
+	/********** Nav Bar Style **********/
+	.navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+
+	.navbar-right {
+		float: none !important;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+
+	.navbar-nav > li {
+		float: none;
+	}
+
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.collapse.in {
+		display: block !important;
+	}
+
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:window-inactive {
+			background: #4192f0;
+	}
+
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.container .text-muted {
+		font-size: 16px;
+		margin: 20px 0;
+	}
 }
 
-/* Large devices (large desktops, 993px and up) */
-@media screen and (min-width: 993px) and (max-width: 1199px) {
+/* Large devices (large desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+		padding-top: 50px;
+		padding-bottom: 60px;
+	}
+
+	/********** Nav Bar Style **********/
+	.navbar {
+		position: fixed; /* needs to be static in media query for smaller devices to push content down */
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.navbar li {
+		padding-left: 0;
+	}
+
+	.navbar-nav.navbar-right {
+		float: right;
+	}
+
+	.navbar ul li a {
+		font-size: 1.2em;
+		text-transform: none;
+	}
+
+	.navbar-brand img {
+		vertical-align: middle;
+	}
+
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:window-inactive {
+			background: #4192f0;
+	}
+
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.container .text-muted {
+		font-size: 18px;
+		margin: 18px 0;
+	}
 }
 
 /* Even larger devices (ott desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
+
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+		padding-top: 50px;
+		padding-bottom: 60px;
+	}
+
+	/********** Nav Bar Style **********/
+	.navbar {
+		position: fixed; /* needs to be static in media query for smaller devices to push content down */
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.navbar li {
+		padding-left: 0;
+	}
+
+	.navbar-nav.navbar-right {
+		float: right;
+	}
+
+	.navbar ul li a {
+		font-size: 1.2em;
+		text-transform: none;
+	}
+
+	.navbar-brand img {
+		vertical-align: middle;
+	}
+
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+
+	::-webkit-scrollbar-thumb:window-inactive {
+			background: #4192f0;
+	}
+
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+
+	.container .text-muted {
+		font-size: 22px;
+		margin: 18px 0;
+	}
 }
