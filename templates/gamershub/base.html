@@ -15,12 +15,16 @@
         <!-- Main Site Title -->
         <title>{% block title %}{% endblock %}</title>
 
-        <!-- Lin to bootstrap -->
+        <!-- Link to Font Awesome 4 -->
+        <link href="{% static "css/vendor/font-awesome-4.7.0/css/font-awesome.css" %}" rel="stylesheet">
+
+        <!-- Link to bootstrap -->
         <link href="{% static "css/vendor/bootstrap/bootstrap.css" %}" rel="stylesheet">
         <link href="{% static "css/vendor/bootstrap/bootstrap-theme.css" %}" rel="stylesheet">
 
         <!-- Link to our custom stylesheet -->
         <link href="{% static "css/gamershub.css" %}" rel="stylesheet">
+
 
         {% block head_js %}{% endblock %}
     </head>

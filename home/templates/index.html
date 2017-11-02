@@ -9,10 +9,11 @@
 
 <!-- block content begin -->
 {% block content %}
-    <div class="col-md-12">
-        <img id="homepage-img" src="{% static "img/homepage/homepage-bg.jpg" %}">
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <img class="img-responsive" id="homepage-img" src="{% static "img/homepage/homepage-bg.jpg" %}">
         <div id="homepage-logo">
-            <img src="{% static "img/homepage/logo.png" %}">
+            <img class="img-responsive" src="{% static "img/homepage/logo.png" %}">
         </div>
         <hr>
         <h1 id="homepage-h1"><span>WELCOME TO </span></h1>
@@ -39,5 +40,6 @@
 		</p>
         <hr>
     </div>
+</div>
 {% endblock %}
 <!-- block content end -->

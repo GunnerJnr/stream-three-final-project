@@ -64,4 +64,14 @@ class EditProfileForm(forms.ModelForm):
         fields: allows the user to edit their dob and profile image
         """
         model = Profile
-        fields = ('date_of_birth', 'about_me', 'fave_game', 'profile_image')
+        fields = (
+            'date_of_birth',
+            'about_me',
+            'fave_game',
+            'facebook_url',
+            'github_url',
+            'twitter_url',
+            'google_plus_url',
+            'youtube_url',
+            'profile_image',
+            )

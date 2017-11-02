@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" id="profile-container">
         <div class="col-md-12">
             <div id="welcome-msg-container">
                 <h2 id="welcome-msg-text">
@@ -39,71 +39,112 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-3 col-md-6 col-lg-3" id="user-details-profile">
-                <!--left col-->
-                <ul class="list-group">
-                    <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                    <li class="list-group-item text-right">
+        <div class="col-sm-6 col-md-6 col-lg-3" id="user-details-profile">
+        <!--left col-->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Profile
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item text-right">
                         <span class="pull-left">
-                            <strong class="">
+                            <strong>
                                 Date of birth:
                             </strong>
                         </span>
                         {% if user.profile.date_of_birth %}
-                        <p>
                             {{ user.profile.date_of_birth }}
-                        </p>
                         {% else %}
-                        <p>
                             Not Entered
-                        </p>
                         {% endif %}
                     </li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Full Name:</strong></span>{{ user.first_name }} {{ user.last_name }}</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Favourite Game: </strong></span>{{ user.profile.fave_game }}</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-9 col-md-6 col-lg-9" id="user-about-me">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        {% if user.first_name %}
-                            {{ user.first_name }}'s Bio
+                    <li class="list-group-item text-right">
+                        <span class="pull-left">
+                            <strong>
+                                Full Name:
+                            </strong>
+                        </span>
+                        {% if user.first_name and user.last_name %}
+                            {{ user.first_name }} {{ user.last_name }}
+                        {% elif user.first_name and not user.last_name %}
+                            {{ user.first_name }}
                         {% else %}
-                            {{ user.get_username }}'s Bio
-                        {% endif %}
-                    </div>
-                    <div class="panel-body">
-                        {% if user.profile.about_me %}
-                        <p>
-                            {{ user.profile.about_me }}
-                        </p>
-                        {% else %}
-                        <p>
                             Not Entered
-                        </p>
                         {% endif %}
-                    </div>
+                    </li>
+                    <li class="list-group-item text-right">
+                        <span class="pull-left">
+                            <strong>
+                                Favourite Game:
+                            </strong>
+                        </span>
+                        {% if user.profile.fave_game %}
+                            {{ user.profile.fave_game }}
+                        {% else %}
+                            Not Entered
+                        {% endif %}
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+        <div class="col-sm-6 col-md-6 col-lg-9" id="user-about-me">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {% if user.first_name %}
+                        {{ user.first_name }}'s Bio
+                    {% else %}
+                        {{ user.get_username }}'s Bio
+                    {% endif %}
+                </div>
+                <div class="panel-body">
+                    {% if user.profile.about_me %}
+                    <p>
+                        {{ user.profile.about_me }}
+                    </p>
+                    {% else %}
+                    <p>
+                        Not Entered
+                    </p>
+                    {% endif %}
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-4 col-md-12 col-lg-12" id="user-about-me">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Social Media
-                    </div>
-                    <div class="panel-body">
-                        <i class="fa fa-facebook fa-2x"></i>
-                        <i class="fa fa-github fa-2x"></i>
-                        <i class="fa fa-twitter fa-2x"></i>
-                        <i class="fa fa-pinterest fa-2x"></i>
-                        <i class="fa fa-google-plus fa-2x"></i>
-                    </div>
+        <div class="col-sm-12 col-md-12 col-lg-12" id="user-social">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Social Media
+                </div>
+                <div class="panel-body">
+                    {% if user.profile.facebook_url %}
+                        <i class="fa fa-facebook">
+                            <a href="{{ user.profile.facebook_url }}" target="_blank"> Facebook</a> |
+                        </i>
+                    {% endif %}
+                    {% if user.profile.github_url %}
+                        <i class="fa fa-github">
+                            <a href="{{ user.profile.github_url }}" target="_blank"> Github</a> |
+                        </i>
+                    {% endif %}
+                    {% if user.profile.twitter_url %}
+                        <i class="fa fa-twitter">
+                            <a href="{{ user.profile.twitter_url }}" target="_blank"> Twitter</a> |
+                        </i>
+                    {% endif %}
+                    {% if user.profile.google_plus_url %}
+                        <i class="fa fa-google-plus">
+                            <a href="{{ user.profile.google_plus_url }}" target="_blank"> Google +</a> |
+                        </i>
+                    {% endif %}
+                    {% if user.profile.youtube_url %}
+                        <i class="fa fa-youtube">
+                            <a href="{{ user.profile.youtube_url }}" target="_blank"> YouTube</a>
+                        </i>
+                    {% endif %}
+                    {% if not user.profile.facebook_url and user.profile.github_url and user.profile.youtube_url and user.profile.twitter_url and user.profile.google_plus_url and user.profile.youtube_url %}
+                        Not Entered
+                    {% endif %}
                 </div>
             </div>
         </div>

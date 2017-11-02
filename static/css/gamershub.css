@@ -274,12 +274,22 @@ ul.messages li a.close:hover {
 	margin: 0 auto;
 }
 
+.next,
+.previous,
+.pager {
+	margin: 2px 2px;
+	text-align: center;
+}
+
 .pagination {
 	height: 100px;
 	font-weight: bold;
 }
 
 /********** Profile Image Style **********/
+#profile-container {
+	margin: auto 5px;
+}
 #profile-img-container {
 	min-width: 100%;
 	text-align: center;
@@ -303,18 +313,28 @@ ul.messages li a.close:hover {
 	text-align: left;
 }
 
-#user-details-profile {
-
+#user-details-profile,
+#user-about-me,
+#user-social {
+	min-height: auto;
 }
 
-#user-about-me {
+#user-about-me .panel-body,
+#user-details-profile .list-group {
+	min-height: auto;
+}
 
+#user-details-profile .list-group-item {
+	margin: 5px auto;
+}
+
+#user-social {
+	text-align: center;
 }
 
 #welcome-msg-text {
 	font-size: 16px;
 	font-weight: bold;
-	margin-left: 20px;
 }
 
 #edit-profile-note-text {
@@ -331,6 +351,7 @@ ul.messages li a.close:hover {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
+		padding-bottom: 20px;
 	}
 
 	/********** Nav Bar Style **********/
@@ -435,6 +456,7 @@ ul.messages li a.close:hover {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
+		padding-bottom: 30px;
 	}
 
 	/********** Nav Bar Style **********/
@@ -539,6 +561,7 @@ ul.messages li a.close:hover {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
+		padding-bottom: 0px;
 	}
 
 	/********** Nav Bar Style **********/
@@ -649,7 +672,7 @@ ul.messages li a.close:hover {
 
 	/********** Nav Bar Style **********/
 	.navbar {
-		position: fixed; /* needs to be static in media query for smaller devices to push content down */
+		position: fixed;
 		height: auto !important;
 		border-bottom: solid;
 		border-width: thin;
@@ -725,7 +748,7 @@ ul.messages li a.close:hover {
 
 	/********** Nav Bar Style **********/
 	.navbar {
-		position: fixed; /* needs to be static in media query for smaller devices to push content down */
+		position: fixed;
 		height: auto !important;
 		border-bottom: solid;
 		border-width: thin;
