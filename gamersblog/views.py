@@ -31,8 +31,8 @@ def new_post(request):
 # define a view to return a list of our blog posts with the 'published' status
 def blog_post_list(request):
     object_list = BlogPost.published.all()
-    # add pagination to the blog page, we will display 6 posts per page
-    paginator = Paginator(object_list, 6)  # 6 posts in each page
+    # add pagination to the blog page, we will display 3 posts per page
+    paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
     try:
         blog_posts = paginator.page(page)
