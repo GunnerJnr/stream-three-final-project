@@ -27,6 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', ]
 
+# PayPal Settings
+# SITE_URL = "GAMERSHUB_SITE_URL"
+# PAYPAL_NOTIFY_URL = 'GAMERSHUB_HARD_TO_GUESS_URL'
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'  # for testing only
+PAYPAL_RECEIVER_EMAIL = 'GAMERSHUB_PAYPAL_RECIEVER_EMAIL'
+PAYPAL_TEST = True  # for testing only
+
 # Site ID
 SITE_ID = 2
 
@@ -37,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'gamersblog',
     'disqus',
+    'paypal.standard.ipn',
     'django_forms_bootstrap',
     'django.contrib.admin',
     'django.contrib.auth',
