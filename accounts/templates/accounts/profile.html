@@ -19,9 +19,9 @@
         </div>
         <div class="col-md-12" id="profile-heading">
             <h1>{{ user.get_username.upper }}'s Profile</h1>
-            <button type="button" class="btn btn-success" onclick="location.href='{% url 'edit-profile' %}'">Edit Profile</button>
-            <button type="button" class="btn btn-info" onclick="location.href='{% url 'new_post' %}'">Write Blog Post</button>
-            <button type="button" class="btn btn-warning" onclick="location.href='{% url 'password_change' %}'">Change Password</button>
+            <button type="button" class="btn btn-success" onclick="location.href='{% url "edit-profile" %}'">Edit Profile</button>
+            <button type="button" class="btn btn-info" onclick="location.href='{% url "new_post" %}'">Write Blog Post</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='{% url "password_change" %}'">Change Password</button>
         </div>
     </div>
 
