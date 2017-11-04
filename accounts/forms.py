@@ -65,6 +65,7 @@ class EditProfileForm(forms.ModelForm):
         """
         model = Profile
         fields = (
+            'personal_site_url',
             'date_of_birth',
             'about_me',
             'fave_game',

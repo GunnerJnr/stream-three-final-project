@@ -25,6 +25,7 @@ class Profile(models.Model):
     twitter_url = models.URLField(max_length=200, blank=True, null=True)
     google_plus_url = models.URLField(max_length=200, blank=True, null=True)
     youtube_url = models.URLField(max_length=200, blank=True, null=True)
+    personal_site_url = models.URLField(max_length=200, blank=True, null=True)
 
 
     def about_me_description(self):
