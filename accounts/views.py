@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.models import User
 from accounts.forms import UserRegisterForm, EditUserForm, EditProfileForm
 from accounts.models import Profile
 
@@ -30,10 +31,11 @@ def register(request):
 
 
 # here we specify that login is required
-@login_required
 # this method redirects the user to their profile page on successful login
+@login_required
 def user_profile(request):
-    return render(request, 'accounts/profile.html',  {'section': 'user_profile'})
+    u = User.objects.get(username=request.user.username)
+    return render(request, 'accounts/profile.html',  {})
 
 
 @login_required

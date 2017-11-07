@@ -75,7 +75,7 @@
                 {% for message in messages %}
                     <li class="{{ message.tags }}">
                         {{ message|safe }}
-                        <a href="{{ request.get_full_path }}" class="close">×</a>
+                        <a href="{{ request.get_absolute_url }}" class="close">×</a>
                     </li>
                 {% endfor %}
             </ul>
