@@ -302,10 +302,11 @@ ul.messages li a.close:hover {
 
 #profile-img-container img {
 	position: relative;
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
+	border: solid 1px #3f3f3f;
 	border-radius: 20%;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 #profile-heading {

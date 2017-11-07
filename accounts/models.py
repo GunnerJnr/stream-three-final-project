@@ -35,4 +35,4 @@ class Profile(models.Model):
 
 
     def __unicode__(self):
-        return 'Profile for user {}'.format(self.user.username)
+        return self.user.username
