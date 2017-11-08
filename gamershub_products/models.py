@@ -14,7 +14,7 @@ class GamersHubProducts(models.Model):
     description: the item's description
     price: the price of the item
     """
-    length=255
+    length = 255
     image_width = 200
     image_height = 200
 
@@ -39,7 +39,7 @@ class GamersHubProducts(models.Model):
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,
             "amount": self.price,
-            "currency": "GBP",
+            "currency": "GB",
             "item_name": self.name,
             "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
             "notify_url": settings.PAYPAL_NOTIFY_URL,

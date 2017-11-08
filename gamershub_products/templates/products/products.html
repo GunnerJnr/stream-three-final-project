@@ -12,7 +12,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Image Thumb</th>
+                    <th>Preview</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Price</th>
@@ -29,7 +29,7 @@
                         {% endif %}
                         <td>{{ product.name }}</td>
                         <td>{{ product.description }}</td>
-                        <td>${{ product.price }}</td>
+                        <td>£{{ product.price }}</td>
                         <td>{{ product.paypal_form.sandbox }}</td>
                     </tr>
                 {% endfor %}
