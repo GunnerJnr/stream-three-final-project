@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import include, url
-from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
+from django.conf import settings
 from .settings import MEDIA_ROOT
+from paypal.standard.ipn import urls as paypal_urls
 from home import views as home_views
+from gamershub_store import views as gamershub_paypal_views
 
 urlpatterns = [
     # add the url to access the admin panel
@@ -33,6 +35,11 @@ urlpatterns = [
 
     # here we want to add the urls from gamersblog app
     url(r'^blog/', include('gamersblog.urls')),
+
+    # gamershub store urls
+    url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
+    url(r'^paypal-return', gamershub_paypal_views.paypal_return),
+    url(r'^paypal-cancel', gamershub_paypal_views.paypal_cancel),
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
