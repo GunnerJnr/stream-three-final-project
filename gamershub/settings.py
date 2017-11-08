@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'disqus',
     'paypal.standard.ipn',
     'gamershub_store',
+    'gamershub_products',
     'django_forms_bootstrap',
     'django.contrib.admin',
     'django.contrib.auth',
