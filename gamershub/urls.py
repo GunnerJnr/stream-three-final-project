@@ -22,6 +22,7 @@ from .settings import MEDIA_ROOT
 from paypal.standard.ipn import urls as paypal_urls
 from home import views as home_views
 from gamershub_store import views as gamershub_paypal_views
+from gamershub_products import views as gamershub_product_views
 
 urlpatterns = [
     # add the url to access the admin panel
@@ -40,6 +41,9 @@ urlpatterns = [
     url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal-return', gamershub_paypal_views.paypal_return),
     url(r'^paypal-cancel', gamershub_paypal_views.paypal_cancel),
+
+    # gamershub products urls
+    url(r'^products/$', gamershub_product_views.all_products, name='products'),
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),

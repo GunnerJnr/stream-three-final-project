@@ -1,25 +1,40 @@
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
+
+<!-- Sets the main site title -->
+{% block title %}
+    Products
+{% endblock %}
+
 {% block content %}
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Image Thumb</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Purchase</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for product in products %}
+<div class="row">
+    <div class="col-md-12" id="product-img-container">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td>{{ product.product_images }}</td>
-                    <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
-                    <td>${{ product.price }}</td>
-                    <td>{{ product.paypal_form.sandbox }}</td>
+                    <th>Image Thumb</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Purchase</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        {% if product.product_images  %}
+                            <td><img class="img-square img-responsive" src="{{ product.product_images.url }}"></td>
+                        {% else %}
+                            <td><img class="img-square img-responsive" src="http://via.placeholder.com/200x200"></td>
+                        {% endif %}
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.description }}</td>
+                        <td>${{ product.price }}</td>
+                        <td>{{ product.paypal_form.sandbox }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

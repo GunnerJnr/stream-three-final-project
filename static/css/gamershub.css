@@ -347,6 +347,20 @@ ul.messages li a.close:hover {
 	color: #ff0000;
 }
 
+/********** Products Page Styling **********/
+#product-img-container {
+	min-width: 100%;
+	text-align: center;
+}
+
+#product-img-container img {
+	position: relative;
+	width: 500px;
+	height: 200px;
+	border: 1px solid #111;
+	margin: auto;
+}
+
 /********** Responsive Breakpoint Design Elements **********/
 
 /* Extra small devices (phones, etc. less than 768px) */
