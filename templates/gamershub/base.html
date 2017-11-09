@@ -47,7 +47,7 @@
                         <li><a href="{% url 'home' %}">Home</a></li>
                         <li><a href="{% url 'blog_post_list' %}">Blog</a></li>
                         <!--<li><a href="#">About</a></li>-->
-                        {% if request.user.is_authenticated %}
+                        {% if user.is_authenticated %}
                             <li><a href="{% url 'products' %}">Store</a></li>
                             <!--<li><a href="#">Forums</a></li>-->
                         {% endif %}
@@ -55,7 +55,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
                             <li><a href="{% url 'user_profile' %}">Profile</a></li>
-                            {% if request.user.is_superuser or request.user.is_admin %}
+                            {% if user.is_superuser or user.is_admin %}
                                 <li><a href="/admin/">Admin</a></li>
                             {% endif %}
                             <li><a href="{% url 'logout' %}">Log Out</a></li>
