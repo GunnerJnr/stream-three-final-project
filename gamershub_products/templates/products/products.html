@@ -8,13 +8,12 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-md-12" id="product-img-container">
+    <div class="col-md-12" id="product-container">
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Preview</th>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <th>Product Name and Description</th>
                     <th>Price</th>
                     <th>Purchase</th>
                 </tr>
@@ -23,14 +22,17 @@
                 {% for product in products %}
                     <tr>
                         {% if product.product_images  %}
-                            <td><img class="img-square img-responsive" src="{{ product.product_images.url }}"></td>
+                            <td><img class="img-square img-responsive product-img" src="{{ product.product_images.url }}"></td>
                         {% else %}
-                            <td><img class="img-square img-responsive" src="http://via.placeholder.com/200x200"></td>
+                            <td><img class="img-square img-responsive product-img" src="http://via.placeholder.com/200x200"></td>
                         {% endif %}
-                        <td>{{ product.name }}</td>
-                        <td>{{ product.description }}</td>
-                        <td>£{{ product.price }}</td>
-                        <td>{{ product.paypal_form.sandbox }}</td>
+                        <td id="product-name-and-description">
+                            <h6>{{ product.name }}</h6>
+                            <hr>
+                            <p>{{ product.description }}</p>
+                        </td>
+                        <td id="product-price">£{{ product.price }}</td>
+                        <td id="product-buy-btn">{{ product.paypal_form.sandbox }}</td>
                     </tr>
                 {% endfor %}
             </tbody>
