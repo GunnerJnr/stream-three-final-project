@@ -31,7 +31,7 @@
                             <hr>
                             <p>{{ product.description }}</p>
                         </td>
-                        <td id="product-price">£{{ product.price }}</td>
+                        <td id="product-price">${{ product.price }}</td>
                         <td id="product-buy-btn">{{ product.paypal_form.sandbox }}</td>
                     </tr>
                 {% endfor %}

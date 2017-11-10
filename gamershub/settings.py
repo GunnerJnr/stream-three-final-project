@@ -29,12 +29,12 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'aa554b9a.ngrok.io' ]
 
 # PayPal Settings
 # SITE_URL = "GAMERSHUB_SITE_URL"
-SITE_URL = 'http://127.0.0.1:8000'
-# PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'  # for testing only
-PAYPAL_NOTIFY_URL = os.environ['GAMERSHUB_PAYPAL_NOTIFY_URL']
+SITE_URL = 'https://127.0.0.1'
+PAYPAL_NOTIFY_URL = 'https://127.0.0.1/pZbHXm5fzvPSHKQZzxcUSSu2Q/'  # for testing only
+# PAYPAL_NOTIFY_URL = os.environ['GAMERSHUB_PAYPAL_NOTIFY_URL']
 PAYPAL_RECEIVER_EMAIL = os.environ['GAMERSHUB_PAYPAL_RECEIVER_EMAIL']
 # PAYPAL_RECEIVER_EMAIL = 'admin@gamershub.uk'
-# PAYPAL_TEST = True  # for testing only
+PAYPAL_TEST = True  # for testing only
 
 # Site ID
 SITE_ID = 2

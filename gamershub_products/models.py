@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import uuid
-from django.db import models
 from django.conf import settings
+from django.db import models
 from paypal.standard.forms import PayPalPaymentsForm
 
 
@@ -39,7 +39,7 @@ class GamersHubProducts(models.Model):
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,
             "amount": self.price,
-            "currency": "GB",
+            "currency": "USD",
             "item_name": self.name,
             "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
             "notify_url": settings.PAYPAL_NOTIFY_URL,
