@@ -38,7 +38,7 @@ urlpatterns = [
     url(r'^blog/', include('gamersblog.urls')),
 
     # gamershub store urls
-    url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
+    url(r'^pZbHXm5fzvPSHKQZzxcUSSu2Q/', include(paypal_urls)),
     url(r'^paypal-return', gamershub_paypal_views.paypal_return),
     url(r'^paypal-cancel', gamershub_paypal_views.paypal_cancel),
 
