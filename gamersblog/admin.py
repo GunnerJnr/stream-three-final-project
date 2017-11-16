@@ -18,13 +18,13 @@ class BlogPostAdmin(admin.ModelAdmin):
     search_fields: create a search bar so we can search the posts
     ordering: specifies the default ordering for the posts
     """
-    list_display = ('post_title', 'post_slug', 'post_author', 'publish', 'post_status')
-    list_filter = ('post_status', 'created_date', 'publish', 'post_author')
-    prepopulated_fields = {'post_slug': ('post_title',)}
+    list_display = ('post_title', 'slug', 'post_author', 'publish')
+    list_filter = ('post_author', 'created_date', 'published_date')
+    prepopulated_fields = {'slug': ('post_title',)}
     raw_id_fields = ('post_author',)
-    date_hierarchy = 'publish'
+    date_hierarchy = 'published_date'
     search_fields = ('post_title', 'post_body')
-    ordering = ['post_status', 'publish']
+    ordering = ['post_author', 'published_date']
 
 
 # Register our BlogPost & BlogPostAdmin to the admin area.
