@@ -1,0 +1,19 @@
+<div class="pagination">
+  <nav aria-label="product-pagination">
+    <ul class="pager">
+        <!-- If there is a previous page to navigate to then display previous link -->
+      {% if page.has_previous %}
+        <li class="previous"><a href="?page={{ page.previous_page_number }}"><span aria-hidden="true">&larr;</span> Previous</a></li>
+      {% endif %}
+
+      <!-- if there is a next page to navigate too then show the next link -->
+      {% if page.has_next %}
+        <li class="next"><a href="?page={{ page.next_page_number }}">Next <span aria-hidden="true">&rarr;</span></a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  <!--Here we display the current page of however many pages exist -->
+  <span class="pager">
+    Page {{ page.number }} of {{ page.paginator.num_pages }}
+  </span>
+</div>

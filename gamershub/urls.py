@@ -43,7 +43,7 @@ urlpatterns = [
     url(r'^paypal-cancel', gamershub_paypal_views.paypal_cancel),
 
     # gamershub products urls
-    url(r'^products/$', gamershub_product_views.all_products, name='products'),
+    url(r'^products/$', gamershub_product_views.products_list, name='products'),
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),

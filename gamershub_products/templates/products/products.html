@@ -37,6 +37,9 @@
                 {% endfor %}
             </tbody>
         </table>
+        <div class="col-md-12">
+            {% include "products/productlistpagination.html" with page=products %}
+        </div>
     </div>
 </div>
 {% endblock %}
