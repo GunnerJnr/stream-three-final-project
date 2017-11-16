@@ -12,20 +12,31 @@ from .forms import BlogPostForm
 @login_required
 def new_post(request):
     if request.method == "POST":
-        form = BlogPostForm(request.POST or None, request.FILES)
+        form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.post_author = request.user
-            post_title = form.cleaned_data['post_title']
-            if BlogPost.objects.filter(post_title=post_title).exists():
-                messages.error(request, 'title already exists')
-            else:
-                post = form.save()
-                messages.success(request, 'post added successfully')
+            post = form.save()
+            messages.success(request, 'post added successfully')
             return redirect(post.get_absolute_url())
     else:
         form = BlogPostForm()
     return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
+
+
+@login_required
+def edit_post(request, day, month, year, pk, post_slug):
+	post = get_object_or_404(BlogPost, post_slug=post_slug, pk=pk, post_status='published', publish__year=year, publish__month=month, publish__day=day)
+	if request.method == "POST":
+		form = BlogPostForm(request.POST, request.FILES, instance=post)
+		if form.is_valid():
+			post = form.save(commit=False)
+			post.post_author = request.user
+			post = form.save()
+			return redirect(post.get_absolute_url())
+	else:
+		form = BlogPostForm(instance=post)
+	return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
 
 
 # define a view to return a list of our blog posts with the 'published' status
@@ -46,8 +57,8 @@ def blog_post_list(request):
 
 
 # define a view that will return a single blog post
-def blog_post_detail(request, day, month, year, pk, slug):
-    post = get_object_or_404(BlogPost, post_slug=slug,
+def blog_post_detail(request, day, month, year, pk, post_slug):
+    post = get_object_or_404(BlogPost, post_slug=post_slug,
                              pk=pk,
                              post_status='published',
                              publish__year=year,

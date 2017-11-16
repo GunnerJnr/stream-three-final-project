@@ -77,7 +77,7 @@ class BlogPost(models.Model):
         ordering = ('-publish',)
 
         def __unicode__(self):
-            return self.title
+            return self.post_title
 
     # fetches the post based on a slug
     @models.permalink
@@ -87,7 +87,7 @@ class BlogPost(models.Model):
                                 'month': self.publish.strftime('%m'),
                                 'year': self.publish.year,
                                 'pk': self.pk,
-                                'slug': self.post_slug,
+                                'post_slug': self.post_slug,
                                 })
 
     # auto generates a slug by overriding the model save method, sets self.slug to
