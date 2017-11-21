@@ -120,4 +120,4 @@ STATICFILES_DIRS = (
 # Media Root - serve the media files uploaded by users
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
