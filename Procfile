@@ -1,0 +1,1 @@
+web: gunicorn gamershub.wsgi:application

@@ -13,16 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.conf.urls import include, url
-from django.conf.urls.static import static
-from django.views.static import serve
 from django.conf import settings
-from .settings import MEDIA_ROOT
+from django.conf.urls import include, url
+from django.contrib import admin
+from django.views.static import serve
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 from paypal.standard.ipn import urls as paypal_urls
-from home import views as home_views
 from gamershub_store import views as gamershub_paypal_views
 from gamershub_products import views as gamershub_product_views
+from home import views as home_views
+from settings.base import MEDIA_ROOT
 
 urlpatterns = [
     # add the url to access the admin panel
@@ -50,4 +51,4 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += staticfiles_urlpatterns()

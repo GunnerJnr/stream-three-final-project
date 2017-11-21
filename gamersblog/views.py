@@ -55,7 +55,7 @@ def blog_post_list(request):
     :param request:
     :return:
     """
-    object_list = BlogPost.objects.all()
+    object_list = BlogPost.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
@@ -83,3 +83,27 @@ def blog_post_detail(request, slug):
     post.post_views += 1  # increment the post views by 1, each time one is seen
     post.save()
     return render(request, 'gamersblog/blogposts/blogpostdetail.html', {'post': post})
+
+
+# 
+def most_viewed(request):
+    """
+    we wnat to get and list the top five most popular
+    blog posts and display them in blogpost.html on clicking the
+    link in the navigation menu
+    :param request:
+    :return:
+    """
+    top_posts = BlogPost.objects.filter(published_date__lte=timezone.now()).order_by('-post_views')[:10]
+    # add pagination to the blog page, we will display 3 posts per page
+    paginator = Paginator(top_posts, 3)  # 3 posts in each page
+    page = request.GET.get('page')
+    try:
+        blog_posts = paginator.page(page)
+    except PageNotAnInteger:
+        # if the page is not an integer deliver the first page
+        blog_posts = paginator.page(1)
+    except EmptyPage:
+        # if page is out of range deliver the last page of results
+        blog_posts = paginator.page(paginator.num_pages)
+    return render(request, 'gamersblog/blogposts/blogpostlist.html', {'page': page, 'blog_posts': blog_posts})

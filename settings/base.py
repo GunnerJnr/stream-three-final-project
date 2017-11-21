@@ -10,10 +10,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['GAMERSHUB_SECRET_KEY']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', u'0.0.0.0']
 
 # Site ID
 SITE_ID = 2
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 # Application definition
 
@@ -99,27 +101,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-gb'
-TIME_ZONE = 'GB'
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
-# SMTP Email Settings
-# https://docs.djangoproject.com/en/1.11/topics/email/#django.core.mail.backends.smtp.EmailBackend
-
-# EMAIL_HOST = 'GAMERSHUB_MAIL_HOST'
-# EMAIL_HOST_USER = 'GAMERSHUB_EMAIL_ADDRESS'
-# EMAIL_HOST_PASSWORD = 'GAMERSHUB_EMAIL_PASSWORD'
-# EMAIL_PORT = 465  # default SMTP port 587
-# EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when
-# talking to the SMTP server
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = ''
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -128,4 +120,4 @@ STATICFILES_DIRS = (
 # Media Root - serve the media files uploaded by users
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
