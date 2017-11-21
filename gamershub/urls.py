@@ -21,7 +21,7 @@ from paypal.standard.ipn import urls as paypal_urls
 from gamershub_store import views as gamershub_paypal_views
 from gamershub_products import views as gamershub_product_views
 from home import views as home_views
-from settings.base import MEDIA_ROOT
+from settings.base import MEDIA_ROOT, STATIC_ROOT
 
 urlpatterns = [
     # add the url to access the admin panel
@@ -48,5 +48,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 
     # Static Root urls
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
 ]
