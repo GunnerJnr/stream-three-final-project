@@ -1,11 +1,12 @@
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
 
 {% block content %}
-    <h1>You've cancelled the purchase of this item!</h1>
+<div class="row" id="successful-purchase-page-container">
+    <div class="col-md-12">
+            <h1>Sorry, but you have cancelled the purchase of this item</h1>
 
-    <h2>POST</h2>
-    {{ post }}
-
-    <h2>GET</h2>
-    {{ get }}
+        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-cancel/game-over.jpg" %}" alt="purchase unsuccesful">
+    </div>
+</div>
 {% endblock %}

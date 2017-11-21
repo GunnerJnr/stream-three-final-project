@@ -381,6 +381,18 @@ th, tr {
 	text-align: center;
 }
 
+#successful-purchase-page-container {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#successful-purchase-page-container img {
+	width: 800px;
+	height: 600px;
+	margin: 20px auto;
+	vertical-align: middle;
+}
+
 /********** Responsive Breakpoint Design Elements **********/
 
 /* Extra small devices (phones, etc. less than 768px) */

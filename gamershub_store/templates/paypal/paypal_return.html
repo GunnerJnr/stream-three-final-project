@@ -1,11 +1,12 @@
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
 
 {% block content %}
-    <h1>Thanks for buying my item :)</h1>
+<div class="row" id="successful-purchase-page-container">
+    <div class="col-md-12">
+        <h1>Thank You! Your purchase was successful.</h1>
 
-    <h2>POST</h2>
-    {{ post }}
-
-    <h2>GET</h2>
-    {{ get }}
+        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-return/thank-you.png" %}" alt="purchase succesful">
+    </div>
+</div>
 {% endblock %}
