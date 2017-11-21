@@ -11,7 +11,7 @@ DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 
 [Installation](#installation)
 
-[Usage](#usage#contributing)
+[Usage](#usage)
 
 [Credits](#credits)
 
