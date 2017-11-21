@@ -17,7 +17,7 @@ class EmailAuth(object):
                 return user
 
         except User.DoesNotExist:
-            raise None
+            return None
 
     def get_user(self, user_id):
         """
