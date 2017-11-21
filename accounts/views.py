@@ -34,7 +34,7 @@ def register(request):
 # this method redirects the user to their profile page on successful login
 @login_required
 def user_profile(request):
-    return render(request, 'accounts/profile.html')
+    return render(request, 'accounts/profile.html' {'section': 'profile'})
 
 
 @login_required
