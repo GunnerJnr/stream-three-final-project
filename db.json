@@ -1,0 +1,391 @@
+[
+{
+    "model": "gamershub_products.gamershubproducts",
+    "pk": 1,
+    "fields": {
+        "product_images": "gamershub/product_images/16/11/2017/boxart.jpg",
+        "name": "Grand Theft Auto 5",
+        "description": "Los Santos: a sprawling sun-soaked metropolis full of self-help gurus, starlets and fading celebrities, once the envy of the Western world, now struggling to stay afloat in an era of economic uncertainty and cheap reality TV.\r\n\r\nAmidst the turmoil, three very different criminals plot their own chances of survival and success: \r\nFranklin, a street hustler looking for real opportunities and serious money. \r\n\r\nMichael, a professional ex-con whose retirement is a lot less rosy than he hoped it would be.\r\n\r\nTrevor, a violent maniac driven by the chance of a cheap high and the next big score. \r\n\r\nRunning out of options, the crew risks everything in a series of daring and dangerous heists that could set them up for life.\r\n\r\nThe biggest, most dynamic and most diverse open world ever created, Grand Theft Auto V blends storytelling and gameplay in new ways as players repeatedly jump in and out of the lives of the game\u2019s three lead characters, playing all sides of the game\u2019s interwoven story.\r\n\r\nAll the classic hallmarks of the groundbreaking series return, including incredible attention to detail and Grand Theft Auto\u2019s darkly humorous take on modern culture, alongside a brand new and ambitious approach to open world multiplayer.",
+        "price": "59.99"
+    }
+},
+{
+    "model": "gamershub_products.gamershubproducts",
+    "pk": 2,
+    "fields": {
+        "product_images": "gamershub/product_images/16/11/2017/custom-controller.jpg",
+        "name": "Custom Gaming Controller",
+        "description": "Design your own controller and show of your true gaming fines to all your friends, make them jealous while playing your games. This custom controller will make you too proud to want to put it down, so in essence will help you become a better gamer, as you will be spending longer playing the games you love.",
+        "price": "34.99"
+    }
+},
+{
+    "model": "gamershub_products.gamershubproducts",
+    "pk": 3,
+    "fields": {
+        "product_images": "gamershub/product_images/16/11/2017/punisher.jpg",
+        "name": "Punisher T-Shirt",
+        "description": "Ever wanted to be 'The Punisher' ? \r\n\r\nWell now you can with this amazing Punisher branded T-Shirt.",
+        "price": "19.99"
+    }
+},
+{
+    "model": "gamershub_products.gamershubproducts",
+    "pk": 4,
+    "fields": {
+        "product_images": "gamershub/product_images/16/11/2017/mug.jpg",
+        "name": "Novelty Mug",
+        "description": "With two handles mimicking a game controller and hand painted buttons, this KOVOT \u201cLevel Complete\u201d Gamer Mug is a must have for any true gamer. \u201cLevel Complete\u201d printed on the inside bottom of the mug. Makes a great gift for any gamer. Mug holds up to 14oz. Hand wash recommended.",
+        "price": "9.99"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$4i3qXbXO5qou$yKAhsNIB2uua/T/uBXtkeoXbKUaIV+T3ZX7E/FevKH0=",
+        "last_login": "2017-11-21T13:52:55.408Z",
+        "is_superuser": true,
+        "username": "gunnerjnr",
+        "first_name": "David",
+        "last_name": "Gunner Jnr",
+        "email": "gunnerjnr@live.co.uk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2017-11-16T14:28:57.647Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "6z6ya6rrep7a85wckdw64fm6kabqwa7l",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-11-30T17:55:00.525Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8e3ubu45c7gti5zjyhnuoz54d2f2x6k1",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-12-04T21:03:21.508Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "92oa9bxbrc236jtaf7yo6m3rlxy3tstz",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-12-05T13:47:44.003Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "b651a8lb49fl0xln25u36xtlxe3x4mhl",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-11-30T14:29:51.919Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ikwwr3zcway4gzcv9clu6mb7p9u9p1sb",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-12-05T13:52:55.510Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-11-16T14:32:42.802Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "accounts",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "gunnerjnr",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-11-16T14:36:06.424Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "1",
+        "object_repr": "Grand Theft Auto 5",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-11-16T14:38:37.155Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "2",
+        "object_repr": "Custom Gaming Controller",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-11-16T14:39:39.060Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "3",
+        "object_repr": "Punisher T-Shirt",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-11-16T14:48:22.120Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "1",
+        "object_repr": "Welcome To Gamers Hub",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-11-16T14:49:18.730Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "1",
+        "object_repr": "Welcome To Gamers Hub",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"post_images\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-11-16T14:59:23.640Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "2",
+        "object_repr": "Welcome To The Gamers Hub",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2017-11-16T17:16:25.620Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "4",
+        "object_repr": "Novelty Mug",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2017-11-16T17:16:49.169Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "4",
+        "object_repr": "Novelty Mug",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"product_images\"]}}]"
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 1,
+    "fields": {
+        "post_title": "Welcome To Gamers Hub",
+        "slug": "welcome-to-gamers-hub",
+        "post_body": "Welcome to Gamers Hub, we are glad you decided to join us.\r\n\r\nGamers Hub is a social application for all your gaming needs. It will fill your brain so full of gaming knowledge that you will probably end up with synaptic leakage!\r\n\r\nIf you have not signed up yet, we highly recommend doing so, the reason for this is because there are some cool hidden parts of the site that you only get through being a signed up member. Don't worry though, I know what you're thinking..\r\n\r\n\"Oh great does that mean it's going to be a subscription based sign up\"? \r\n\r\nWell, the answer is actually no! It is completely FREE to sign up and become a member.\r\n\r\n\"So why do you hide some site features then if its free for everybody to sign up\"?\r\n\r\nThe simple answer is basically to keep the spammers out! But I guess in some sense it's also more for the community, we don't want people who can't be bothered to sign up enjoying all the goodies of those can be bothered to make the effort, we have lots of exciting things in store for you as the site grows.\r\n\r\n\"What might those be\"? \r\n\r\nWe will have a simple static home page, this will just basically welcome users to the site and explain a little bit about the site and why it's worth signing up! There will also be a simple about us page, this as the title may suggest will tell you more about us, (the site devs and staff). There will also be a blog, this will deliver you content and reviews on past, present and upcoming games. You will be able to join in with the community and comment on the posts voicing your own opinions and views. Just one rule, keep it clean.\r\n\r\nAt present we are undecided on forums for you guys ? Perhaps you can use the comment system below and let us know your views on this ?\r\n\r\nLast but not least, we will also have a storefront, this will have items to buy such as custom controllers for your consoles, gaming keyboards and gaming mouse, desktop cases with custom designs, all the latest and greatest game releases, (some with applied discount), t-shirts, mugs, mouse mats, and many more items to build up that geek den full of gaming attire.\r\n\r\nThank you for taking the time to read this post and we hope you will sign up and enjoy your stay for a very long.\r\n\r\nBye for now from the Gamers Hub Team!\r\nEnjoy.",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T14:40:07Z",
+        "published_date": "2017-11-16T16:40:22.068Z",
+        "post_images": "users/blog_post_images/16/11/2017/maxresdefault.jpg",
+        "post_views": -8,
+        "post_tags": "Gamers Hub, Welcome"
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 3,
+    "fields": {
+        "post_title": "Xbox 360 - Gaming Now",
+        "slug": "xbox-360-gaming-now",
+        "post_body": "By: Ted Belfour\r\nWith a variety of gaming consoles available today, all produced by well known and high profile corporations, it can be difficult to know which one is the best to invest your hard earned money in. The choice can become even more overwhelming as technology marches on relentlessly and consoles seem to change as quickly as you can turn around, so if you are having some trouble making a choice, here are some thoughts that might just help you out. \r\n\r\nThe average lifespan, it is estimated, of a games console is about five years. That is not to say that your still working gaming equipment will suddenly and inexplicably combust after a five year period, rather that at about that time, manufacturers typically introduce a more technologically advanced version of their former console. If being at the cutting edge of technology is important to you, then purchasing a console at the start of this standard five-year period is a wise move. \r\n\r\nThat's partly why the Xbox 360 is a great choice right now. Released at the end of 2005, the technology it comprises is absolutely cutting edge, making it, according to a whole host of reviewers, the best buy available. With a wide range of features, including high quality online gaming capability and HDTV compatibility, the Xbox 360 offers a fantastic all round gaming experience. And though this version of the Xbox surpassed its predecessor after only four years, the lifespan of the previous console has been extended to a certain extent, as over two hundred of the most popular Xbox games are compatible with the new 360 version. \r\n\r\nSome gamers are holding off on purchasing the Xbox 360. Why? Because the PlayStation 3 is due out sometime this year. But while most experts agree that the PS 3 is likely to contain more technological innovation that the already released Xbox 360, the PlayStation is likely to cost up to $200 more. For the extra investment, the PS 3 will include a Blu-ray high definition DVD player - the down side of this, however, is that movies are not currently available in this format, though they are likely to surface within the next two years. \r\n\r\nThere is little question that the upcoming PlayStation will be somewhat technologically superior to the Xbox 360, but with a release date still to be confirmed, many gamers prefer not to wait to enjoy gaming of the highest quality. And with technology that will be useless to the majority of consumers for the next couple of years, for many gamers, the PlayStation 3 simply isn't worth the wait. So enjoy the moment in all its glory, and go for an Xbox 360.\r\n\r\nAuthor Bio\r\nDave is the owner of myxbox360movies.info and xbox360launchdate.info websites that provide information on xbox 360\r\n\r\nArticle Source: http://www.ArticleGeek.com - Free Website Content\r\nArticle Link: http://www.articlegeek.com/games/xbox_articles/xbox-360-gaming-now.htm",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T15:10:23.747Z",
+        "published_date": "2017-11-16T16:40:22.226Z",
+        "post_images": "users/blog_post_images/16/11/2017/Xbox-360-Consoles-Infobox.png",
+        "post_views": 3,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 4,
+    "fields": {
+        "post_title": "Set Up Your Own Online Games Business",
+        "slug": "set-up-your-own-online-games-business",
+        "post_body": "Set Up Your Own Online Games Home Business\r\nBy: Geoff Kitkat\r\nOne of the best bets for starting an online home business is an on line gaming site. These sites are typically very easy to set up and ensure almost immediate success, thanks to the popularity of online gaming. Here's a quick guide to help you start your own online gaming home business.\r\n\r\n1. Research popular online games - Most online games are available in flash format. Try to find a good mix of popular games that you can add to your own site. If you want to start fresh, you can hire a developer to design games that will be unique to your own business.\r\n\r\n2. Set up a site - It is a good idea to use a content management system for your new online home business. A CMS will make it very easy to build an attractive site that will be appealing to gamers. As a bonus, many popular CMS systems are free and feature games that are already built in and ready to go.\r\n\r\n3. Start promoting your site - Once you have your site ready to go, you can begin promoting your online home business gaming site. One of the best places to start is a gaming community that is centered around the type of games that you offer. Free games are always popular and they are a great way to attract new players.\r\n\r\n4. Keep the games coming - Don't fall into the trap of having old, stagnant games. Stay on top of the market by finding new games and designing unique games to fit your online home business. The more games you offer, the better your chances are of success.\r\n\r\n5. Stay on top of trends - Gaming trends can change at the drop of a hat. Stay on top of the market by getting involved in the gaming community.\r\n\r\n6. Offer a premium area - This is how you can really start making money for your online home business. Offer special games that are only available to subscribers, or offer them the ability to challenge one another to games for a fee. This is a great way to offset your bandwidth costs and make extra money.\r\n\r\nAn online gaming site is a great place to start for an online home business. The set-up costs are minimal and it is a niche that has been consistently popular for many years. With proper management, you could be the next great gaming portal. \r\n\r\nLook caerfully at the optiosn available. You should look for a system that will enabel you to start with a free or quite low cost option - get your game site first, so you can judge the quality and attractiveness of the games. You then need an option that allows you to upgrade your position so you can start to promote yoru own games, and even host high ticket tournaments. \r\n\r\nof course, the really best opportunities will also have the opportunity for you to set up a full multilevel marletin opportunity, so you can easily duplicate wha you have apready been doing.\r\n\r\nYou never know, following that route, you could either  play games for money, or even make money on the game...\r\n\r\nAuthor Bio\r\nGeoff Kitkat has been involved in internet marketing and social networking projects for several years. he has built up a great on-line business out of uVme online games. Watch the video and get a free report by visiting www.uvmeonlinegames.com.\r\n\r\nArticle Source: http://www.ArticleGeek.com - Free Website Content\r\nArticle Link: http://www.articlegeek.com/games/online_game_articles/23274-setupyourownonl.htm",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T15:12:41.051Z",
+        "published_date": "2017-11-16T16:40:22.326Z",
+        "post_images": "users/blog_post_images/16/11/2017/gaming.jpg",
+        "post_views": 2,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 5,
+    "fields": {
+        "post_title": "RuneScape Tips",
+        "slug": "runescape-tips",
+        "post_body": "RuneScape Tips - Basic Essentials You Must Know\r\nBy: Jeremy Tang\r\nBefore studying the meat under RuneScape tips, it's a good idea to talk about the game itself. RuneScape is a MMORPG (Google it if you do not know what it means) in which people from all other the world engage themselves in epic battles. You face other humans and computer controlled opponents that all compete for fame and money. The first thing you do when entering the fascinating world of RuneScape is to select a name.\r\n\r\nSelecting your nickname in a wise manner is an essential tip in the game. This will be your screen identity for the rest of the game and you cannot change it thereafter. Never give your real name to anyone, hey for some reason they give you the option of choosing a handle you can use as an identity. There are many hackers in the RuneScape world and giving them your real name will make things much easier for them. On to more RuneScape tips.\r\n\r\nYou have the freedom to adventure from a choice of various virtual worlds. A good tip is to select a world that is physically located near your geographical region. This way you can enjoy higher speeds and avoid a lagging connection. If you are going to share any info on RuneScape, share the country, this makes it easier to find servers that you might not be aware of, but someone else is.\r\n\r\nIn RuneScape there is a list called the ignore list. If anyone seems to be annoying you till the cows come home add him to this list and they shall be blacklisted in your interface. RuneScape tips are scattered all over the internet. Whether you are a child or an adult, there's tons of fun to have with RuneScape!\r\n\r\nAuthor Bio\r\nJeremy Tang can take you to the next level of gaming expertise by showing you an ethical RuneScape hack. Learn more about the RuneScape online game and become an online legend.\r\n\r\nArticle Source: http://www.ArticleGeek.com - Free Website Content\r\nArticle Link: http://www.articlegeek.com/games/online_game_articles/runescape-tips-you-must-know.htm",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T15:14:46.273Z",
+        "published_date": "2017-11-16T17:21:30.482Z",
+        "post_images": "users/blog_post_images/16/11/2017/RS3_Banner.jpg",
+        "post_views": 4,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 6,
+    "fields": {
+        "post_title": "Gaming Has a Positive Side",
+        "slug": "gaming-has-a-positive-side",
+        "post_body": "Gaming Has a Positive Side\r\nBy: Paul Wilson\r\nGaming is not just about revenue, addiction, gamers, and so on. A game being an expression of technology, developing cultural norms, and a world wide phenomenon that transcends all boundaries, becomes a source of study.\r\n\r\nGames are not mere toys, they promote:\r\n\r\n\r\nInformation literacy. Players download text files, make notes, they also take \"screen shots\" of the game and upload it with their comments. A group then examines the suggestions and discussions emerge on strategies as well as required improvements or changes.  Knowledge creation and rapid sharing is common to digital spaces. People of all ages and ethnicities from around the world pool their understanding and resources to solve problems.\r\nCuriosity and a thirst to find out more. Leading to the development of learning. Players pool thoughts and resources and try and work out how different elements function. Individual skills are sharpened using pooled resources.\r\nDevelopment of well developed research skills and the use of a huge mind boggling variety of resources. For games like \"Lineage\" a player would need to become a member of a 100 or more strong clan and in order to protect his castle or carry out sieges he or she needs to manipulate text, images, research equipment use, draw out maps, manage resources, design strategies, create and maintain treasuries, write down facts, theories, and proposals, as well as design workable models.\r\nSocial interaction and exchange of ideas and thoughts especially in multiplayer online games.\r\nAn understanding of world history. A few games are based on civilizations and take players as far back as 4000 BCE leading them through different developmental stages of the world with the creation of cities, temples, libraries, granaries, railroads and more. Many games are map based and re-enact actual events that have taken place in the world.\r\nThe setting up of virtual learning to explore new game related technologies, new gaming elements, and modes of play with peers. In fact, \"Civilization\" aficionados created \"Give peace a Chance\" in which players learn about wining by using non violence.\r\nInterpretation of data and lateral thinking. Players spend long hours absorbed in researching information, searching high and low for tips, cheats, and tricks, developing what are known as walkthroughs.\r\nCuriosity and sets the wheels of the mind clicking leading to innovations in design, software programming, graphics, strategies, and more.\r\nTeam work, a sharing of ideas, as well as collective problem solving.\r\nCompetitiveness a thirst to succeed and win.\r\n\r\n\r\nIn depth research has proven that gaming plays a role in increasing self esteem, and is motivational in many ways. Children who play games perform better at comprehension, spelling, and math.  \r\n\r\nGee, Squire, and Stienkuehler, University of Wisconsin-Madison professors, are studying learning through game playing and the advantages of gaming over traditional teaching tools truly believe that gaming has woven within its matrix important learning technologies. Learning in the e-learning world of virtual gaming is hands on, interactive, has no restrictions or boundaries, promotes collaborative working, problem solving, creating a new generation of leaders.\r\n\r\nAuthor Bio\r\nPaul Wilson is a freelance writer for www.1888Discuss.com/online-games/, the premier REVENUE SHARING discussion forum for Online Games Forum including topics on find free online games, free download games, suggest your new game and more. He also freelances for the premier Free Online Games Site www.1888FreeOnlineGames.com\r\n\r\nArticle Source: http://www.ArticleGeek.com - Free Website Content\r\nArticle Link: http://www.articlegeek.com/games/online_game_articles/gaming-has-positive-side.htm",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T17:21:04.899Z",
+        "published_date": "2017-11-21T18:11:03.377Z",
+        "post_images": "users/blog_post_images/16/11/2017/mario.jpg",
+        "post_views": 8,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 7,
+    "fields": {
+        "post_title": "Best Practices For A Warrior In WOW",
+        "slug": "best-practices-for-a-warrior-in-wow",
+        "post_body": "Best Practices For A Warrior In World Of Warcraft\r\nBy: Hunter Crowell\r\nThe Job of the Warrior is to get relentlessly beat upon.  While there are a handful of classes in World of Warcraft that have the capability to tank, the Warrior stands above them all with more talents, abilities and equipment geared for the role.  In a group setting, if the warrior dies first, they died knowing they did their job to the best of their abilities.  Some players are better at holding the agro from the monsters than others, but it's a common adage that effective tanking is 10% gear, 10% talent build and 80% skill.  \r\n\r\nA large part of effective tanking is outside the hands of the warrior.  One common fallacy held by the players of World of Warcraft is that if a tank loses control of a monster, he's a bad tank.  While this very well could be true, the case could actually be quite the opposite.  There is a limited number of things a Warrior can do to generate threat on a creature.  Assuming that the skill, talents build are in place and the gear collected, he can build a lot of threat.  There is an upper limit to the threat obtainable.  When a character is assigned to tank, he will not be generating the majority of his threat from dealing damage to a target.  Outside of the Warrior class, dealing damage is the best way to increase threat on a monster.  Over a period of time, the threat from damage caused by another character can overcome the threat generated by the tank.  In such a situation, as long as the warrior was using all his abilities to their maximum effectiveness, there's nothing else he could have done to keep the focus of the enemy.  A party who knows this, and can manage their own threat makes the tanks life that much easier.  At lower levels, the group tends to blame the tank if he loses control of the monster.  In the end game forty man instances, the smart groups tend to blame the player who pulled the target for not managing his own threat.\r\n\r\nWarriors are very dependant on the sort of gear they use.  If the goal is to play the higher intensity raid instances, a lot of time will be spent gathering up the equipment.  For a tank, there are three main things to look at while gathering gear: Stamina, Armor Rating, and Defense.  Stamina gives the character ten hit points per point.  That may not seem like a lot, but just like pennies in a piggy back, it starts adding up.  Armor Rating lowers the incoming damage percentage.  Defense ups the skill of the same name, and lowers the chance that enemies will critically hit the tank by a percentage point for every twenty five points of defense.  Thankfully, World of Warcraft offers many different dungeons to crawl in order to gather equipment with all of these perks.  On epic pieces of armor, players will find bonuses to blocking skill or dodge percentages, and those are nice too, but those will only come after time spent tanking.  There will be a long time when the characters will be relying on uncommon and rare equipment that is much easier to obtain.\r\n\r\nOf the 51 talent points World of Warcraft offers its players, eighteen of those should be dedicated to the protection tree.  For a tank to excel at his job, it is in his best interest to send points on the talents Defiance, Toughness and Last Stand.  Neither five point talent on the first tier of talents a warrior can access truly outdoes the other, one raises the chance to block with a shield, the other raises the characters natural defense.  Both are good options, yet not required for optimum tanking.  On the second tier, five points in Toughness gives you ten percent more armor contribution, and at the high armor ratings a warrior can achieve this talent can decrease all incoming damage by up to five percent.  Also on tier two is the Improved Bloodrage talent.  This two point talent is useful, but not required to tank.  It is required to gain access to the tier three talent Last Stand.  Last stand increases the warriors current and maximum hit points by thirty percent for twenty seconds, great for the times when that heal is coming just a second too late.  Lastly, the Defiance talent raises the threat generated by the warrior by fifteen percent.  Without all these talents, the warrior is not able to tank to the best of the class's ability.\r\n\r\nThe gear is in place, the talent build is good, but the most important thing to tank effectively is the skill.  Its not hard to tank.  It just takes knowledge.  Sunder Armor is the staple of every tanks retinue.  It is the most efficient way to gather rage early in a fight, and it makes the enemy easier to kill by lowering its armor rating.  Another ability widely used is Heroic Strike.  Some tanks use these two abilities and they manage to control the monster.  In a prolonged fight, this will not be enough.  There are three abilities other than sunder armor that allow the tank to gain as much agro as possible.  Shield block, while not an threat generating ability in itself, it guarantees a block, which in turn allows the tank to use the Revenge ability.  Revenge is the lowest cost and highest threat generating ability in the game.  Finally, Shield Bash, a high threat producing ability used primarily to stop a spell caster from casting can be used liberally on non-magical foes to generate high amounts of threat.  Each of these abilities should be used when they are cooled down and available.  Once the basics of tanking are understood, each individual player can add their own flavor to the game and improve on their own abilities.\r\n\r\nAuthor Bio\r\nHunter Crowell is a researcher, avid online gamer, and creator of Buy WOW Gold A site that helps players find the cheapest place to buy their gold.\r\n\r\nArticle Source: http://www.ArticleGeek.com - Free Website Content\r\nArticle Link: http://www.articlegeek.com/games/online_game_articles/world-of-warcraft-warrior-best-practices.htm",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-16T17:53:27.663Z",
+        "published_date": "2017-11-16T17:53:43.599Z",
+        "post_images": "users/blog_post_images/16/11/2017/game-logo-wow.png",
+        "post_views": 3,
+        "post_tags": null
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "gunnerjnr"
+        ],
+        "date_of_birth": "1984-03-29",
+        "profile_image": "users/profile_images/16/11/2017/boxart.jpg",
+        "about_me": "I am Dave. Hello!",
+        "fave_game": "Doom",
+        "facebook_url": "https://facebook.com/david.gunner.jnr",
+        "github_url": "https://github.com/gunnerjnr",
+        "twitter_url": "https://twitter.com/gunnerjnr84",
+        "google_plus_url": "https://plus.google.com/+DavidGunnerJnr",
+        "youtube_url": "https://youtube.com/djwikked24",
+        "personal_site_url": "https://gunnerjnr.uk"
+    }
+}
+]
