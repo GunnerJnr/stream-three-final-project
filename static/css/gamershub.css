@@ -381,12 +381,14 @@ th, tr {
 	text-align: center;
 }
 
-#successful-purchase-page-container {
+#successful-purchase-page-container,
+#unsuccessful-purchase-page-container {
 	margin: 0 auto;
 	text-align: center;
 }
 
-#successful-purchase-page-container img {
+#successful-purchase-page-container img,
+#unsuccessful-purchase-page-container img {
 	min-width: 800px;
 	min-height: 600px;
 	margin: 20px auto;
