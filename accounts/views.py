@@ -12,12 +12,12 @@ from accounts.models import Profile
 # this method handles user registration
 def register(request):
     if request.method == 'POST':
-        user_form = UserRegisterForm(request.POST)
+        user_form = UserRegisterForm(request.POST or None)
         if user_form.is_valid():
             # Create a new 'User' object
             new_user = user_form.save(commit=False)
             # Set the password to the users chosen password
-            new_user.set_password(user_form.cleaned_data['password1'])
+            new_user.set_password(user_form.cleaned_data['password'])
             # save the new User object
             new_user.save()
             # create the users profile
