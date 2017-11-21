@@ -17,11 +17,13 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.static import serve
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
 from paypal.standard.ipn import urls as paypal_urls
 from gamershub_store import views as gamershub_paypal_views
 from gamershub_products import views as gamershub_product_views
 from home import views as home_views
-from settings.base import MEDIA_ROOT, STATIC_ROOT
+from settings.base import MEDIA_ROOT
 
 urlpatterns = [
     # add the url to access the admin panel
@@ -46,7 +48,7 @@ urlpatterns = [
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-
-    # Static Root urls
-    url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT}),
 ]
+
+if settings.DEBUG:
+    urlpatterns += staticfiles_urlpatterns()
