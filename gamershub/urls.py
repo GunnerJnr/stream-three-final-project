@@ -48,6 +48,9 @@ urlpatterns = [
 
     # Media Root urls
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+
+    # Static Root urls
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT,}),
 ]
 
 if settings.DEBUG:
