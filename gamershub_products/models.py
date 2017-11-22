@@ -5,11 +5,6 @@ from django.db import models
 from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
 
-if settings.DEBUG:
-    from settings.dev import PAYPAL_NOTIFY_URL, PAYPAL_RECEIVER_EMAIL, SITE_URL
-else:
-    from settings.staging import PAYPAL_NOTIFY_URL, PAYPAL_RECEIVER_EMAIL, SITE_URL
-
 
 # Create your models here.
 class GamersHubProducts(models.Model):
@@ -41,15 +36,27 @@ class GamersHubProducts(models.Model):
         return_url: where to return a customer after the payment process is complete
         cancel_url: where to return the customer if they choose to cancel the payment process
         """
-        paypal_dict = {
-            "business": PAYPAL_RECEIVER_EMAIL,
+        if settings.DEBUG:
+            paypal_dict = {
+            "business": settings.dev.PAYPAL_RECEIVER_EMAIL,
             "amount": self.price,
             "currency": "USD",
             "item_name": self.name,
             "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
-            "notify_url": PAYPAL_NOTIFY_URL,
-            "return_url": "%s/paypal-return" % SITE_URL,
-            "cancel_return": "%s/paypal-cancel" % SITE_URL
+            "notify_url": settings.dev.PAYPAL_NOTIFY_URL,
+            "return_url": "%s/paypal-return" % settings.dev.SITE_URL,
+            "cancel_return": "%s/paypal-cancel" % settings.dev.SITE_URL
+        }
+        else:
+            paypal_dict = {
+            "business": settings.staging.PAYPAL_RECEIVER_EMAIL,
+            "amount": self.price,
+            "currency": "USD",
+            "item_name": self.name,
+            "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
+            "notify_url": settings.staging.PAYPAL_NOTIFY_URL,
+            "return_url": "%s/paypal-return" % settings.staging.SITE_URL,
+            "cancel_return": "%s/paypal-cancel" % settings.staging.SITE_URL
         }
 
         return PayPalPaymentsForm(initial=paypal_dict)
