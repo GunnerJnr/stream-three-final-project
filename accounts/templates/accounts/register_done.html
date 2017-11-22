@@ -16,12 +16,6 @@
                 Your account has been successfully created.
                 You are now able to <a href="{% url 'login' %}">login.</a>
 			</p>
-			<br />
-			<form action="." method="post">
-				{{ user_form | as_bootstrap }}
-				<!-- CSRF protection -->
-				{% csrf_token %}
-			</form>
 		</div>
 	</div>
 {% endblock %}
