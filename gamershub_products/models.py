@@ -4,6 +4,7 @@ import uuid
 from django.db import models
 from paypal.standard.forms import PayPalPaymentsForm
 from django.conf import settings
+from settings import *
 
 
 # Create your models here.
