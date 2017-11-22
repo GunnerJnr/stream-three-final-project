@@ -31,7 +31,7 @@ EMAIL_HOST_USER = 'GAMERSHUB_EMAIL_ADDRESS'
 EMAIL_HOST_PASSWORD = 'GAMERSHUB_EMAIL_PASSWORD'
 DEFAULT_FROM_EMAIL = 'GAMERSHUB_DEFAULT_FROM_EMAIL'
 EMAIL_PORT = 'GAMERSHUB_EMAIL_PORT'  # default SMTP port 587
-EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when talking to the SMTP server
+EMAIL_USE_TLS = False  # Whether to use a TLS (secure) connection when talking to the SMTP server
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Log DEBUG information to the console
