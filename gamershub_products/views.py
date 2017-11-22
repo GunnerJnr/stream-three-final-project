@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import GamersHubProducts
 
@@ -11,7 +10,7 @@ from .models import GamersHubProducts
 @login_required(login_url='/login/')
 def products_list(request):
 
-    object_list = GamersHubProducts.objects.all.order_by('price')
+    object_list = GamersHubProducts.objects.filter('price').order_by('name')
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
