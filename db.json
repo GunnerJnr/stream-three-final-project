@@ -44,7 +44,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$4i3qXbXO5qou$yKAhsNIB2uua/T/uBXtkeoXbKUaIV+T3ZX7E/FevKH0=",
-        "last_login": "2017-11-21T13:52:55.408Z",
+        "last_login": "2017-11-22T12:17:27.343Z",
         "is_superuser": true,
         "username": "gunnerjnr",
         "first_name": "David",
@@ -53,6 +53,24 @@
         "is_staff": true,
         "is_active": true,
         "date_joined": "2017-11-16T14:28:57.647Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$36000$d0aaV5MWqXG5$E1aSaj+ORCbusAaN2MiSEf3lt1ub8RHwGuhMbUCmcEQ=",
+        "last_login": "2017-11-22T12:17:16.106Z",
+        "is_superuser": false,
+        "username": "davidgunner",
+        "first_name": "David",
+        "last_name": "Gunner",
+        "email": "daveyg24@live.co.uk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2017-11-22T12:17:08.265Z",
         "groups": [],
         "user_permissions": []
     }
@@ -103,6 +121,14 @@
     "fields": {
         "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
         "expire_date": "2017-12-05T13:52:55.510Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "t2pbth4xvud11q1vkneoz3bvfppjfi3o",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-12-06T12:17:27.525Z"
     }
 },
 {
@@ -268,6 +294,24 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2017-11-22T12:16:35.480Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "davidgunner",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
     "model": "gamersblog.blogpost",
     "pk": 1,
     "fields": {
@@ -386,6 +430,25 @@
         "google_plus_url": "https://plus.google.com/+DavidGunnerJnr",
         "youtube_url": "https://youtube.com/djwikked24",
         "personal_site_url": "https://gunnerjnr.uk"
+    }
+},
+{
+    "model": "accounts.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "davidgunner"
+        ],
+        "date_of_birth": null,
+        "profile_image": "",
+        "about_me": null,
+        "fave_game": null,
+        "facebook_url": null,
+        "github_url": null,
+        "twitter_url": null,
+        "google_plus_url": null,
+        "youtube_url": null,
+        "personal_site_url": null
     }
 }
 ]
