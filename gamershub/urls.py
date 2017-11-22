@@ -18,7 +18,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.static import serve
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.conf.urls.static import static
 from paypal.standard.ipn import urls as paypal_urls
 from gamershub_store import views as gamershub_paypal_views
 from gamershub_products import views as gamershub_product_views
