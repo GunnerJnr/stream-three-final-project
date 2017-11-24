@@ -20,7 +20,7 @@ DISQUS_WEBSITE_SHORTNAME='gunnerjnr'
 PAYPAL_NOTIFY_URL='gamershub.herokuapp.com'
 PAYPAL_RECEIVER_EMAIL='admin@gamershub.uk'
 
-SITE_URL="gamershub.herokuapp.com"
+SITE_URL="https://gamershub.herokuapp.com"
 ALLOWED_HOSTS.append('gamershub.herokuapp.com')
 
 # SMTP Email Settings
