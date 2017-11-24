@@ -17,11 +17,11 @@ DISQUS_WEBSITE_SHORTNAME='gunnerjnr'
 
 # PayPal Settings
 
-PAYPAL_NOTIFY_URL='gamershub.herokuapp.com'
-PAYPAL_RECEIVER_EMAIL='admin@gamershub.uk'
+PAYPAL_NOTIFY_URL = os.environ['GAMERSHUB_HARD_TO_GUESS_URL']
+PAYPAL_RECEIVER_EMAIL = os.environ['GAMERSHUB_PAYPAL_RECEIVER_EMAIL']
 
-SITE_URL="https://gamershub.herokuapp.com"
-ALLOWED_HOSTS.append('gamershub.herokuapp.com')
+SITE_URL = os.environ['GAMERSHUB_SITE_URL']
+ALLOWED_HOSTS.append(os.environ['GAMERSHUB_ALLOWED_HOST'])
 
 # SMTP Email Settings
 # https://docs.djangoproject.com/en/1.11/topics/email/#django.core.mail.backends.smtp.EmailBackend
