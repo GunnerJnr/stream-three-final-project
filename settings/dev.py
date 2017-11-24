@@ -13,6 +13,9 @@ DATABASES = {
     }
 }
 
+# Site ID
+SITE_ID = 2
+
 # PayPal Settings
 
 SITE_URL = 'http://127.0.0.1:8000'

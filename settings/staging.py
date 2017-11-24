@@ -12,6 +12,9 @@ DATABASES = {
     'default': dj_database_url.config('CLEARDB_DATABASE_URL')
 }
 
+# Site ID
+SITE_ID = 3
+
 # Django Disqus Settings
 DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
 
