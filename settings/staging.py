@@ -17,10 +17,10 @@ DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
 
 # PayPal Settings
 
-SITE_URL = "gamershub.herokuapp.com"
-PAYPAL_NOTIFY_URL = 'GAMERSHUB_HARD_TO_GUESS_URL'
+PAYPAL_NOTIFY_URL = 'gamershub.herokuapp.com'
 PAYPAL_RECEIVER_EMAIL = os.environ['GAMERSHUB_PAYPAL_RECEIVER_EMAIL']
 
+SITE_URL = "gamershub.herokuapp.com"
 ALLOWED_HOSTS.append('gamershub.herokuapp.com')
 
 # SMTP Email Settings
