@@ -13,14 +13,14 @@ DATABASES = {
 }
 
 # Django Disqus Settings
-DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
+DISQUS_WEBSITE_SHORTNAME='gunnerjnr'
 
 # PayPal Settings
 
-PAYPAL_NOTIFY_URL = 'gamershub.herokuapp.com'
-PAYPAL_RECEIVER_EMAIL = 'admin@gamershub.uk'
+PAYPAL_NOTIFY_URL='gamershub.herokuapp.com'
+PAYPAL_RECEIVER_EMAIL='admin@gamershub.uk'
 
-SITE_URL = "gamershub.herokuapp.com"
+SITE_URL="gamershub.herokuapp.com"
 ALLOWED_HOSTS.append('gamershub.herokuapp.com')
 
 # SMTP Email Settings
