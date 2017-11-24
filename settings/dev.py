@@ -1,4 +1,7 @@
-from base import *
+"""
+Dev.py: - This is the settings used in development (DUBUG = True)
+"""
+from settings.base import *
 
 
 DEBUG = True

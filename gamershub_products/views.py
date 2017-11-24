@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+Views.py: -
+"""
 from __future__ import unicode_literals
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
@@ -9,7 +12,9 @@ from .models import GamersHubProducts
 # Create your views here.
 @login_required(login_url='/login/')
 def products_list(request):
-
+    """
+    products_list:
+    """
     object_list = GamersHubProducts.objects.get_queryset().order_by('id')
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(object_list, 3)  # 3 posts in each page

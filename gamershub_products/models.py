@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
+"""
+Models.py: This class is responsible for handling all the models for the Gamershub products.
+"""
 from __future__ import unicode_literals
+
 import uuid
+
+from django.conf import settings
 from django.db import models
 from paypal.standard.forms import PayPalPaymentsForm
-from django.conf import settings
 
 
 # Create your models here.
@@ -14,14 +19,26 @@ class GamersHubProducts(models.Model):
     description: the item's description
     price: the price of the item
     """
+
+    class Meta:
+        """
+        Meta class:
+        """
+        verbose_name_plural = "Gamers Hub Products"
+
     length = 255
     image_width = 200
     image_height = 200
 
-    product_images = models.ImageField(upload_to='gamershub/product_images/%d/%m/%Y', height_field='image_height', width_field='image_width', blank=True)
+    product_images = models.ImageField(upload_to='gamershub/product_images/%d/%m/%Y',
+                                       height_field='image_height',
+                                       width_field='image_width',
+                                       blank=True)
     name = models.CharField(max_length=length, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+
+    objects = models.Manager() # default manager
 
     @property
     def paypal_form(self):
@@ -49,8 +66,6 @@ class GamersHubProducts(models.Model):
 
         return PayPalPaymentsForm(initial=paypal_dict)
 
+
     def __unicode__(self):
         return self.name
-
-    class Meta:
-        verbose_name_plural = "Gamers Hub Products"

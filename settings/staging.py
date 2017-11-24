@@ -1,3 +1,6 @@
+"""
+Staging.py: -
+"""
 from base import *
 import dj_database_url
 
@@ -13,7 +16,7 @@ DATABASES = {
 }
 
 # Django Disqus Settings
-DISQUS_WEBSITE_SHORTNAME='gunnerjnr'
+DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
 
 # PayPal Settings
 
