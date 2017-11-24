@@ -44,7 +44,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$4i3qXbXO5qou$yKAhsNIB2uua/T/uBXtkeoXbKUaIV+T3ZX7E/FevKH0=",
-        "last_login": "2017-11-22T12:17:27.343Z",
+        "last_login": "2017-11-24T13:44:20.847Z",
         "is_superuser": true,
         "username": "gunnerjnr",
         "first_name": "David",
@@ -77,10 +77,26 @@
 },
 {
     "model": "sites.site",
-    "pk": 2,
+    "pk": 1,
     "fields": {
         "domain": "example.com",
         "name": "example.com"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 2,
+    "fields": {
+        "domain": "localhost",
+        "name": "localhost"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 3,
+    "fields": {
+        "domain": "gamershub.herokuapp.com",
+        "name": "gamershub.herokuapp.com"
     }
 },
 {
@@ -117,18 +133,10 @@
 },
 {
     "model": "sessions.session",
-    "pk": "ikwwr3zcway4gzcv9clu6mb7p9u9p1sb",
+    "pk": "wl2au0n7vjq8e954pam0ub4d3colra3i",
     "fields": {
         "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-        "expire_date": "2017-12-05T13:52:55.510Z"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "t2pbth4xvud11q1vkneoz3bvfppjfi3o",
-    "fields": {
-        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-        "expire_date": "2017-12-06T12:17:27.525Z"
+        "expire_date": "2017-12-08T13:44:21.019Z"
     }
 },
 {
@@ -307,6 +315,42 @@
         ],
         "object_id": "2",
         "object_repr": "davidgunner",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2017-11-24T13:40:32.700Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "3",
+        "object_repr": "localhost",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2017-11-24T13:42:18.134Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "2",
+        "object_repr": "example.com",
         "action_flag": 3,
         "change_message": ""
     }
