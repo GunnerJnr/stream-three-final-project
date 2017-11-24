@@ -92,14 +92,6 @@
     }
 },
 {
-    "model": "sites.site",
-    "pk": 3,
-    "fields": {
-        "domain": "gamershub.herokuapp.com",
-        "name": "gamershub.herokuapp.com"
-    }
-},
-{
     "model": "sessions.session",
     "pk": "6z6ya6rrep7a85wckdw64fm6kabqwa7l",
     "fields": {
