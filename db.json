@@ -87,8 +87,8 @@
     "model": "sites.site",
     "pk": 2,
     "fields": {
-        "domain": "localhost",
-        "name": "localhost"
+        "domain": "gamershub.herokuapp.com",
+        "name": "gamershub.herokuapp.com"
     }
 },
 {
