@@ -27,7 +27,7 @@ ALLOWED_HOSTS.append('gamershub.herokuapp.com')
 # https://docs.djangoproject.com/en/1.11/topics/email/#django.core.mail.backends.smtp.EmailBackend
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = os.environ['GAMERSHUB_MAIL_HOST']
 EMAIL_HOST_USER = os.environ['GAMERSHUB_HOST_USER']
 EMAIL_HOST_PASSWORD = os.environ['GAMERSHUB_EMAIL_PASSWORD']
 DEFAULT_FROM_EMAIL = os.environ['GAMERSHUB_DEFAULT_FROM_EMAIL']
