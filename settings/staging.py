@@ -31,8 +31,8 @@ EMAIL_HOST = 'GAMERSHUB_MAIL_HOST'
 EMAIL_HOST_USER = 'GAMERSHUB_HOST_USER'
 EMAIL_HOST_PASSWORD = 'GAMERSHUB_EMAIL_PASSWORD'
 DEFAULT_FROM_EMAIL = 'GAMERSHUB_DEFAULT_FROM_EMAIL'
-EMAIL_PORT = 465  # default SMTP port 587
-EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when talking to the SMTP server
+EMAIL_PORT = 587  # default SMTP port 587
+EMAIL_USE_TLS = False  # Whether to use a TLS (secure) connection when talking to the SMTP server
 
 # Log DEBUG information to the console
 LOGGING = {
