@@ -19,6 +19,8 @@ SITE_URL = 'http://127.0.0.1:8000'
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'  # for testing only
 PAYPAL_RECEIVER_EMAIL = 'admin@gamershub.uk'
 
+ALLOWED_HOSTS.append(u'0.0.0.0',)
+
 # A nifty Django feature that allows the sending of emails to be displayed in
 # the console, a bit like a fake SMTP server
 

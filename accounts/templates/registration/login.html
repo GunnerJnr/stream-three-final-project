@@ -8,7 +8,6 @@
 
 <!-- start our login page content injection -->
 {% block content %}
-    {% load bootstrap_tags %}
     <div class="col-md-12 borderlands-img">
         <div class="custom-form">
             <h1>Gamers Hub Login</h1>
@@ -24,7 +23,7 @@
                 <br />
             {% endif %}
             <form action="{% url 'login' %}" method="post">
-                {{ form | as_bootstrap }}
+                {{ form.as_p }}
                 <!-- CSRF protection -->
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}" />
