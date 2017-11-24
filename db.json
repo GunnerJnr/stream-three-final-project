@@ -132,6 +132,222 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2017-11-16T14:32:42.802Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "accounts",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "gunnerjnr",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2017-11-16T14:36:06.424Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "1",
+        "object_repr": "Grand Theft Auto 5",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2017-11-16T14:38:37.155Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "2",
+        "object_repr": "Custom Gaming Controller",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2017-11-16T14:39:39.060Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "3",
+        "object_repr": "Punisher T-Shirt",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2017-11-16T14:48:22.120Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "1",
+        "object_repr": "Welcome To Gamers Hub",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2017-11-16T14:49:18.730Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "1",
+        "object_repr": "Welcome To Gamers Hub",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"post_images\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2017-11-16T14:59:23.640Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamersblog",
+            "blogpost"
+        ],
+        "object_id": "2",
+        "object_repr": "Welcome To The Gamers Hub",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2017-11-16T17:16:25.620Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "4",
+        "object_repr": "Novelty Mug",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2017-11-16T17:16:49.169Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "gamershub_products",
+            "gamershubproducts"
+        ],
+        "object_id": "4",
+        "object_repr": "Novelty Mug",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"product_images\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2017-11-22T12:16:35.480Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "davidgunner",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2017-11-24T13:40:32.700Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "3",
+        "object_repr": "localhost",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2017-11-24T13:42:18.134Z",
+        "user": [
+            "gunnerjnr"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "2",
+        "object_repr": "example.com",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
     "model": "gamersblog.blogpost",
     "pk": 1,
     "fields": {
