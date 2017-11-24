@@ -389,8 +389,8 @@ th, tr {
 
 #successful-purchase-page-container img,
 #unsuccessful-purchase-page-container img {
-	min-width: 800px;
-	min-height: 600px;
+	width: 800px;
+	height: 600px;
 	margin: 20px auto;
 	vertical-align: middle;
 }
