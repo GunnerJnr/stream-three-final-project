@@ -1,7 +1,6 @@
 DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 ----------------------------------------------------------
 
- 
 ### Table of Contents
 
 [Description](#description)
@@ -14,7 +13,6 @@ DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 
 [Credits](#credits)
 
- 
 ### Description
 
 A live version of the site can be accessed by following this [link](https://gamershub.herokuapp.com/)
@@ -25,14 +23,12 @@ Gamers Hub is a fictional all purpose online community for gamers and like minde
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
 ### Testing
 
 TODO
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
 ### Installation
 
 Firstly clone the project from Github, you can do with the following command in a terminal/console window:
@@ -45,15 +41,12 @@ Once you have cloned the project, you will need to set up a virtual environment 
 
 [Pip - Official Installation Guide](https://pip.pypa.io/en/latest/installing/)
 
-Also please see the following link for setting up a 
-
-[Virtual Environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv)
+Also please see the following link for setting up a [Virtual Environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv)
 
 Once all this is completed you should simply be able to run the command `pip install -r requirements.txt` from your activated virtual environment terminal/console window to install all the neccessary packages needed to run the project. Once this completes you should be able to now simply run the command `python manage.py runserver` and it should fire up the development server where you can navigate to `localhost:8000` to browse the site offline.
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
 ### Usage
 
 Django Bootstrap Forms - Used for responsive layout and design.
@@ -62,7 +55,6 @@ Django Disqus - Used for integrating Disqus comments into the blog posts.
 
 [Back to Table Of Contents]
 
- 
 ### Credits
 
 Code Institute - For the lessons on Full Stack Development.
