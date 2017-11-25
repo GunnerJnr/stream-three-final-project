@@ -19,7 +19,7 @@ DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 
 ### Description
 
-A live version of the site can be accessed by following this [link] (https://gamershub.herokuapp.com/)
+A live version of the site can be accessed by following this [link] (#https://gamershub.herokuapp.com/)
 
 #### Stream Three Final Project - Gamers Hub.
 
