@@ -60,7 +60,9 @@ Or as stated above, a live version of the site can be accessed by following this
 ### Usage
 
 [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/) - Used for responsive layout and design.
+
 [Django Paypal](https://django-paypal.readthedocs.io/en/latest/) - Used for making `Paypal` single payments.
+
 [Django Disqus](https://django-disqus.readthedocs.io/en/latest/) - Used for integrating `Disqus` comments into the blog posts.
 
 [Back to Table Of Contents]
