@@ -11,8 +11,8 @@ html {
 .container-fluid {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
-	margin: auto;
-	padding: none;
+	margin: -60px auto;
+	padding: 60px 0;
 }
 
 p {
@@ -63,6 +63,17 @@ li {
 	min-width: 100%;
 	min-height: 100%;
 	opacity: 0.9;
+}
+
+.custom-form {
+	background-color: rgba(201, 201, 200, 0.651);
+	color: #2e5384;
+	border-radius: 10px;
+	max-width: 60%;
+	height: auto !important;
+	text-align: center;
+	margin: 100px auto 0 auto;
+	padding: 10px;
 }
 
 .custom-form p{
@@ -475,18 +486,6 @@ th, tr {
 			background: #4192f0;
 	}
 
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(201, 201, 200, 0.651);
-		color: #2e5384;
-		border-radius: 10px;
-		max-width: 60%;
-		height: auto !important;
-		text-align: center;
-		margin: 0 auto;
-		padding: 10px;
-	}
-
 	/********** Footer Style **********/
 	footer {
 		position: static;
@@ -591,19 +590,6 @@ th, tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 			background: #4192f0;
 	}
-
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(201, 201, 200, 0.651);
-		color: #2e5384;
-		border-radius: 10px;
-		max-width: 60%;
-		height: auto !important;
-		text-align: center;
-		margin: 0 auto;
-		padding: 10px;
-	}
-
 
 	/********** Footer Style **********/
 	footer {
@@ -710,19 +696,6 @@ th, tr {
 			background: #4192f0;
 	}
 
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(201, 201, 200, 0.651);
-		color: #2e5384;
-		border-radius: 10px;
-		max-width: 60%;
-		height: auto !important;
-		text-align: center;
-		margin: 60px auto 0 auto;
-		padding: 10px;
-	}
-
-
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -799,19 +772,6 @@ th, tr {
 			background: #4192f0;
 	}
 
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(201, 201, 200, 0.651);
-		color: #2e5384;
-		border-radius: 10px;
-		max-width: 60%;
-		height: auto !important;
-		text-align: center;
-		margin: 100px auto 0 auto;
-		padding: 10px;
-	}
-
-
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -887,19 +847,6 @@ th, tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 			background: #4192f0;
 	}
-
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(201, 201, 200, 0.651);
-		color: #2e5384;
-		border-radius: 10px;
-		max-width: 60%;
-		height: auto !important;
-		text-align: center;
-		margin: 100px auto 0 auto;
-		padding: 10px;
-	}
-
 
 	/********** Footer Style **********/
 	footer {
