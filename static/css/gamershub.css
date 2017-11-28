@@ -12,7 +12,7 @@ html {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
 	margin: auto;
-	padding: 0;
+	padding: none;
 }
 
 p {
