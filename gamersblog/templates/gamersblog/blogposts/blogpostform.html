@@ -1,5 +1,6 @@
 <!-- tell django we want to extend base.html -->
 {% extends "gamershub/base.html" %}
+{% load bootstrap_tags %}
 
 <!-- The main post tile -->
 {% block title %}
@@ -8,7 +9,6 @@
 
 <!-- The main post content to be injected -->
 {% block content %}
-    {% load bootstrap_tags %}
 <!-- The main content of the body -->
     <div class="col-md-12">
         <h1>Add A New Blog Post</h1>
