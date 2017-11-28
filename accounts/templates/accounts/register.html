@@ -15,7 +15,7 @@
 			<p>Sign up to Gamers Hub using the below form:</p>
 			<br />
 			<form action="." method="post">
-				{{ user_form | as_bootstrap }}
+				{{ user_form|as_bootstrap }}
 				<!-- CSRF protection -->
 				{% csrf_token %}
 				<button class="btn btn-default" type="submit" value="Create an account">Create</button>

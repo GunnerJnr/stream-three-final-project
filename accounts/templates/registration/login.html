@@ -24,7 +24,7 @@
                 <br />
             {% endif %}
             <form action="{% url 'login' %}" method="post">
-                {{ form | as_bootstrap }}
+                {{ form|as_bootstrap }}
                 <!-- CSRF protection -->
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}" />
