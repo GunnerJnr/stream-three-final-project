@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'gamershub_store',
     'gamershub_products',
-    'django_forms_bootstrap',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
@@ -35,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_forms_bootstrap',
 ]
 
 # Login, Logout and Profile Handling
