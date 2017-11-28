@@ -5,37 +5,35 @@
 }
 
 html {
+	height: 100%;
+	margin: 0;
 	overflow-x: hidden;
 }
 
-.container-fluid {
-	margin: 0 auto;
-	padding: 0;
-}
-
 p {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 
 }
 
 p.date {
 	color: #b4b4b4;
 	font-size: 12px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
 a {
 	color: #2e5384;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	text-decoration:  none;
 	text-transform:none;
 }
 
 a:hover {
 	color: #ee3a3a;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	text-decoration:  none;
 	text-transform:none;
 }
@@ -51,12 +49,11 @@ li {
 
 /********** Forms Style **********/
 .borderlands-img {
-	position: relative;
-	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-image: url("/static/img/login-page/borderlands-two.jpg");
+	/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 	/* Preserve aspect ratio */
 	min-width: 100%;
 	min-height: 100%;
@@ -64,14 +61,14 @@ li {
 }
 
 .custom-form {
-	background-color: rgba(201, 201, 200, 0.651);
-	color: #2e5384;
-	border-radius: 10px;
+	background-color: rgba(227, 201, 248, 0.589);
+	color: #104283;
+	border-radius: 20px;
 	max-width: 60%;
 	height: auto !important;
 	text-align: center;
 	margin: -20px auto;
-	padding: 20px;
+	padding: 40px;
 }
 
 .custom-form p{
@@ -405,6 +402,11 @@ th, tr {
 		padding-bottom: 20px;
 	}
 
+	.container-fluid {
+		margin: auto;
+		padding: 0;
+	}
+
 	/********** Nav Bar Style **********/
 	.navbar {
 		position: static;
@@ -507,7 +509,11 @@ th, tr {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-bottom: 30px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 0;
 	}
 
 	/********** Nav Bar Style **********/
@@ -612,7 +618,11 @@ th, tr {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-bottom: 0px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 0;
 	}
 
 	/********** Nav Bar Style **********/
@@ -717,8 +727,11 @@ th, tr {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-top: 50px;
-		padding-bottom: 60px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
 	}
 
 	/********** Nav Bar Style **********/
@@ -793,8 +806,11 @@ th, tr {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-top: 50px;
-		padding-bottom: 60px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
 	}
 
 	/********** Nav Bar Style **********/
