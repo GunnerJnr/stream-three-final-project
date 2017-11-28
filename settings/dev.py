@@ -16,6 +16,9 @@ DATABASES = {
     }
 }
 
+# Django Disqus Settings
+DISQUS_WEBSITE_SHORTNAME = 'gunnerjnr'
+
 # PayPal Settings
 
 PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'  # for testing only

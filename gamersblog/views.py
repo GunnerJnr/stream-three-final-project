@@ -20,10 +20,10 @@ def new_post(request):
             post.published_date = timezone.now()
             post_title = form.cleaned_data['post_title']
             if BlogPost.objects.filter(post_title__iexact=post_title).exists():
-                messages.error(request, 'Sorry that title already exists')
+                form.add_error(None, 'Sorry that title already exists')
             else:
                 post = form.save()
-                messages.success(request, 'Your post has been added successfully')
+                form.add_error(None, 'Your post has been added successfully')
                 return redirect('blog_post_detail', post.slug)
     else:
         form = BlogPostForm()
