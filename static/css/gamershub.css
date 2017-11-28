@@ -9,10 +9,8 @@ html {
 }
 
 .container-fluid {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-	font-style: normal;
-	margin: -60px auto;
-	padding: 60px 0;
+	margin: 0 auto;
+	padding: 0;
 }
 
 p {
@@ -72,8 +70,8 @@ li {
 	max-width: 60%;
 	height: auto !important;
 	text-align: center;
-	margin: 100px auto 0 auto;
-	padding: 10px;
+	margin: -20px auto;
+	padding: 20px;
 }
 
 .custom-form p{
@@ -400,7 +398,8 @@ th, tr {
 /* So we will make our own custom to handle these devices */
 @media screen and (min-width: 278px) and (max-width: 400px) {
 
-	body {
+	body {	left:calc(50vw - 200px);
+		top: calc(50hw - 200px);
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
 		padding-bottom: 20px;
