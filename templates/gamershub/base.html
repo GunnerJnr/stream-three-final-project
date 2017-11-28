@@ -16,14 +16,14 @@
         <title>{% block title %}{% endblock %}</title>
 
         <!-- Link to Font Awesome 4 -->
-        <link href="{% static "css/vendor/font-awesome-4.7.0/css/font-awesome.css" %}" rel="stylesheet">
+        <link href="{% static 'css/vendor/font-awesome-4.7.0/css/font-awesome.css' %}" rel="stylesheet" type="text/css">
 
         <!-- Link to bootstrap -->
-        <link href="{% static "css/vendor/bootstrap/bootstrap.css" %}" rel="stylesheet">
-        <link href="{% static "css/vendor/bootstrap/bootstrap-theme.css" %}" rel="stylesheet">
+        <link href="{% static 'css/vendor/bootstrap/bootstrap.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/vendor/bootstrap/bootstrap-theme.css' %}" rel="stylesheet" type="text/css">
 
         <!-- Link to our custom stylesheet -->
-        <link href="{% static "css/gamershub.css" %}" rel="stylesheet">
+        <link href="{% static 'css/gamershub.css' %}" rel="stylesheet" type="text/css">
 
 
         {% block head_js %}{% endblock %}
@@ -83,8 +83,6 @@
 
             <!-- Here we inject the content we want to display -->
             {% block content %}
-
-            
 
             {% endblock %}
             <!-- End content injection here -->
