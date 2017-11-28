@@ -65,7 +65,7 @@ Or as stated above, a live version of the site can be accessed by following this
 
 [Django Disqus](https://django-disqus.readthedocs.io/en/latest/) - Used for integrating `Disqus` comments into the blog posts.
 
-[Back to Table Of Contents]
+[Back to Table Of Contents](#table-of-contents)
 
 ### Credits
 
