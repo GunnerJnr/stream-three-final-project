@@ -5,39 +5,35 @@
 }
 
 html {
+	height: 100%;
+	margin: 0;
 	overflow-x: hidden;
 }
 
-.container-fluid {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-	font-style: normal;
-	margin: -60px auto;
-	padding: 60px 0;
-}
-
 p {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 
 }
 
 p.date {
 	color: #b4b4b4;
 	font-size: 12px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
 a {
 	color: #2e5384;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	text-decoration:  none;
 	text-transform:none;
 }
 
 a:hover {
 	color: #ee3a3a;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	text-decoration:  none;
 	text-transform:none;
 }
@@ -53,27 +49,15 @@ li {
 
 /********** Forms Style **********/
 .borderlands-img {
-	position: relative;
-	background: url("/static/img/login-page/borderlands-two.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	background-image: url("/static/img/login-page/borderlands-two.jpg");
+	/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 	/* Preserve aspect ratio */
 	min-width: 100%;
 	min-height: 100%;
 	opacity: 0.9;
-}
-
-.custom-form {
-	background-color: rgba(201, 201, 200, 0.651);
-	color: #2e5384;
-	border-radius: 10px;
-	max-width: 60%;
-	height: auto !important;
-	text-align: center;
-	margin: 100px auto 0 auto;
-	padding: 10px;
 }
 
 .custom-form p{
@@ -398,16 +382,25 @@ th, tr {
 /* Extra small devices (phones, etc. less than 768px) */
 /* No media query since this is the default in Bootstrap */
 /* So we will make our own custom to handle these devices */
-@media screen and (min-width: 278px) and (max-width: 400px) {
+@media screen and (max-width: 400px) and (min-width: 178px) {
 
-	body {
+	body {	
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
 		padding-bottom: 20px;
 	}
 
+	.container-fluid {
+		margin: auto;
+		padding: 0;
+	}
+
+	.h1, .h2, .h3 {
+		font-size: 0.5em;
+	}
+
 	/********** Nav Bar Style **********/
-	.navbar {
+	navbar {
 		position: static;
 		height: auto !important;
 		border-bottom: solid;
@@ -470,6 +463,7 @@ th, tr {
 	::-webkit-scrollbar-track {
 		-webkit-box-shadow: inset 0 0 6px #fa6a17;
 		-webkit-border-radius: 5px;
+		border-radius: 5px;
 		box-shadow: inset 0 0 6px #fa6a17;
 		border-radius: 5px;
 	}
@@ -484,6 +478,18 @@ th, tr {
 
 	::-webkit-scrollbar-thumb:window-inactive {
 			background: #4192f0;
+	}
+
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
 	}
 
 	/********** Footer Style **********/
@@ -503,16 +509,20 @@ th, tr {
 }
 
 /* Small devices (tablets, etc.) */
-@media screen and (min-width: 401px) and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 401px) {
 
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-bottom: 30px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 0;
 	}
 
 	/********** Nav Bar Style **********/
-	.navbar {
+	navbar {
 		position: static;
 		height: auto !important;
 		border-bottom: solid;
@@ -591,6 +601,18 @@ th, tr {
 			background: #4192f0;
 	}
 
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -608,16 +630,20 @@ th, tr {
 }
 
 /* Medium devices (desktops, 769px and up) */
-@media screen and (min-width: 769px) and (max-width: 991px) {
+@media screen and (max-width: 991px) and (min-width: 769px) {
 
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-bottom: 0px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 0;
 	}
 
 	/********** Nav Bar Style **********/
-	.navbar {
+	navbar {
 		position: static;
 		height: auto !important;
 		border-bottom: solid;
@@ -696,6 +722,18 @@ th, tr {
 			background: #4192f0;
 	}
 
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -713,17 +751,20 @@ th, tr {
 }
 
 /* Large devices (large desktops, 992px and up) */
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 992px) {
 
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-top: 50px;
-		padding-bottom: 60px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
 	}
 
 	/********** Nav Bar Style **********/
-	.navbar {
+	navbar {
 		position: fixed;
 		height: auto !important;
 		border-bottom: solid;
@@ -770,6 +811,18 @@ th, tr {
 
 	::-webkit-scrollbar-thumb:window-inactive {
 			background: #4192f0;
+	}
+
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
 	}
 
 	/********** Footer Style **********/
@@ -794,12 +847,15 @@ th, tr {
 	body {
 		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 		box-sizing: border-box;
-		padding-top: 50px;
-		padding-bottom: 60px;
+	}
+
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
 	}
 
 	/********** Nav Bar Style **********/
-	.navbar {
+	navbar {
 		position: fixed;
 		height: auto !important;
 		border-bottom: solid;
@@ -846,6 +902,18 @@ th, tr {
 
 	::-webkit-scrollbar-thumb:window-inactive {
 			background: #4192f0;
+	}
+
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
 	}
 
 	/********** Footer Style **********/
