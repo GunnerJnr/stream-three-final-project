@@ -12,8 +12,8 @@ html {
 }
 
 body {
-	background-color: rgb(226, 226, 226);
-	color: #000;
+	background-color: rgb(75, 73, 73);
+	color: #fff;
 }
 
 #site-theme-container {
@@ -37,7 +37,7 @@ p.date {
 }
 
 a {
-	color: #2e5384;
+	color: #377eda;
 	font-style: normal;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 	text-decoration: none;
@@ -262,6 +262,7 @@ ul.messages li a.close:hover {
 
 #blog-post-title {
 	min-height: 60px;
+	color: #fff;
 }
 
 #blog-post-title h2 {
@@ -271,6 +272,10 @@ ul.messages li a.close:hover {
 	margin-top: 20px;
 }
 
+#blog-post-title h2 a {
+	color: #fff;
+}
+
 #blog-post-preview {
 	min-height: 200px;
 	margin: auto;
@@ -278,7 +283,7 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-preview a {
-	color: #2e5384;
+	color: #fff;
 	text-transform: none;
 }
 
@@ -322,6 +327,11 @@ ul.messages li a.close:hover {
 
 #profile-container {
 	margin: auto 5px;
+}
+
+#profile-container li,
+#profile-container p {
+	color: #000;
 }
 
 #profile-img-container {
