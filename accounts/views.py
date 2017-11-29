@@ -1,12 +1,31 @@
 # -  *  - coding:utf-8 -  *  -
 from __future__ import unicode_literals
-# from django.contrib.auth import views
-from django.shortcuts import render, redirect
+from django.template.context_processors import csrf
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
+from django.contrib import auth, messages
 from django.contrib.auth.models import User
-from accounts.forms import UserRegisterForm, EditUserForm, EditProfileForm
+from accounts.forms import UserRegisterForm, UserLoginForm, EditUserForm, EditProfileForm
 from accounts.models import Profile
+
+def login(request):
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
+        if form.is_valid():
+            user = auth.authenticate(email=request.POST.get('email'), password=request.POST.get('password'))
+
+            if user is not None:
+                auth.login(request, user)
+                messages.error(request, "You have successfully logged in")
+                return redirect(reverse('user_profile'))
+            else:
+                form.add_error(None, "Your email or password was not recognised")
+    else:
+        form = UserLoginForm()
+
+    args = {'form': form}
+    args.update(csrf(request))
+    return render(request, 'login.html', args)
 
 
 # this method handles user registration
