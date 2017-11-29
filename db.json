@@ -44,7 +44,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$36000$4i3qXbXO5qou$yKAhsNIB2uua/T/uBXtkeoXbKUaIV+T3ZX7E/FevKH0=",
-        "last_login": "2017-11-24T13:44:20.847Z",
+        "last_login": "2017-11-28T17:50:16.742Z",
         "is_superuser": true,
         "username": "gunnerjnr",
         "first_name": "David",
@@ -125,10 +125,18 @@
 },
 {
     "model": "sessions.session",
-    "pk": "wl2au0n7vjq8e954pam0ub4d3colra3i",
+    "pk": "jf6gki89ox2m7gv3za3kw3kh48dqgp34",
     "fields": {
         "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-        "expire_date": "2017-12-08T13:44:21.019Z"
+        "expire_date": "2017-12-12T11:17:21.079Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qqc1gjwdv6po7lflwwqiaod1p96f1atj",
+    "fields": {
+        "session_data": "MDAxYmQ1NzRkZjc0ZDUzYmNkOGQ2ZGUzNDVmODFlZTQxY2NhNmVlODp7Il9hdXRoX3VzZXJfaGFzaCI6ImUzNGU5NDg3NmZhZmJhNzNkNjQzNDNmY2YzYjkzNmRjOTNmZmRjNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+        "expire_date": "2017-12-08T14:31:13.846Z"
     }
 },
 {
@@ -358,9 +366,9 @@
             "gunnerjnr"
         ],
         "created_date": "2017-11-16T14:40:07Z",
-        "published_date": "2017-11-16T16:40:22.068Z",
+        "published_date": "2017-11-28T09:49:49.150Z",
         "post_images": "users/blog_post_images/16/11/2017/maxresdefault.jpg",
-        "post_views": -8,
+        "post_views": -7,
         "post_tags": "Gamers Hub, Welcome"
     }
 },
@@ -375,9 +383,9 @@
             "gunnerjnr"
         ],
         "created_date": "2017-11-16T15:10:23.747Z",
-        "published_date": "2017-11-16T16:40:22.226Z",
+        "published_date": "2017-11-28T09:49:37.262Z",
         "post_images": "users/blog_post_images/16/11/2017/Xbox-360-Consoles-Infobox.png",
-        "post_views": 3,
+        "post_views": 8,
         "post_tags": null
     }
 },
@@ -450,6 +458,57 @@
     }
 },
 {
+    "model": "gamersblog.blogpost",
+    "pk": 8,
+    "fields": {
+        "post_title": "test",
+        "slug": "test",
+        "post_body": "fdsgfsdg",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-28T10:55:47.659Z",
+        "published_date": "2017-11-28T10:55:52.362Z",
+        "post_images": "",
+        "post_views": 2,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 9,
+    "fields": {
+        "post_title": "test 2",
+        "slug": "test-2",
+        "post_body": "fdsgfsdg",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-28T10:56:13.584Z",
+        "published_date": "2017-11-28T10:56:13.585Z",
+        "post_images": "",
+        "post_views": 0,
+        "post_tags": null
+    }
+},
+{
+    "model": "gamersblog.blogpost",
+    "pk": 10,
+    "fields": {
+        "post_title": "test 23",
+        "slug": "test-23",
+        "post_body": "fdsgfsdg",
+        "post_author": [
+            "gunnerjnr"
+        ],
+        "created_date": "2017-11-28T11:02:07.216Z",
+        "published_date": "2017-11-28T11:02:07.393Z",
+        "post_images": "",
+        "post_views": 1,
+        "post_tags": null
+    }
+},
+{
     "model": "accounts.profile",
     "pk": 1,
     "fields": {
@@ -459,7 +518,7 @@
         "date_of_birth": "1984-03-29",
         "profile_image": "users/profile_images/16/11/2017/boxart.jpg",
         "about_me": "I am Dave. Hello!",
-        "fave_game": "Doom",
+        "fave_game": "DOOM",
         "facebook_url": "https://facebook.com/david.gunner.jnr",
         "github_url": "https://github.com/gunnerjnr",
         "twitter_url": "https://twitter.com/gunnerjnr84",
