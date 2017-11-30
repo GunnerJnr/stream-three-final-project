@@ -1,7 +1,6 @@
-DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
-----------------------------------------------------------
+# DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 
-### Table of Contents
+## Table of Contents
 
 [Description](#description)
 
@@ -13,31 +12,31 @@ DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
 
 [Credits](#credits)
 
-### Description
+## Description
 
 A live version of the site can be accessed by following this [link](https://gamershub.herokuapp.com/).
 
-#### Stream Three Final Project - Gamers Hub.
+### Stream Three Final Project - Gamers Hub
 
-Gamers Hub is a fictional all purpose online community for gamers and like minded people. The idea behind it came from my passion of games and game development. 
+Gamers Hub is a fictional all purpose online community for gamers and like minded people. The idea behind it came from my passion of games and game development.
 
-Its purpose is to unite gamers and like minded people, it will give them a place to share and voice there opinions by utilising the `django-disqus` pkg to comment on blog posts. 
+Its purpose is to unite gamers and like minded people, it will give them a place to share and voice there opinions by utilising the `django-disqus` pkg to comment on blog posts.
 
-The users will also have the option of creating their own blog posts which can also be commented on by fellow gamers. 
+The users will also have the option of creating their own blog posts which can also be commented on by fellow gamers.
 
-There is also a profile page of which they can set some basic information about their self if they so wish. 
+There is also a profile page of which they can set some basic information about their self if they so wish.
 
 There os also a store front which will allow the users to purchase any gaming product they desire, as long as we have it in stock.
 
 [Back to Table Of Contents](#table-of-contents)
 
-### Testing
+## Testing
 
 TODO
 
 [Back to Table Of Contents](#table-of-contents)
 
-### Installation
+## Installation
 
 Firstly clone the project from `Github`, you can do with the following command in a terminal/console window:
 
@@ -57,7 +56,7 @@ Or as stated above, a live version of the site can be accessed by following this
 
 [Back to Table Of Contents](#table-of-contents)
 
-### Usage
+## Usage
 
 [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/) - Used for responsive layout and design.
 
@@ -67,7 +66,7 @@ Or as stated above, a live version of the site can be accessed by following this
 
 [Back to Table Of Contents](#table-of-contents)
 
-### Credits
+## Credits
 
 Code Institute - For the lessons on Full Stack Development.
 
