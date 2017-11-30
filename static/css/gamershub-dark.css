@@ -407,8 +407,8 @@ ul.messages li a.close:hover {
 }
 
 #product-container p,
-#product-container h6, {
-	color: #3f3f3f;
+#product-container h6 {
+	color: #ffffff;
 }
 
 .product-img {
