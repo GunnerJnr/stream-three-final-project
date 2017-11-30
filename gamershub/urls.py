@@ -22,7 +22,7 @@ from paypal.standard.ipn import urls as paypal_urls
 from gamershub_store import views as gamershub_paypal_views
 from gamershub_products import views as gamershub_product_views
 from home import views as home_views
-from settings.base import MEDIA_ROOT, STATIC_ROOT
+from settings.dev import MEDIA_ROOT, STATIC_ROOT
 
 urlpatterns = [
     # add the url to access the admin panel

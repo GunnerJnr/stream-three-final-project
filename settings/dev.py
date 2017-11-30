@@ -33,5 +33,12 @@ ALLOWED_HOSTS.append(u'0.0.0.0',)
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
