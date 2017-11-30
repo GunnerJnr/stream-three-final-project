@@ -37,6 +37,11 @@ EMAIL_PORT = 587  # default SMTP port 587
 EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when talking to the SMTP server
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 3099 23:59:59 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+
 # Log DEBUG information to the console
 LOGGING = {
     'version': 1.0,
