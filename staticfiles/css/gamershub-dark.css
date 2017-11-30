@@ -1,0 +1,921 @@
+/********** Default Element Style **********/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100%;
+	background-color: rgb(26, 26, 26);
+	color: #fff;
+}
+
+#site-theme-container {
+	margin-left: 5px;
+	margin-bottom: 40px;
+	color: rgb(8, 8, 8);
+}
+
+#site-theme-container label {
+	color: #fff;
+}
+
+h1 {
+	margin-top: 60px;
+}
+
+p {
+	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+p.date {
+	color: #b4b4b4;
+	font-size: 12px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+a {
+	color: #377eda;
+	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	text-decoration: none;
+	text-transform: none;
+}
+
+a:hover {
+	color: #ee3a3a;
+	font-style: normal;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	text-decoration: none;
+	text-transform: none;
+}
+
+li {
+	list-style: none;
+}
+
+
+/********** md-col Style **********/
+
+[class*="col-"] {
+	margin-top: 0;
+}
+
+
+/********** Forms Style **********/
+
+.borderlands-img {
+	background-image: url("/static/img/login-page/borderlands-two.jpg");
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* Preserve aspect ratio */
+	min-width: 100%;
+	min-height: 100%;
+	opacity: 0.9;
+}
+
+.custom-form h1 {
+	margin: 20px auto;
+}
+
+.custom-form p {
+	min-width: 100%;
+}
+
+.custom-form label {
+	min-width: 100%;
+	margin: auto auto 2.5px auto;
+	text-transform: uppercase;
+}
+
+.custom-form input,
+.custom-form textarea {
+	background: #efefef;
+	width: 80%;
+	font-size: 14px;
+	margin: 4px auto;
+	padding: 6px 10px;
+}
+
+.custom-form input[type=submit],
+.custom-form button {
+	background: #BFACB1;
+	color: #436591;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+
+.custom-form button:hover {
+	background: #e0ced4;
+	color: #ee3a3a;
+	font-size: 14.5px;
+	padding: 10px 20px;
+	text-transform: uppercase;
+}
+
+.custom-form .errorlist {
+	color: #cc0033;
+	float: left;
+	clear: both;
+	padding-left: 10px;
+}
+
+.custom-form .help-block {
+	color: #2109f7;
+	clear: both;
+	float: left;
+	font-size: 14px;
+	list-style: none;
+	margin: 0 0 20px 0;
+}
+
+
+/********** Validation Message Style **********/
+
+ul.messages {
+	list-style-type: none;
+	margin: 10px 100px;
+}
+
+ul.messages li.success,
+ul.messages li.warning,
+ul.messages li.error,
+ul.messages li.info {
+	color: #fff;
+	list-style: none;
+	padding: 14px 20px;
+}
+
+ul.messages li.success {
+	background: #81ce81;
+}
+
+ul.messages li.success a {
+	color: #0ac33e;
+}
+
+ul.messages li.error {
+	background: #a30029;
+	color: #e9828e;
+}
+
+ul.messages li.error a {
+	color: #e9828e;
+}
+
+ul.messages li.info {
+	background: #faffae;
+	color: #696b4e;
+}
+
+ul.messages li.info a {
+	color: #1586de;
+}
+
+ul.messages li.warning {
+	background: #de9404;
+}
+
+ul.messages li.warning a {
+	color: #f49000;
+}
+
+ul.messages li a.close {
+	float: right;
+	opacity: 1;
+}
+
+ul.messages li a.close:hover {
+	float: right;
+	color: #0ac33e;
+	opacity: 1;
+}
+
+
+/********** Log in & Log out Page Style **********/
+
+#login-form h1,
+#loggedout-form h1,
+#login-form p,
+#loggedout-form p {
+	/* Will override color (regardless of order) */
+	-webkit-text-fill-color: #ff8400;
+	-webkit-text-stroke-width: 0.3px;
+	-webkit-text-stroke-color: #111;
+	padding: 5px;
+}
+
+
+/********** Home Page Style **********/
+
+#homepage-container {
+	margin: 0 auto;
+}
+
+#homepage-img {
+	min-width: 100%;
+	height: 650px;
+	opacity: 0.9;
+	margin-top: 20px;
+}
+
+#homepage-h1 {
+	position: absolute;
+	width: 100%;
+	left: 12.5px;
+	top: 25%;
+}
+
+#homepage-h1 span {
+	background: reg(0, 0, 0);
+	/*fallback color */
+	background: rgba(0, 0, 0, 0.702);
+	color: #ffffff;
+	font-size: 30px;
+	letter-spacing: -1px;
+	padding: 12px;
+}
+
+
+/********** Blog List and Post Style **********/
+
+#blog-post-content {
+	min-height: 100%;
+	text-align: center;
+}
+
+.blog-post-container {
+	border: solid 0.025px rgba(238, 235, 235, 0.5);
+}
+
+#blog-post-content img {
+	width: 100%;
+	height: 200px;
+	/* 200 sm, 400 md, 500 lg */
+	margin: 20px auto;
+}
+
+#blog-post-title {
+	min-height: 60px;
+	color: #fff;
+}
+
+#blog-post-title h2 {
+	font-weight: normal;
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#blog-post-title h2 a {
+	color: #fff;
+}
+
+#blog-post-preview {
+	min-height: 200px;
+	margin: auto;
+	text-align: left;
+}
+
+#blog-post-preview a {
+	color: #fff;
+	text-transform: none;
+}
+
+#blog-post-preview a:hover {
+	color: #ee3a3a;
+	text-transform: none;
+}
+
+#blog-post-content p {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#blog-post-detail {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#blog-post-detail img {
+	width: 500px;
+	height: 300px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	margin: 0 auto;
+}
+
+.next,
+.previous,
+.pager {
+	margin: 2px 2px;
+	text-align: center;
+}
+
+.pagination {
+	height: 100px;
+	font-weight: bold;
+}
+
+
+/********** Profile Image Style **********/
+
+#profile-container {
+	margin: auto 5px;
+}
+
+#profile-container li,
+#profile-container p {
+	color: #000;
+}
+
+#profile-img-container {
+	min-width: 100%;
+	text-align: center;
+}
+
+#profile-img-container img {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border: solid 1px #3f3f3f;
+	border-radius: 20%;
+	margin: 10px auto;
+}
+
+#profile-heading {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#welcome-msg-container {
+	min-width: 100%;
+	text-align: left;
+}
+
+#user-details-profile,
+#user-about-me,
+#user-social {
+	min-height: auto;
+}
+
+#user-about-me .panel-body,
+#user-details-profile .list-group {
+	min-height: auto;
+}
+
+#user-details-profile .list-group-item {
+	margin: 5px auto;
+}
+
+#user-social {
+	text-align: center;
+}
+
+#welcome-msg-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#edit-profile-note-text {
+	color: #ff0000;
+}
+
+
+/********** Products Page Styling **********/
+
+#product-container {
+	min-width: 100%;
+	text-align: center;
+}
+
+.product-img {
+	position: relative;
+	width: 200px;
+	max-height: 400px;
+	border: 1px solid #111;
+	margin: auto;
+}
+
+#product-name-and-description {
+	width: 850px;
+	height: auto;
+	max-height: 400px;
+}
+
+#product-name-and-description p {
+	font-size: 14px;
+	text-align: justify;
+}
+
+#product-price,
+#product-buy-btn {
+	vertical-align: middle;
+}
+
+th,
+tr {
+	text-align: center;
+}
+
+#successful-purchase-page-container,
+#unsuccessful-purchase-page-container {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#successful-purchase-page-container img,
+#unsuccessful-purchase-page-container img {
+	width: 800px;
+	height: 600px;
+	margin: 20px auto;
+	vertical-align: middle;
+}
+
+
+/********** Responsive Breakpoint Design Elements **********/
+/* Extra small devices (phones, etc. less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* So we will make our own custom to handle these devices */
+
+@media screen and (max-width: 400px) and (min-width: 178px) {
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+		padding-bottom: 20px;
+	}
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
+	}
+	.h1,
+	.h2,
+	.h3 {
+		font-size: 0.5em;
+	}
+	/********** Nav Bar Style **********/
+	navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+	.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 3px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #4192f0;
+	}
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+	/********** Footer Style **********/
+	footer {
+		position: static;
+		height: 20px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.container .text-muted {
+		font-size: 10px;
+		margin: 3px 0;
+	}
+}
+
+
+/* Small devices (tablets, etc.) */
+
+@media screen and (max-width: 768px) and (min-width: 401px) {
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
+	}
+	/********** Nav Bar Style **********/
+	navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+	.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #4192f0;
+	}
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 30px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.container .text-muted {
+		font-size: 12px;
+		margin: 7px 0;
+	}
+}
+
+
+/* Medium devices (desktops, 769px and up) */
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
+	}
+	/********** Nav Bar Style **********/
+	navbar {
+		position: static;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left {
+		float: none !important;
+	}
+	.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in {
+		display: block !important;
+	}
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #4192f0;
+	}
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.container .text-muted {
+		font-size: 16px;
+		margin: 20px 0;
+	}
+}
+
+
+/* Large devices (large desktops, 992px and up) */
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
+	}
+	/********** Nav Bar Style **********/
+	navbar {
+		position: fixed;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.navbar li {
+		padding-left: 0;
+	}
+	.navbar-nav.navbar-right {
+		float: right;
+	}
+	.navbar ul li a {
+		font-size: 1.2em;
+		text-transform: none;
+	}
+	.navbar-brand img {
+		vertical-align: middle;
+	}
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #4192f0;
+	}
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.container .text-muted {
+		font-size: 18px;
+		margin: 18px 0;
+	}
+}
+
+
+/* Even larger devices (ott desktops, 1200px and up) */
+
+@media screen and (min-width: 1200px) {
+	body {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		box-sizing: border-box;
+	}
+	.container-fluid {
+		margin: auto;
+		padding: 50px 0;
+	}
+	/********** Nav Bar Style **********/
+	navbar {
+		position: fixed;
+		height: auto !important;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.navbar li {
+		padding-left: 0;
+	}
+	.navbar-nav.navbar-right {
+		float: right;
+	}
+	.navbar ul li a {
+		font-size: 1.2em;
+		text-transform: none;
+	}
+	.navbar-brand img {
+		vertical-align: middle;
+	}
+	/********** Scroll Bar Style **********/
+	::-webkit-scrollbar {
+		width: 12px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px #fa6a17;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #fa6a17;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background: #ff8400;
+		-webkit-box-shadow: inset 0 0 6px #f7fa2e;
+		-webkit-border-radius: 5px;
+		box-shadow: inset 0 0 6px #f7fa2e;
+		border-radius: 5px;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: #4192f0;
+	}
+	/********** Custom Form Style **********/
+	.custom-form {
+		background-color: rgba(227, 201, 248, 0.589);
+		color: #104283;
+		border-radius: 20px;
+		max-width: 80%;
+		height: auto !important;
+		text-align: center;
+		margin: 50px auto 0 auto;
+		padding: 20px;
+	}
+	/********** Footer Style **********/
+	footer {
+		position: fixed;
+		height: 60px;
+		background-color: #f5f5f5;
+		border-bottom: solid;
+		border-width: thin;
+		border-color: #ff8400;
+	}
+	.container .text-muted {
+		font-size: 22px;
+		margin: 18px 0;
+	}
+}
