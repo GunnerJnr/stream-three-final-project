@@ -258,6 +258,7 @@ ul.messages li a.close:hover {
 #blog-post-thumb {
 	width: 350px;
 	height: 350px;
+	margin: 0 auto;
 }
 
 #blog-post-thumb img {

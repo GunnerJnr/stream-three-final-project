@@ -262,6 +262,7 @@ ul.messages li a.close:hover {
 #blog-post-thumb {
 	width: 350px;
 	height: 350px;
+	margin: 0 auto;
 }
 
 #blog-post-thumb img {
@@ -405,8 +406,9 @@ ul.messages li a.close:hover {
 	text-align: center;
 }
 
-#product-container p {
-	color: #887c7c
+#product-container p,
+#product-container h6, {
+	color: #aca7a7
 }
 
 .product-img {
