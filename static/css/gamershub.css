@@ -257,7 +257,7 @@ ul.messages li a.close:hover {
 
 #blog-post-content img {
 	width: 100%;
-	height: 200px;
+	height: auto;
 	/* 200 sm, 400 md, 500 lg */
 	margin: 20px auto;
 }
