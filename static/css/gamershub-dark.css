@@ -265,7 +265,7 @@ ul.messages li a.close:hover {
 
 #blog-post-thumb img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	/* 200 sm, 400 md, 500 lg */
 	margin: 20px auto;
 }
@@ -314,7 +314,7 @@ ul.messages li a.close:hover {
 
 #blog-post-detail img {
 	width: 500px;
-	height: 300px;
+	height: 500px;
 	border-top-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 	margin: 0 auto;
