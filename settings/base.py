@@ -1,3 +1,6 @@
+"""
+Base.py: This is the main settings of the app
+"""
 import os
 from django.core.urlresolvers import reverse_lazy
 

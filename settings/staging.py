@@ -1,9 +1,8 @@
 """
-Staging.py: -
+Staging.py: This is the settings used for deployment with heroku live on the web
 """
-from base import *
 import dj_database_url
-
+from settings.base import *  # pylint: disable=W0401, W0614
 
 DEBUG = False
 

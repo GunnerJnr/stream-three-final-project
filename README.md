@@ -42,7 +42,7 @@ Firstly clone the project from `Github`, you can do with the following command i
 
 `git clone https://github.com/gunnerjnr/stream-three-final-project.git`
 
-Once you have cloned the project, you will need to set up a `virtual environment` to use the project offline. This assumes you already have `Python` and `Pip` installed. If you do not then please see the following links. 
+Once you have cloned the project, you will need to set up a `virtual environment` to use the project offline. This assumes you already have `Python` and `Pip` installed. If you do not then please see the following links.
 
 [Python](https://www.python.org/downloads/) - Note we use `version 2.7` of `Python`.
 
