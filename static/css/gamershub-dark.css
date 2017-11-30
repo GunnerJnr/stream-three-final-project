@@ -259,9 +259,13 @@ ul.messages li a.close:hover {
 	border: solid 0.025px rgba(238, 235, 235, 0.5);
 }
 
-#blog-post-content img {
+#blog-post-thumb {
+	min-height: 400px;
+}
+
+#blog-post-thumb img {
 	width: 100%;
-	height: 200px;
+	height: auto;
 	/* 200 sm, 400 md, 500 lg */
 	margin: 20px auto;
 }
