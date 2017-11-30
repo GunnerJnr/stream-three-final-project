@@ -13,13 +13,18 @@ html {
 
 body {
 	height: 100%;
-	background-color: rgb(75, 73, 73);
+	background-color: rgb(26, 26, 26);
 	color: #fff;
 }
 
 #site-theme-container {
-	margin-bottom: 60px;
+	margin-left: 5px;
+	margin-bottom: 40px;
 	color: rgb(8, 8, 8);
+}
+
+#site-theme-container label {
+	color: #fff;
 }
 
 h1 {
@@ -452,7 +457,7 @@ tr {
 	}
 	.container-fluid {
 		margin: auto;
-		padding: 0;
+		padding: 50px 0;
 	}
 	.h1,
 	.h2,
@@ -561,7 +566,7 @@ tr {
 	}
 	.container-fluid {
 		margin: auto;
-		padding: 0;
+		padding: 50px 0;
 	}
 	/********** Nav Bar Style **********/
 	navbar {
@@ -664,7 +669,7 @@ tr {
 	}
 	.container-fluid {
 		margin: auto;
-		padding: 0;
+		padding: 50px 0;
 	}
 	/********** Nav Bar Style **********/
 	navbar {
