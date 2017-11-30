@@ -4,6 +4,9 @@ Staging.py: This is the settings used for deployment with heroku live on the web
 import dj_database_url
 from settings.base import *  # pylint: disable=W0401, W0614
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ['GAMERSHUB_SECRET_KEY']
+
 DEBUG = False
 
 # Database
@@ -36,6 +39,14 @@ DEFAULT_FROM_EMAIL = os.environ['GAMERSHUB_DEFAULT_FROM_EMAIL']
 EMAIL_PORT = 587  # default SMTP port 587
 EMAIL_USE_TLS = True  # Whether to use a TLS (secure) connection when talking to the SMTP server
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+AWS_STORAGE_BUCKET_NAME = os.environ['GAMERSHUB_AWS_STORAGE_BUCKET_NAME']
+AWS_S3_REGION_NAME = os.environ['GAMERSHUB_AWS_S3_REGION_NAME'] # e.g. us-east-2
+AWS_ACCESS_KEY_ID = os.environ['GAMERSHUB_AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['GAMERSHUB_AWS_SECRET_ACCESS_KEY']
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 AWS_S3_OBJECT_PARAMETERS = {
     'Expires': 'Thu, 31 Dec 3099 23:59:59 GMT',

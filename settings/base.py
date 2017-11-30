@@ -10,9 +10,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['GAMERSHUB_SECRET_KEY']
-
 ALLOWED_HOSTS = ['127.0.0.1',]
 
 # Site ID
@@ -128,16 +125,7 @@ STATICFILES_DIRS = (
 
 # Media Root - serve the media files uploaded by users
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
-
-AWS_STORAGE_BUCKET_NAME = os.environ['GAMERSHUB_AWS_STORAGE_BUCKET_NAME']
-AWS_S3_REGION_NAME = os.environ['GAMERSHUB_AWS_S3_REGION_NAME'] # e.g. us-east-2
-AWS_ACCESS_KEY_ID = os.environ['GAMERSHUB_AWS_ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = os.environ['GAMERSHUB_AWS_SECRET_ACCESS_KEY']
-
-# Tell django-storages the domain to use to refer to static files.
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 # Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
 # you run `collectstatic`).

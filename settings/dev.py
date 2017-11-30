@@ -3,6 +3,7 @@ Dev.py: - This is the settings used in development (DUBUG = True)
 """
 from settings.base import *
 
+SECRET_KEY = 'ab$TH&zc32R^(()3GhrtSx3Aa' # dummy key for development
 
 DEBUG = True
 
@@ -31,3 +32,6 @@ ALLOWED_HOSTS.append(u'0.0.0.0',)
 # the console, a bit like a fake SMTP server
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
