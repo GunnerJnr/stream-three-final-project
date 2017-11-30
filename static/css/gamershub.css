@@ -252,12 +252,12 @@ ul.messages li a.close:hover {
 }
 
 .blog-post-container {
-	border: solid 0.025px rgba(238, 235, 235, 0.5);
+	border: solid 0.025px rgba(146, 136, 136, 0.5);
 }
 
 #blog-post-thumb {
-	width: 350px;
-	height: 350px;
+	max-width: 400px;
+	height: 400px;
 	margin: 0 auto;
 }
 

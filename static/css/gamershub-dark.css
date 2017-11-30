@@ -260,8 +260,8 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-thumb {
-	width: 350px;
-	height: 350px;
+	max-width: 400px;
+	max-height: 400px;
 	margin: 0 auto;
 }
 
