@@ -326,7 +326,7 @@ ul.messages li a.close:hover {
 #blog-post-detail img {
 	border-top-left-radius: 25px;
 	border-bottom-right-radius: 25px;
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	margin: 20px auto;
 }
