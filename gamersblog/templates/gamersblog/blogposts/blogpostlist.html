@@ -20,11 +20,14 @@
                 <div id="blog-post-thumb">
                     <!-- add an image to the post preview for a nice touch -->
                     <a href="{{ post.get_absolute_url }}">
+                        {% load thumbnail %}
+                        {% thumbnail post.post_images "500x500" as im %}
                         {% if post.post_images %}
-                            <img class="img-responsive" src="{{ post.post_images.url }}">
+                            <img src="{{ im.url }}">
                         {% else %}
-                            <img class="img-responsive" src="http://via.placeholder.com/500x200" alt="blog-post-thumbs">
+                            <img src="http://via.placeholder.com/500x200" alt="blog-post-thumbs">
                         {% endif %}
+                        {% endthumbnail %}
                     </a>
                 </div>
 

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'storages',
+    'sorl.thumbnail',
 ]
 
 # Login, Logout and Profile Handling

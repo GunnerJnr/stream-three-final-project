@@ -16,9 +16,12 @@
             Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
         <div class="col-md-12"  id="blog-post-detail">
+            {% load thumbnail %}
+            {% thumbnail post.post_images "500x500" as im %}
             {% if post.post_images %}
-                <img class="img-responsive" src="{{ post.post_images.url }}">
+                <img class="" src="{{ im.url }}">
             {% endif %}
+            {% endthumbnail %}
         </div>
 
         <br />

@@ -21,11 +21,14 @@
             <tbody>
                 {% for product in products %}
                     <tr>
+                        {% load thumbnail %}
+                        {% thumbnail product.product_images "300x300" as im %}
                         {% if product.product_images  %}
-                            <td><img class="img-square img-responsive product-img" src="{{ product.product_images.url }}"></td>
+                            <td><img class="product-img" src="{{ im.url }}"></td>
                         {% else %}
-                            <td><img class="img-square img-responsive product-img" src="http://via.placeholder.com/200x200"></td>
+                            <td><img class="product-img" src="http://via.placeholder.com/200x200"></td>
                         {% endif %}
+                        {% endthumbnail %}
                         <td id="product-name-and-description">
                             <h6>{{ product.name }}</h6>
                             <hr>

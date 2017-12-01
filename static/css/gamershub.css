@@ -306,8 +306,6 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-detail img {
-	width: 500px;
-	height: 500px;
 	border-top-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 	margin: 0 auto;
@@ -339,10 +337,7 @@ ul.messages li a.close:hover {
 
 #profile-img-container img {
 	position: relative;
-	width: 250px;
-	height: 250px;
-	border: solid 1px #3f3f3f;
-	border-radius: 20%;
+	border-radius: 10%;
 	margin: 10px auto;
 }
 
@@ -394,8 +389,6 @@ ul.messages li a.close:hover {
 
 .product-img {
 	position: relative;
-	width: 200px;
-	max-height: 400px;
 	border: 1px solid #111;
 	margin: auto;
 }
@@ -415,6 +408,12 @@ ul.messages li a.close:hover {
 #product-buy-btn {
 	vertical-align: middle;
 }
+
+#product-container tr {
+	max-height: 400px;
+	vertical-align: middle;
+}
+
 
 th,
 tr {
