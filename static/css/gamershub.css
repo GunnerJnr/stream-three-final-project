@@ -264,8 +264,7 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-thumb {
-	min-width: 400px;
-	min-height: 400px;
+	min-height: 300px;
 	margin: 20px auto;
 }
 
