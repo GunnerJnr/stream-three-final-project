@@ -240,9 +240,12 @@ ul.messages li a.close:hover {
 
 #homepage-h1 {
 	position: absolute;
-	width: 100%;
-	left: 12.5px;
-	top: 25%;
+	max-width: 100%;
+	height: auto;
+	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #homepage-h1 span {
@@ -250,7 +253,7 @@ ul.messages li a.close:hover {
 	/*fallback color */
 	background: rgba(0, 0, 0, 0.702);
 	color: #ffffff;
-	font-size: 30px;
+	font-size: 24px;
 	letter-spacing: -1px;
 	padding: 12px;
 }
