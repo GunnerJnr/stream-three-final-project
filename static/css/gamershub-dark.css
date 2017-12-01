@@ -223,11 +223,15 @@ ul.messages li a.close:hover {
 	margin: 0 auto;
 }
 
-#homepage-img {
-	min-width: 100%;
-	height: 650px;
+#homepage-img-container {
+	min-height: 650px;
+	margin: 20px auto;
+}
+
+#homepage-img-container img {
+	width: 100%;
+	height:100%;
 	opacity: 0.9;
-	margin-top: 20px;
 }
 
 #homepage-h1 {

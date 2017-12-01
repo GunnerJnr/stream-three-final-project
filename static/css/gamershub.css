@@ -219,11 +219,16 @@ ul.messages li a.close:hover {
 	margin: 0 auto;
 }
 
-#homepage-img {
+#homepage-img-container {
+	min-height: 650px;
+	margin: 0 auto;
+}
+
+#homepage-img-container img {
 	width: 100%;
-	height: 650px;
+	height:100%;
 	opacity: 0.9;
-	margin-top: 20px;
+	margin: 0 auto;
 }
 
 #homepage-h1 {
