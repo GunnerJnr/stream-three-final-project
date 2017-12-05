@@ -403,6 +403,7 @@ ul.messages li a.close:hover {
 	max-width: 100%;
 	height: auto;
 	margin: 20px auto;
+	vertical-align: middle;
 }
 
 #product-name-and-description {
