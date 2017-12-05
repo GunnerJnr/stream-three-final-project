@@ -402,7 +402,7 @@ ul.messages li a.close:hover {
 .product-img {
 	position: relative;
 	max-width: 100%;
-	height: auto;
+	height: 100%;
 	margin: 0 auto;
     top: 0;
     left: 0;
