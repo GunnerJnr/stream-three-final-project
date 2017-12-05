@@ -401,8 +401,13 @@ ul.messages li a.close:hover {
 
 .product-img {
 	position: relative;
-	border: 1px solid #111;
-	margin: auto;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #product-name-and-description {
