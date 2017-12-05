@@ -19,7 +19,7 @@
             {% load thumbnail %}
             {% thumbnail post.post_images "500x500" as im %}
             {% if post.post_images %}
-                <img class="" src="{{ im.url }}">
+                <img class="" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
             {% endif %}
             {% endthumbnail %}
         </div>
