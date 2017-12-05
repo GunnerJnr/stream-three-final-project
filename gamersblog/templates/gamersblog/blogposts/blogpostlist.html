@@ -21,7 +21,7 @@
                     <!-- add an image to the post preview for a nice touch -->
                     <a href="{{ post.get_absolute_url }}">
                         {% load thumbnail %}
-                        {% thumbnail post.post_images "300x300" crop="center" as im %}
+                        {% thumbnail post.post_images "100x100" crop="center" as im %}
                         {% if post.post_images %}
                             <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                         {% else %}
