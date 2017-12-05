@@ -438,6 +438,7 @@ ul.messages li a.close:hover {
 #product-name-and-description p {
 	font-size: 14px;
 	text-align: justify;
+	font-size:calc(100% + 2vw);
 }
 
 #product-price,
