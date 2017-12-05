@@ -448,6 +448,7 @@ ul.messages li a.close:hover {
 th,
 tr {
 	text-align: center;
+	overflow-x: auto;
 }
 
 #successful-purchase-page-container,
