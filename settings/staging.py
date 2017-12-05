@@ -63,6 +63,8 @@ STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 MEDIAFILES_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
+THUMBNAIL_FORCE_OVERWRITE = True
+
 # Log DEBUG information to the console
 LOGGING = {
     'version': 1.0,
