@@ -75,24 +75,19 @@ li {
 .custom-form-container {
 	position: relative;
 	text-align: center;
-	vertical-align: middle;
 	margin: 0 auto;
 }
 
 .borderlands-img {
 	max-width: 100%;
-	height: auto;
+	max-height: 650px;
 	opacity: 0.9;
 }
 
 .custom-form {
-	position: absolute;
-	width: auto !important;
+	width: 75%;
 	height: auto !important;
-	left: 50%;
-	top: 50%;
-	margin-left: -150px;
-	margin-top: -150px;
+	margin: 0 auto;
 }
 
 .custom-form h1 {
