@@ -16,31 +16,49 @@
         <div class="col-sm-4 col-md-4 col-lg-4 product-container">
             <div class="product-thumb">
                 <!-- add an image to the post preview for a nice touch -->
-                <a href="{{ product.get_absolute_url }}">
-                    {% load thumbnail %}
-                    {% thumbnail product.product_images "300x300" crop="center" as im %}
-                    {% if product.product_images  %}
-                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-                    {% else %}
-                        <img src="http://via.placeholder.com/200x200">
-                    {% endif %}
-                    {% endthumbnail %}
-                </a>
+                {% load thumbnail %}
+                {% thumbnail product.product_images "300x300" crop="center" as im %}
+                {% if product.product_images  %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                {% else %}
+                    <img src="http://via.placeholder.com/200x200">
+                {% endif %}
+                {% endthumbnail %}
             </div>
 
             <div id="product-name">
                 <h3>
-                    <a href="{{ product.get_absolute_url }}">
-                        {{ product.name }}
-                    </a>
+                    {{ product.name }}
                 </h3>
             </div>
 
             <div id="product-description">
-                <a href="{{ product.get_absolute_url }}">
-                    <!-- Here we wish to truncate the post content as it is a preview -->
-                    <p>{{ product.description|truncatewords:50|linebreaks }}</p>
-                </a>
+                <!-- Here we wish to truncate the post content as it is a preview -->
+                <p>{{ product.description|truncatewords:50|linebreaks }}</p>
+
+                <br />
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">        
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">{{ product.name }}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>{{ product.description }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <hr>
@@ -50,11 +68,11 @@
                 <p id="product-buy-btn">{{ product.paypal_form.sandbox }}</p>
             </div>
         </div>
-            {% endfor %}
+        {% endfor %}
 
 
-            <div class="col-md-12">
-                {% include "products/productlistpagination.html" with page=products %}
-            </div>
+        <div class="col-md-12">
+            {% include "products/productlistpagination.html" with page=products %}
+        </div>
     </div>
 {% endblock %}

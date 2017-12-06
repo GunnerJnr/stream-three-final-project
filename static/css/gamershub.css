@@ -415,7 +415,7 @@ ul.messages li a.close:hover {
 
 #product-content p,
 #product-content h6 {
-	color: #ffffff;
+	color: #111;
 }
 
 .product-thumb {
@@ -444,7 +444,7 @@ ul.messages li a.close:hover {
 #product-description {
 	min-height: 200px;
 	margin: auto;
-	text-align: left;
+	text-align: center;
 }
 
 #product-description a {
@@ -484,6 +484,23 @@ ul.messages li a.close:hover {
 	height: 600px;
 	margin: 20px auto;
 	vertical-align: middle;
+}
+
+.modal {
+	width: 600px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.modal-backdrop {
+	background-color: rgba(240, 149, 74, 0.74);
+ }
+
+.modal-title,
+.modal-body p {
+	text-align: center;
+	color: #111;
+	margin: 0 auto;
 }
 
 

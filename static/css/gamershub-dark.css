@@ -20,7 +20,7 @@ body {
 #site-theme-container {
 	margin-left: 5px;
 	margin-bottom: 40px;
-	color: rgb(8, 8, 8);
+	color: #080808;
 }
 
 #site-theme-container label {
@@ -457,7 +457,7 @@ ul.messages li a.close:hover {
 #product-description {
 	min-height: 200px;
 	margin: auto;
-	text-align: left;
+	text-align: center;
 }
 
 #product-description a {
@@ -499,6 +499,27 @@ ul.messages li a.close:hover {
 	vertical-align: middle;
 }
 
+.modal {
+	width: 600px;
+	max-width: 100%;
+	margin: 0 auto;
+	
+}
+
+.modal-content {
+	background-color: #111;
+}
+
+.modal-backdrop {
+	background-color: rgba(240, 149, 74, 0.74);
+ }
+
+.modal-title,
+.modal-body p {
+	text-align: center;
+	color: #ffffff;
+	margin: 0 auto;
+}
 
 /********** Responsive Breakpoint Design Elements **********/
 
