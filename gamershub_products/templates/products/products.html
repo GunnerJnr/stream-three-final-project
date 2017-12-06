@@ -7,9 +7,10 @@
 {% endblock %}
 
 {% block content %}
+    <h1>Gamers Hub Shop</h1>
+
     <div id="product-content">
         <!-- The main content of the body -->
-        <h1>Gamers Hub Shop</h1>
 
         {% for product in products %}
         <div class="col-sm-4 col-md-4 col-lg-4 product-container">
@@ -28,11 +29,11 @@
             </div>
 
             <div id="product-name">
-                <h2>
+                <h3>
                     <a href="{{ product.get_absolute_url }}">
                         {{ product.name }}
                     </a>
-                </h2>
+                </h3>
             </div>
 
             <div id="product-description">
@@ -51,7 +52,7 @@
         </div>
             {% endfor %}
 
-            <hr>
+
             <div class="col-md-12">
                 {% include "products/productlistpagination.html" with page=products %}
             </div>

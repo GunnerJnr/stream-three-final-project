@@ -29,6 +29,7 @@ body {
 
 h1 {
 	margin-top: 60px;
+	text-align: center;
 }
 
 p {
@@ -338,6 +339,8 @@ ul.messages li a.close:hover {
 	margin: 20px auto;
 }
 
+/********** Pagination Style **********/
+
 .next,
 .previous,
 .pager {
@@ -444,7 +447,7 @@ ul.messages li a.close:hover {
 	min-height: 60px;
 }
 
-#product-name-h2 {
+#product-name-h3 {
 	font-weight: normal;
 	font-size: 1.5em;
 	text-align: center;
@@ -473,11 +476,13 @@ ul.messages li a.close:hover {
 }
 
 #product-price-and-buy-btn {
+	min-height: 150px;
 	vertical-align: middle;
 }
 
 #product-price-and-buy-btn p {
-	font-size: 22px;
+	margin: 20px;
+	font-size: 28px;
 }
 
 #successful-purchase-page-container,
