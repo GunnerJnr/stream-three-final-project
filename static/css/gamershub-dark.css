@@ -74,13 +74,12 @@ li {
 
 .borderlands-img {
 	background-image: url("/static/img/login-page/borderlands-two.jpg");
-	/* Center and scale the image nicely */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* Preserve aspect ratio */
-	min-width: 100%;
-	min-height: 100%;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
 	opacity: 0.9;
 }
 
