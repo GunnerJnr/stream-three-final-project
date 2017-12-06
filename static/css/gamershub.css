@@ -419,9 +419,8 @@ ul.messages li a.close:hover {
 
 #product-name,
 #product-description {
-	width: 850px;
+	max-width: 100%;
 	height: auto;
-	max-height: 400px;
 }
 
 #product-name p,

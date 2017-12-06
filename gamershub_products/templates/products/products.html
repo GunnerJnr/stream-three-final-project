@@ -7,42 +7,49 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12" id="product-container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Preview</th>
-                    <th>Product Name and Description</th>
-                    <th>Price</th>
-                    <th>Purchase</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for product in products %}
-                    <tr>
-                        {% load thumbnail %}
-                        {% thumbnail product.product_images "300x300" as im %}
-                        {% if product.product_images  %}
-                            <td><img class="product-img" src="{{ im.url }}"></td>
-                        {% else %}
-                            <td><img class="product-img" src="http://via.placeholder.com/200x200"></td>
-                        {% endif %}
-                        {% endthumbnail %}
-                        <td id="product-name-and-description">
-                            <h6>{{ product.name }}</h6>
-                            <hr>
-                            <p>{{ product.description }}</p>
-                        </td>
-                        <td id="product-price">${{ product.price }}</td>
-                        <td id="product-buy-btn">{{ product.paypal_form.sandbox }}</td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <div class="col-md-12">
-            {% include "products/productlistpagination.html" with page=products %}
+    <div id="product-container">
+        <!-- The main content of the body -->
+        <h1>Gamers Hub Shop</h1>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="product-img">
+                <!-- add an image to the post preview for a nice touch -->
+                <a href="{{ product.get_absolute_url }}">
+                    {% load thumbnail %}
+                    {% thumbnail product.product_images "300x300" as im %}
+                    {% if product.product_images  %}
+                        <img src="{{ im.url }}">
+                    {% else %}
+                        <img src="http://via.placeholder.com/200x200">
+                    {% endif %}
+                    {% endthumbnail %}
+                </a>
+            </div>
+
+            <div id="product-name">
+                <h2>
+                    <a href="{{ product.get_absolute_url }}">
+                        {{ product.name }}
+                    </a>
+                </h2>
+            </div>
+
+            <div id="product-description">
+                <a href="{{ product.get_absolute_url }}">
+                    <!-- Here we wish to truncate the post content as it is a preview -->
+                    <p>{{ product.description|truncatewords:50|linebreaks }}</p>
+                </a>
+            </div>
+
+            <div id="">
+                <p id="product-price">${{ product.price }}</p>
+                <p id="product-buy-btn">{{ product.paypal_form.sandbox }}</p>
+            </div>
+
+            <hr>
+            <div class="col-md-12">
+                {% include "products/productlistpagination.html" with page=products %}
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
