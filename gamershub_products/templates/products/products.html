@@ -7,18 +7,19 @@
 {% endblock %}
 
 {% block content %}
-    <div id="product-container">
+    <div id="product-content">
         <!-- The main content of the body -->
         <h1>Gamers Hub Shop</h1>
 
-        <div class="col-sm-4 col-md-4 col-lg-4">
-            <div class="product-img">
+        {% for product in products %}
+        <div class="col-sm-4 col-md-4 col-lg-4 product-container">
+            <div class="product-thumb">
                 <!-- add an image to the post preview for a nice touch -->
                 <a href="{{ product.get_absolute_url }}">
                     {% load thumbnail %}
-                    {% thumbnail product.product_images "300x300" as im %}
+                    {% thumbnail product.product_images "300x300" crop="center" as im %}
                     {% if product.product_images  %}
-                        <img src="{{ im.url }}">
+                        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                     {% else %}
                         <img src="http://via.placeholder.com/200x200">
                     {% endif %}
@@ -41,15 +42,18 @@
                 </a>
             </div>
 
-            <div id="">
+            <hr>
+
+            <div id="product-price-and-buy-btn">
                 <p id="product-price">${{ product.price }}</p>
                 <p id="product-buy-btn">{{ product.paypal_form.sandbox }}</p>
             </div>
+        </div>
+            {% endfor %}
 
             <hr>
             <div class="col-md-12">
                 {% include "products/productlistpagination.html" with page=products %}
             </div>
-        </div>
     </div>
 {% endblock %}

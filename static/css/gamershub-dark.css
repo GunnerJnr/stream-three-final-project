@@ -414,38 +414,70 @@ ul.messages li a.close:hover {
 
 /********** Products Page Styling **********/
 
-#product-container {
-	min-width: 100%;
+#product-content {
+	min-height: 100%;
 	text-align: center;
 }
 
-#product-container p,
-#product-container h6 {
+.product-container {
+	border: solid 0.025px rgba(146, 136, 136, 0.5);
+}
+
+#product-content p,
+#product-content h6 {
 	color: #ffffff;
 }
 
-.product-img {
-	max-width: 100%;
-	height: auto;
+.product-thumb {
+	min-height: 300px;
 	margin: 20px auto;
-	vertical-align: middle;
 }
 
-#product-name,
-#product-description {
-	max-width: 100%;
+.product-thumb img {
+	width: 100%;
 	height: auto;
+	border-radius: 5%;
+	margin: 0 auto;
 }
 
-#product-name p,
-#product-description p {
+#product-name {
+	min-height: 60px;
+}
+
+#product-name-h2 {
+	font-weight: normal;
+	font-size: 1.5em;
+	text-align: center;
+	margin-top: 20px;
+}
+
+#product-description {
+	min-height: 200px;
+	margin: auto;
+	text-align: left;
+}
+
+#product-description a {
+	color: #2e5384;
+	text-transform: none;
+}
+
+#product-description a:hover {
+	color: #ee3a3a;
+	text-transform: none;
+}
+
+#product-content p {
 	font-size: 14px;
-	text-align: justify;
+	font-weight: bold;
 }
 
-#product-price,
-#product-buy-btn {
+#product-price-and-buy-btn {
 	vertical-align: middle;
+}
+
+#product-price-and-buy-btn p {
+	font-size: 22px;
 }
 
 #successful-purchase-page-container,
