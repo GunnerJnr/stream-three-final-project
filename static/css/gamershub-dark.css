@@ -70,17 +70,29 @@ li {
 }
 
 
-/********** Forms Style **********/
+/********** Custom Form Style **********/
+
+.custom-form-container {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+}
 
 .borderlands-img {
-	background-image: url("/static/img/login-page/borderlands-two.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	max-width: 100%;
 	height: auto;
-	margin: 0 auto;
 	opacity: 0.9;
+}
+
+.custom-form {
+	position: absolute;
+	width: auto !important;
+	height: auto !important;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
 }
 
 .custom-form h1 {
@@ -228,13 +240,13 @@ ul.messages li a.close:hover {
 
 #homepage-img-container img {
 	width: 100%;
-    max-height: 650px;
+	max-height: 650px;
 	opacity: 0.9;
 	margin: 20px auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #homepage-h1 {
@@ -242,9 +254,9 @@ ul.messages li a.close:hover {
 	max-width: 100%;
 	height: auto;
 	top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #homepage-h1 span {
@@ -424,13 +436,15 @@ ul.messages li a.close:hover {
 	vertical-align: middle;
 }
 
-#product-name-and-description {
+#product-name,
+#product-description {
 	width: 850px;
 	height: auto;
 	max-height: 400px;
 }
 
-#product-name-and-description p {
+#product-name p,
+#product-description p {
 	font-size: 14px;
 	text-align: justify;
 }
@@ -438,17 +452,6 @@ ul.messages li a.close:hover {
 #product-price,
 #product-buy-btn {
 	vertical-align: middle;
-}
-
-#product-container tr {
-	max-height: 400px;
-	vertical-align: middle;
-}
-
-th,
-tr {
-	text-align: center;
-	overflow-x: auto;
 }
 
 #successful-purchase-page-container,
@@ -467,8 +470,14 @@ tr {
 
 
 /********** Responsive Breakpoint Design Elements **********/
+
+
 /* Extra small devices (phones, etc. less than 768px) */
+
+
 /* No media query since this is the default in Bootstrap */
+
+
 /* So we will make our own custom to handle these devices */
 
 @media screen and (max-width: 400px) and (min-width: 178px) {
@@ -551,17 +560,6 @@ tr {
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
-	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
 	}
 	/********** Footer Style **********/
 	footer {
@@ -655,17 +653,6 @@ tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
 	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
-	}
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -691,7 +678,7 @@ tr {
 	}
 	.container-fluid {
 		margin: auto;
-		padding: 50px 0;
+		padding: 0;
 	}
 	/********** Nav Bar Style **********/
 	navbar {
@@ -757,17 +744,6 @@ tr {
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
-	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
 	}
 	/********** Footer Style **********/
 	footer {
@@ -837,17 +813,6 @@ tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
 	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
-	}
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -915,17 +880,6 @@ tr {
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
-	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
 	}
 	/********** Footer Style **********/
 	footer {

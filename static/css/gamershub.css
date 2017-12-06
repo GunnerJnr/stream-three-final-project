@@ -66,17 +66,29 @@ li {
 }
 
 
-/********** Forms Style **********/
+/********** Custom Form Style **********/
+
+.custom-form-container {
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+}
 
 .borderlands-img {
-	background-image: url("/static/img/login-page/borderlands-two.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	max-width: 100%;
 	height: auto;
-	margin: 0 auto;
 	opacity: 0.9;
+}
+
+.custom-form {
+	position: absolute;
+	width: auto !important;
+	height: auto !important;
+	left: 50%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
 }
 
 .custom-form h1 {
@@ -398,6 +410,11 @@ ul.messages li a.close:hover {
 	text-align: center;
 }
 
+#product-container p,
+#product-container h6 {
+	color: #ffffff;
+}
+
 .product-img {
 	max-width: 100%;
 	height: auto;
@@ -405,13 +422,15 @@ ul.messages li a.close:hover {
 	vertical-align: middle;
 }
 
-#product-name-and-description {
+#product-name,
+#product-description {
 	width: 850px;
 	height: auto;
 	max-height: 400px;
 }
 
-#product-name-and-description p {
+#product-name p,
+#product-description p {
 	font-size: 14px;
 	text-align: justify;
 }
@@ -419,18 +438,6 @@ ul.messages li a.close:hover {
 #product-price,
 #product-buy-btn {
 	vertical-align: middle;
-}
-
-#product-container tr {
-	max-height: 400px;
-	vertical-align: middle;
-}
-
-
-th,
-tr {
-	text-align: center;
-	overflow-x: auto;
 }
 
 #successful-purchase-page-container,
@@ -534,17 +541,6 @@ tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
 	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
-	}
 	/********** Footer Style **********/
 	footer {
 		position: static;
@@ -636,17 +632,6 @@ tr {
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
-	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
 	}
 	/********** Footer Style **********/
 	footer {
@@ -740,17 +725,6 @@ tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
 	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
-	}
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -819,17 +793,6 @@ tr {
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
 	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
-	}
 	/********** Footer Style **********/
 	footer {
 		position: fixed;
@@ -897,17 +860,6 @@ tr {
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
 		background: #4192f0;
-	}
-	/********** Custom Form Style **********/
-	.custom-form {
-		background-color: rgba(227, 201, 248, 0.589);
-		color: #104283;
-		border-radius: 20px;
-		max-width: 80%;
-		height: auto !important;
-		text-align: center;
-		margin: 50px auto 0 auto;
-		padding: 20px;
 	}
 	/********** Footer Style **********/
 	footer {
