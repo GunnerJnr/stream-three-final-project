@@ -10,7 +10,7 @@ from .models import GamersHubProducts
 
 
 # Create your views here.
-@login_required(login_url='/login/')
+@login_required
 def products_list(request):
     """
     products_list:
