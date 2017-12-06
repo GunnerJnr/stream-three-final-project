@@ -1,14 +1,19 @@
 <!-- Tell Django we want to extend the Base.html -->
 {% extends "gamershub/base.html" %}
+{% load staticfiles %}
 
 {% block title %}
 	Logged out
 {% endblock %}
 
 {% block content %}
-	<div class="col-md-12 borderlands-img">
+	<div class="custom-form-container col-md-12">
+
+		<h1>Logged out</h1>
+
+		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
+
 		<div class="custom-form">
-			<h1>Logged out</h1>
 			<p>
 				Thank You for visiting Gamers Hub.
 			<br  />
