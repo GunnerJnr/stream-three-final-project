@@ -3,7 +3,7 @@ Dev.py: - This is the settings used in development (DUBUG = True)
 """
 from settings.base import *
 
-SECRET_KEY = 'ab$TH&zc32R^(()3GhrtSx3Aa' # dummy key for development
+SECRET_KEY = 'gh^jqtpb1@e3^ks@y2i4@xuxo9r(xqf6v8-$$5e6ak*v6-g8$f5idag' # dummy key for development
 
 DEBUG = True
 
