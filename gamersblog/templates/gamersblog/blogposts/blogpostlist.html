@@ -17,11 +17,11 @@
         {% for post in  blog_posts %}
             <div class="col-sm-4 col-md-4 col-lg-4 blog-post-container">
 
-                <div id="blog-post-thumb">
+                <div id="blog-post-thumb-container">
                     <!-- add an image to the post preview for a nice touch -->
                     <a href="{{ post.get_absolute_url }}">
                         {% load thumbnail %}
-                        {% thumbnail post.post_images "500x500" crop="center" as im %}
+                        {% thumbnail post.post_images "300x300" crop="center" as im %}
                         {% if post.post_images %}
                             <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                         {% else %}
@@ -42,17 +42,17 @@
                 <hr>
 
                 <div id="blog-post-title">
-                    <h2>
+                    <h5>
                         <a href="{{ post.get_absolute_url }}">
                             {{ post.post_title }}
                         </a>
-                    </h2>
+                    </h5>
                 </div>
 
                 <div id="blog-post-preview">
                         <a href="{{ post.get_absolute_url }}">
                             <!-- Here we wish to truncate the post content as it is a preview -->
-                            <p>{{ post.post_body|truncatewords:50|linebreaks }}</p>
+                            <p>{{ post.post_body|truncatewords:30|linebreaks }}</p>
                         </a>
                 </div>
             </div>

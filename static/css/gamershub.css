@@ -241,7 +241,8 @@ ul.messages li a.close:hover {
 /********** Blog List and Post Style **********/
 
 #blog-post-content {
-	min-height: 100%;
+	max-width: 100%;
+	height: auto;
 	text-align: center;
 }
 
@@ -249,33 +250,29 @@ ul.messages li a.close:hover {
 	border: solid 0.025px rgba(146, 136, 136, 0.5);
 }
 
-#blog-post-thumb {
-	min-height: 300px;
-	margin: 20px auto;
-}
-
-#blog-post-thumb img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 5%;
+#blog-post-thumb-container {
 	margin: 0 auto;
 }
 
+#blog-post-thumb-container img {
+	max-width: 100%;
+	height: auto;
+	margin: 20px auto;
+}
+
 #blog-post-title {
-	min-height: 60px;
+	height: auto;
+	color: #fff;
 }
 
 #blog-post-title h2 {
 	font-weight: normal;
-	font-size: 1.5em;
 	text-align: center;
-	margin-top: 20px;
 }
 
 #blog-post-preview {
-	min-height: 200px;
-	margin: auto;
-	text-align: left;
+	min-height: 100px;
+	text-align: center;
 }
 
 #blog-post-preview a {
@@ -289,7 +286,7 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-content p {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: bold;
 }
 
@@ -380,6 +377,7 @@ ul.messages li a.close:hover {
 /********** Products Page Styling **********/
 
 #product-content {
+	max-width: 100%;
 	height: auto;
 	text-align: center;
 }
