@@ -1,45 +1,36 @@
 <!-- Tell Django we want to extend the base.html file -->
-{% extends 'gamershub/base.html' %}
-{% load staticfiles %}
+{% extends 'gamershub/base.html' %} {% load staticfiles %}
 
 <!-- Sets the main site title -->
-{% block title %}
-    Homepage
-{% endblock %}
-
-{% block head_js %}
-
-{% endblock %}
+{% block title %} Homepage {% endblock %} {% block head_js %} {% endblock %}
 
 <!-- block content begin -->
 {% block content %}
-<div class="row" id="homepage-container">
-    <div class="col-md-12">
-        <div id="homepage-img-container">
-            <img src="{% static 'img/homepage/homepage-bg.png' %}">
-        </div>
-        <hr>
-        <h1 id="homepage-h1"><span>WELCOME TO </span></h1>
-        <p>
-            Hello and welcome to Gamers Hub! 
-            
-            We are very excited to have you and we hope that you will enjoy your stay. 
-            There should be enough content and fun for you to satisfy your needs as a gaming nut.
-        </p>
-        <p>
-            We plan on continually expanding our site to make your experience a great one. We
-            currently have a blog for you to read up about all the latest game releases, see what we
-            think about them by reading our reviews, we will add a commenting system to allow you
-            to interact with the gaming community and voice your own opinions on the games. We
-            also have a store where you can purchase t-shirts, gaming bundles, computer bits and
-            bobs that can all be customised with gaming attire. We will offer discounts on some of the
-            latest game releases and much more.
-        </p>
-        <p>
-            Finally, you will have the chance to Sign up/Register to our site and become part of
-            a great community. The benefits of this will be that can access parts of the site that are not
-            available to non members. Registration is FREE so there is no reason to hold off signing up.
-        </p>
-        <hr>
+<div class="col-md-12" id="homepage-container">
+    <div id="homepage-img-container">
+        <img src="{% static 'img/homepage/homepage-bg.png' %}">
+    </div>
+    <hr>
+    <h1 id="homepage-h1">
+        <span>WELCOME TO </span>
+    </h1>
+    <p>
+        Hello and welcome to Gamers Hub! We are very excited to have you and we hope that you will enjoy your stay. There should
+        be enough content and fun for you to satisfy your needs as a gaming nut.
+    </p>
+    <p>
+        We plan on continually expanding our site to make your experience a great one. We currently have a blog for you to read up
+        about all the latest game releases, see what we think about them by reading our reviews, we will add a commenting
+        system to allow you to interact with the gaming community and voice your own opinions on the games. We also have
+        a store where you can purchase t-shirts, gaming bundles, computer bits and bobs that can all be customised with
+        gaming attire. We will offer discounts on some of the latest game releases and much more.
+    </p>
+    <p>
+        Finally, you will have the chance to Sign up/Register to our site and become part of a great community. The benefits of this
+        will be that can access parts of the site that are not available to non members. Registration is FREE so there
+        is no reason to hold off signing up.
+    </p>
+    <hr>
+</div>
 {% endblock %}
 <!-- block content end -->

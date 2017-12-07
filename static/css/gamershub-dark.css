@@ -7,20 +7,21 @@
 
 html {
 	height: 100%;
-	margin: 0;
 	overflow-x: hidden;
 }
 
 body {
-	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 20px;
 	background-color: rgb(26, 26, 26);
 	color: #fff;
+	overflow: hidden;
 }
 
 #site-theme-container {
 	margin-left: 5px;
-	margin-bottom: 40px;
-	color: #080808;
+	margin-bottom: 60px;
+	color: rgb(8, 8, 8);
 }
 
 #site-theme-container label {

@@ -7,19 +7,19 @@
 
 html {
 	height: 100%;
-	margin: 0;
 	overflow-x: hidden;
 }
 
 body {
-	height: 100%;
+	padding-top: 50px;
+	padding-bottom: 60px;
 	background-color: rgb(226, 226, 226);
 	color: #000;
 }
 
 #site-theme-container {
 	margin-left: 5px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	color: rgb(8, 8, 8);
 }
 
@@ -592,8 +592,10 @@ ul.messages li a.close:hover {
 	}
 	/********** Footer Style **********/
 	footer {
-		position: static;
-		height: 20px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
 		background-color: #f5f5f5;
 		border-bottom: solid;
 		border-width: thin;
@@ -684,8 +686,10 @@ ul.messages li a.close:hover {
 	}
 	/********** Footer Style **********/
 	footer {
-		position: fixed;
-		height: 30px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
 		background-color: #f5f5f5;
 		border-bottom: solid;
 		border-width: thin;
@@ -776,7 +780,9 @@ ul.messages li a.close:hover {
 	}
 	/********** Footer Style **********/
 	footer {
-		position: fixed;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 		height: 60px;
 		background-color: #f5f5f5;
 		border-bottom: solid;
@@ -844,7 +850,9 @@ ul.messages li a.close:hover {
 	}
 	/********** Footer Style **********/
 	footer {
-		position: fixed;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 		height: 60px;
 		background-color: #f5f5f5;
 		border-bottom: solid;
@@ -912,7 +920,9 @@ ul.messages li a.close:hover {
 	}
 	/********** Footer Style **********/
 	footer {
-		position: fixed;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
 		height: 60px;
 		background-color: #f5f5f5;
 		border-bottom: solid;
