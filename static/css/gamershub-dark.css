@@ -235,34 +235,10 @@ ul.messages li a.close:hover {
 }
 
 #homepage-img-container img {
-	width: 100%;
-	max-height: 650px;
-	opacity: 0.9;
-	margin: 20px auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-#homepage-h1 {
-	position: absolute;
 	max-width: 100%;
-	height: auto;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-#homepage-h1 span {
-	background: reg(0, 0, 0);
-	/*fallback color */
-	background: rgba(0, 0, 0, 0.702);
-	color: #ffffff;
-	font-size: 24px;
-	letter-spacing: -1px;
-	padding: 12px;
+    max-height: 650px;
+	opacity: 0.9;
+	margin: 10px auto;
 }
 
 
