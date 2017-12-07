@@ -20,8 +20,8 @@
         {% for product in products %}
         <!-- Product Container Begin -->
         <div class="col-sm-4 col-md-4 col-lg-4 product-container">            
-            <!-- Product Thumb Begin -->
-            <div class="product-thumb">
+            <!-- Product Thumb Container Begin -->
+            <div class="product-thumb-container">
                 <!-- add an image to the post preview for a nice touch -->
                 {% load thumbnail %}
                 {% thumbnail product.product_images "300x300" crop="center" as im %}
@@ -32,7 +32,7 @@
                 {% endif %}
                 {% endthumbnail %}
             </div>
-            <!-- Product Thumb End -->
+            <!-- Product Thumb Container End -->
 
             <!-- Product Name Begin -->
             <div id="product-name">

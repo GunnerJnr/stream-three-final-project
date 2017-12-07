@@ -259,7 +259,7 @@ ul.messages li a.close:hover {
 }
 
 #blog-post-thumb img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	border-radius: 5%;
 	margin: 0 auto;
@@ -406,14 +406,14 @@ ul.messages li a.close:hover {
 	color: #ffffff;
 }
 
-.product-thumb {
+.product-thumb-container {
 	margin: 0 auto;
 }
 
-.product-thumb img {
+.product-thumb-container img {
+	max-width: 100%;
 	height: auto;
-	border-radius: 5%;
-	margin: 15px auto;
+	margin: 20px auto;
 }
 
 #product-name {
@@ -497,25 +497,12 @@ ul.messages li a.close:hover {
 
 /********** Responsive Breakpoint Design Elements **********/
 
-
 /* Extra small devices (phones, etc. less than 768px) */
-
-
 /* No media query since this is the default in Bootstrap */
-
-
 /* So we will make our own custom to handle these devices */
 
 @media screen and (max-width: 400px) and (min-width: 178px) {
-	body {
-		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		box-sizing: border-box;
-		padding-bottom: 20px;
-	}
-	.container-fluid {
-		margin: auto;
-		padding: 50px 0;
-	}
+
 	.h1,
 	.h2,
 	.h3 {
@@ -606,14 +593,7 @@ ul.messages li a.close:hover {
 /* Small devices (tablets, etc.) */
 
 @media screen and (max-width: 768px) and (min-width: 401px) {
-	body {
-		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		box-sizing: border-box;
-	}
-	.container-fluid {
-		margin: auto;
-		padding: 50px 0;
-	}
+
 	/********** Nav Bar Style **********/
 	navbar {
 		position: static;
@@ -698,14 +678,7 @@ ul.messages li a.close:hover {
 /* Medium devices (desktops, 769px and up) */
 
 @media screen and (max-width: 991px) and (min-width: 769px) {
-	body {
-		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		box-sizing: border-box;
-	}
-	.container-fluid {
-		margin: auto;
-		padding: 0;
-	}
+	
 	/********** Nav Bar Style **********/
 	navbar {
 		position: static;
@@ -790,14 +763,7 @@ ul.messages li a.close:hover {
 /* Large devices (large desktops, 992px and up) */
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
-	body {
-		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		box-sizing: border-box;
-	}
-	.container-fluid {
-		margin: auto;
-		padding: 50px 0;
-	}
+
 	/********** Nav Bar Style **********/
 	navbar {
 		position: fixed;
@@ -858,14 +824,7 @@ ul.messages li a.close:hover {
 /* Even larger devices (ott desktops, 1200px and up) */
 
 @media screen and (min-width: 1200px) {
-	body {
-		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-		box-sizing: border-box;
-	}
-	.container-fluid {
-		margin: auto;
-		padding: 50px 0;
-	}
+	
 	/********** Nav Bar Style **********/
 	navbar {
 		position: fixed;
