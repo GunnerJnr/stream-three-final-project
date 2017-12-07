@@ -27,22 +27,25 @@
             </div>
 
             <div id="product-name">
-                <h3>
+                <h5>
                     {{ product.name }}
-                </h3>
+                </h5>
             </div>
 
+            <!-- Product Description Begin -->
             <div id="product-description">
-                <!-- Here we wish to truncate the post content as it is a preview -->
-                <p>{{ product.description|truncatewords:50|linebreaks }}</p>
+                <!-- Here we truncate the product description to show a preview -->
+                <p>{{ product.description|truncatewords:30|linebreaks }}</p>
+            </div>
+            <!-- Product Description End -->
 
-                <br />
-
+            <!-- Modal Div Begin -->
+            <div id="modal-btn-container">
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Full Description</button>
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#product-description-modal">Full Description</button>
                 
                 <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal fade" id="product-description-modal" role="dialog">
                     <div class="modal-dialog">        
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -54,12 +57,13 @@
                                 <p>{{ product.description }}</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Modal Div End -->
 
             <hr>
 
