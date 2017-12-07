@@ -30,7 +30,7 @@
     </head>
 
     <body>
-        <!-- FIXED NAV BAR BEGIN -->
+        <!-- Fixed Navbar Begin -->
         <nav class="navbar navbar-default navbar-fixed-top navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
@@ -45,53 +45,37 @@
                         <img alt="Brand" src="{% static 'img/logo/nav-logo.png' %}">
                     </a>
                 </div>
-                <!-- NAV COLLAPSE BEGIN-->
+                <!-- Nav Collapse Begin -->
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'blog_post_list' %}">Blog</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'most_viewed' %}">Most Viewed Blog Posts</a>
-                        </li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'blog_post_list' %}">Blog</a></li>
+                        <li><a href="{% url 'most_viewed' %}">Most Viewed Blog Posts</a></li>
                         {% if user.is_authenticated %}
-                        <li>
-                            <a href="{% url 'products' %}">Store</a>
-                        </li>
+                            <li><a href="{% url 'products' %}">Store</a></li>
                         {% endif %}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {% if user.is_authenticated %}
-                        <li>
-                            <a href="{% url 'user_profile' %}">Profile</a>
-                        </li>
-                        {% if user.is_superuser or user.is_admin %}
-                        <li>
-                            <a href="/admin/">Admin</a>
-                        </li>
-                        {% endif %}
-                        <li>
-                            <a href="{% url 'logout' %}">Log Out</a>
-                        </li>
+                            <li><a href="{% url 'user_profile' %}">Profile</a></li>
+                            {% if user.is_superuser or user.is_admin %}
+                                <li><a href="/admin/">Admin</a></li>
+                            {% endif %}
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
                         {% else %}
-                        <li>
-                            <a href="{% url 'register' %}">Register</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'login' %}">Login</a>
-                        </li>
+                            <li><a href="{% url 'register' %}">Register</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
                         {% endif %}
                     </ul>
                 </div>
-                <!--NAV COLLAPSE END -->
+                <!--Nav Collapse End -->
             </div>
         </nav>
-        <!-- FIXED NAV END-->
+        <!-- Fixed Nav End-->
 
+        <!-- Content Container Begin -->
         <div class="container">
+            <!-- Validation Messages Begin -->
             {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -101,12 +85,15 @@
                 {% endfor %}
             </ul>
             {% endif %}
+            <!-- Validation Messages End -->
 
-            <!-- Here we inject the content we want to display -->
+            <!-- Inject the content we want to display -->
             {% block content %} {% endblock %}
             <!-- End content injection here -->
         </div>
+        <!-- Content Container End -->
 
+        <!-- Site Theme Selector Begin -->
         <div id="site-theme-container" class "col-md-12">
             <label for="theme">Choose Theme:</label>
             <select id="theme">
@@ -114,18 +101,24 @@
                 <option value="{% static 'css/gamershub-dark.css' %}">Dark</option>
             </select>
         </div>
+        <!-- Site Theme Selector End -->
 
+        <!-- Footer Begin -->
         <footer class="footer navbar-fixed-bottom navbar-inverse">
             <div class="container">
                 <p class="text-muted">&copy; 2017 GAMERS HUB</p>
             </div>
         </footer>
+        <!-- Footer End -->
 
+        <!-- Link Javascript Files -->
         <script src="{% static 'js/theme-select.js' %}" type='text/javascript'></script>
         <script src="{% static 'js/vendor/jquery/jquery-3.2.1.js' %}" type='text/javascript'></script>
         <script src="{% static 'js/vendor/bootstrap/bootstrap.min.js' %}" type='text/javascript'></script>
 
+        <!-- Inject any needed JS files -->
         {% block body_js %} {% endblock %}
+        <!-- JS Injection End-->
     </body>
-
+    
     </html>
