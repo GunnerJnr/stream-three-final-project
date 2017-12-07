@@ -1,19 +1,25 @@
+<!-- Extends from the base html page -->
 {% extends "gamershub/base.html" %}
+<!-- Tell Django we want to load the static files -->
 {% load staticfiles %}
 
-<!-- Sets the main site title -->
+<!-- Page Title Begin -->
 {% block title %}
     Products
 {% endblock %}
+<!-- Page Title End -->
 
 {% block content %}
+    <!-- Page Heading Begin -->
     <h1>Gamers Hub Shop</h1>
+    <!-- Page Heading End -->
 
+    <!-- Product Content Begin -->
     <div id="product-content">
-        <!-- The main content of the body -->
-
         {% for product in products %}
-        <div class="col-sm-4 col-md-4 col-lg-4 product-container">
+        <!-- Product Container Begin -->
+        <div class="col-sm-4 col-md-4 col-lg-4 product-container">            
+            <!-- Product Thumb Begin -->
             <div class="product-thumb">
                 <!-- add an image to the post preview for a nice touch -->
                 {% load thumbnail %}
@@ -25,12 +31,15 @@
                 {% endif %}
                 {% endthumbnail %}
             </div>
+            <!-- Product Thumb End -->
 
+            <!-- Product Name Begin -->
             <div id="product-name">
                 <h5>
                     {{ product.name }}
                 </h5>
             </div>
+            <!-- Product Name End -->
 
             <!-- Product Description Begin -->
             <div id="product-description">
@@ -42,41 +51,58 @@
             <!-- Modal Div Begin -->
             <div id="modal-btn-container">
                 <!-- Trigger the modal with a button -->
-                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#product-description-modal">Full Description</button>
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#product-description-modal-{{forloop.counter}}">Full Description</button>
                 
-                <!-- Modal -->
-                <div class="modal fade" id="product-description-modal" role="dialog">
-                    <div class="modal-dialog">        
-                        <!-- Modal content-->
+                <!-- Modal Begin -->
+                <div class="modal fade" id="product-description-modal-{{forloop.counter}}" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal Content Begin -->
                         <div class="modal-content">
+
+                            <!-- Modal Header Begin -->
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">{{ product.name }}</h4>
                             </div>
+                            <!-- Modal Header End -->
+
+                            <!-- Modal Body Begin -->
                             <div class="modal-body">
                                 <p>{{ product.description }}</p>
                             </div>
+                            <!-- Modal Body End -->
+
+                            <!-- Modal Footer Begin -->
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">Close</button>
                             </div>
+                            <!-- Modal Footer End -->
                         </div>
+                        <!-- Modal Content End -->
                     </div>
                 </div>
+                <!-- Modal End -->
             </div>
             <!-- Modal Div End -->
 
             <hr>
 
+            <!-- Price and Buy Button Begin -->
             <div id="product-price-and-buy-btn">
                 <p id="product-price">${{ product.price }}</p>
                 <p id="product-buy-btn">{{ product.paypal_form.sandbox }}</p>
             </div>
+            <!-- Price and Buy Button End -->
         </div>
+        <!-- Product Container End -->
         {% endfor %}
 
-
+        <!-- Pagination Begin -->
         <div class="col-md-12">
             {% include "products/productlistpagination.html" with page=products %}
         </div>
+        <!-- Pagination End -->
     </div>
+    <!-- Product Content End -->
 {% endblock %}
