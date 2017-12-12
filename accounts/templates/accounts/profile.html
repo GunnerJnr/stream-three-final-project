@@ -10,6 +10,7 @@
 
 <!-- start our login page content injection -->
 {% block content %}
+    <!-- Profile Container Begin -->
     <div class="col-md-12" id="profile-container">
 
         <!-- Profile Page Heading Begin -->
@@ -18,7 +19,8 @@
 
         <!-- Profile Image Container Begin -->
         <div id="profile-img-container">
-            <!-- Profile Page Heading Begin -->
+
+            <!-- Profile Page Image Begin -->
             {% load thumbnail %}
             {% thumbnail user.profile.profile_image "300x300" as im %}
             {% if user.profile.profile_image %}
@@ -27,15 +29,20 @@
                 <img src="http://via.placeholder.com/300x300" alt="{{ user.first_name }} {{ user.last_name }}">
             {% endif %}
             {% endthumbnail %}
+            <!-- Profile Page Image End -->
+
         </div>
         <!-- Profile Image Container End -->
 
+        <!-- Profile Page Heading Buttons Begin -->
         <div id="profile-heading">
             <button type="button" class="btn btn-success" onclick="location.href='{% url 'edit-profile' %}'">Edit Profile</button>
             <button type="button" class="btn btn-info" onclick="location.href='{% url 'new_post' %}'">Write Blog Post</button>
             <button type="button" class="btn btn-warning" onclick="location.href='{% url 'password_change' %}'">Change Password</button>
         </div>
+        <!-- Profile Page Heading Buttons End -->
 
+        <!-- Welcome Message Begin -->
         <div id="welcome-msg-container">
             <h2 id="welcome-msg-text">
                 Welcome to your profile
@@ -46,7 +53,9 @@
                 {% endif %}
             </h2>
         </div>
+        <!-- Welcome Message End -->
 
+        <!-- User Personal Site Begin -->
         <div id="user-social">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -58,9 +67,10 @@
                 </div>
             </div>
         </div>
+        <!-- User Personal Site End -->
 
+        <!-- User Personal Details Begin -->
         <div id="user-details-profile">
-            <!--left col-->
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Profile
@@ -107,7 +117,9 @@
                 </ul>
             </div>
         </div>
+        <!-- User Personal Details End -->
 
+        <!-- User About Me Begin -->
         <div id="user-about-me">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -130,7 +142,9 @@
                 </div>
             </div>
         </div>
+        <!-- User About Me End -->
 
+        <!-- User Social Links Begin -->
         <div id="user-social">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -168,5 +182,7 @@
                 </div>
             </div>
         </div>
+        <!-- User Social Links Begin -->
     </div>
+    <!-- Profile Container Begin -->
 {% endblock %}
