@@ -66,18 +66,25 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 THUMBNAIL_FORCE_OVERWRITE = True
 
 # Log DEBUG information to the console
+# https://docs.djangoproject.com/en/2.0/topics/logging/#topic-logging-parts-loggers
 LOGGING = {
     'version': 1.0,
     'disable_existing_loggers': False,
     'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/logs/django/debug.log',
+        },
         'console': {
             'class': 'logging.StreamHandler',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['console'],
+            'handlers': ['file', 'console'],
             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
+            'propagate': True,
         },
     },
 }
