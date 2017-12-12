@@ -2,17 +2,22 @@
 {% extends "gamershub/base.html" %}
 {% load staticfiles %}
 
-<!-- Sets the main site title -->
+<!-- Page Title Begin -->
 {% block title %}
 	Welcome to Gamers Hub
 {% endblock %}
+<!-- Page Title End -->
 
 <!-- start our login page content injection -->
 {% block content %}
+	<!-- Custom Form Container Begin -->
 	<div class="custom-form-container col-md-12">
 
+		<!-- Page Image Begin -->
 		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
-
+		<!-- Page Image End -->
+		
+		<!-- Custom Form Begin -->
 		<div class="custom-form">
             <h1>Welcome to Gamers Hub, {{ new_user.first_name }}</h1>
 			<p>
@@ -20,5 +25,8 @@
                 You are now able to <a href="{% url 'login' %}">login.</a>
 			</p>
 		</div>
+		<!-- Custom Form End -->
+		
 	</div>
+	<!-- Custom Form Container End -->
 {% endblock %}

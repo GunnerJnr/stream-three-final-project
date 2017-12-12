@@ -3,19 +3,24 @@
 {% load staticfiles %}
 {% load bootstrap_tags %}
 
-<!-- Sets the main site title -->
+<!-- Page Title Begin -->
 {% block title %}
     Edit Your Profile
 {% endblock %}
+<!-- Page Title End -->
 
 <!-- start our login page content injection -->
 {% block content %}
+    <!-- Custom Form Container Begin -->
     <div class="custom-form-container col-md-12">
 
         <h1>Edit Your Profile</h1>
 
-        <img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
-
+        <!-- Page Image Begin -->
+		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
+		<!-- Page Image End -->
+		
+		<!-- Custom Form Begin -->
         <div class="custom-form">
             <p>You can edit your account using the following form:</p>
             <br />
@@ -29,5 +34,8 @@
                 <button class="btn btn-default" type="reset" value="Reset">Reset</button>
             </form>
         </div>
-    </div>
+		<!-- Custom Form End -->
+		
+	</div>
+	<!-- Custom Form Container End -->
 {% endblock %}
