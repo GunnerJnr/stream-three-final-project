@@ -27,7 +27,9 @@
         <link href="{% static 'css/vendor/bootstrap/bootstrap-theme.css' %}" rel="stylesheet" type="text/css">
 
         <!-- Link to our custom stylesheet -->
-        <link id="theme-css" href="{% static 'css/gamershub.css' %}" rel="stylesheet" type="text/css"> {% block head_js %}{% endblock %}
+        <link id="theme-css" href="{% static 'css/gamershub.css' %}" rel="stylesheet" type="text/css"> 
+        
+        {% block head_js %}{% endblock %}
     </head>
 
     <body>
@@ -115,7 +117,9 @@
         <!-- Link Javascript Files -->
         <script src="{% static 'js/vendor/jquery/jquery-3.2.1.js' %}" type="text/javascript"></script>
         <script src="{% static 'js/vendor/bootstrap/bootstrap.min.js' %}" type="text/javascript"></script>
+        <!-- Link to our custom JS file for selecting between css themes -->
         <script src="{% static 'js/theme-select.js' %}" type="text/javascript"></script>
+        <!-- Link to our custom JS file for login & register autofocus -->
         <script src="{% static 'js/autofocus.js' %}" type="text/javascript"></script>
 
         <!-- Inject any needed JS files -->
