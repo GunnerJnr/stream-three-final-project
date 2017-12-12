@@ -2,7 +2,7 @@ window.onload = function () {
     var styleCSS = document.getElementById('theme-css');
     var styleChoice = document.getElementById('theme');
 
-    if(!localStorage.getItem('theme')) {
+    if (!localStorage.getItem('theme')) {
         populateStorage();
     } else {
         setStyles();

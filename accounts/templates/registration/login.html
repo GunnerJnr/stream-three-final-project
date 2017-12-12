@@ -11,6 +11,7 @@
 <!-- start our login page content injection -->
 {% block content %}
     <div class="custom-form-container col-md-12">
+
         <h1>Gamers Hub Login</h1>
 
         <img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
@@ -25,7 +26,6 @@
                 <p>
                     Please login using the form below.
                 </p>
-                <br />
             {% endif %}
             <form action="{% url 'login' %}" method="post">
                 {{ form|as_bootstrap }}
@@ -40,6 +40,5 @@
             <br />
             <p>If you don't have an account with us please <a href="{% url "register" %}">register</a>:</p>
         </div>
-        
     </div>
  {% endblock %}
