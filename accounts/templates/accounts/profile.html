@@ -13,10 +13,10 @@
         <div class="col-md-12" id="profile-img-container">
             {% load thumbnail %}
             {% thumbnail user.profile.profile_image "300x300" as im %}
-            {% if user.profile.profile_image  %}
-                <img class="" src="{{ im.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
+            {% if user.profile.profile_image %}
+                <img src="{{ im.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
             {% else %}
-                <img class="" src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
+                <img src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
             {% endif %}
             {% endthumbnail %}
         </div>
