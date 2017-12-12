@@ -6,7 +6,7 @@ window.onload = function () {
     var styleChoice = document.getElementById('theme');
 
     // here we check to see if the local storage exists
-    if (!localStorage.getItem('theme')) {
+    if(!localStorage.getItem('theme')) {
         // if it doesn't then we populate it
         populateStorage();
     } else {
