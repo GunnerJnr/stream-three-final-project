@@ -74,7 +74,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '../logs/django/debug.log',
+            'filename': 'debug.log',
         },
         'console': {
             'class': 'logging.StreamHandler',
