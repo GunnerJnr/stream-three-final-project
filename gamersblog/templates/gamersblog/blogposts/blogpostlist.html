@@ -10,13 +10,14 @@
 <!-- The main content we wish to inject -->
 {% block content %}
     <div id="blog-post-content">
-        <!-- The main content of the body -->
+        
         <h1>Gamers Hub Blog</h1>
 
         <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
             <div class="col-sm-4 col-md-4 col-lg-4 blog-post-container">
 
+                <!-- Blog Post Thumbnail Begin -->
                 <div id="blog-post-thumb-container">
                     <!-- add an image to the post preview for a nice touch -->
                     <a href="{{ post.get_absolute_url }}">
@@ -30,38 +31,55 @@
                         {% endthumbnail %}
                     </a>
                 </div>
+                <!-- Blog Post Thumbnail End -->
 
-                <!-- For a nice added touch we display the published date and post author -->
+                <!-- Blog Post Published Date Begin -->
                 <p class="date">
                     Published {{ post.published_date }}
                 </p>
+                <!-- Blog Post Published Date End -->
+
+                <!-- Blog Post Author Begin -->
                 <p class="date">
                     by {{ post.post_author }} | Post Views {{ post.post_views }}
                 </p>
+                <!-- Blog Post Author End -->
 
                 <hr>
 
+                <!-- Blog Post Title Begin -->
                 <div id="blog-post-title">
-                    <h5>
-                        <a href="{{ post.get_absolute_url }}">
-                            {{ post.post_title }}
-                        </a>
-                    </h5>
+                    <a href="{{ post.get_absolute_url }}">
+                        <h5>{{ post.post_title }}</h5>
+                    </a>
                 </div>
+                <!-- Blog Post Title End -->
 
+                <!-- Blog Post Preview Begin -->
                 <div id="blog-post-preview">
-                        <a href="{{ post.get_absolute_url }}">
-                            <!-- Here we wish to truncate the post content as it is a preview -->
-                            <p>{{ post.post_body|truncatewords:30|linebreaks }}</p>
-                        </a>
+                    <!-- Here we wish to truncate the post content as it is a preview -->
+                    <p>{{ post.post_body|truncatewords:30|linebreaks }}</p>
                 </div>
+                <!-- Blog Post Preview End -->
+
+                <!-- Read More Btn Begin -->
+                <div id="">
+                    <!-- Trigger the modal with a button -->
+                    <button type="button" class="btn btn-warning" onclick="location.href='{{ post.get_absolute_url }}'">Read More</button>
+                </div>
+                <!-- Read More Btn End -->
+
+                <br />
+
             </div>
         {% endfor %}
         <!-- End for block -->
 
+        <!-- Pagination Begin -->
         <div class="col-md-12">
             {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
         </div>
+        <!-- Pagination End -->
     </div>
 {% endblock %}
 <!-- Main content injection end -->
