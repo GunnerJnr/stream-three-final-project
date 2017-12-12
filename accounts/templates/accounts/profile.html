@@ -2,47 +2,52 @@
 {% extends "gamershub/base.html" %}
 {% load staticfiles %}
 
-<!-- Sets the main site title -->
+<!-- Page Title Begin -->
 {% block title %}
     Profile
 {% endblock %}
+<!-- Page Title End -->
 
 <!-- start our login page content injection -->
 {% block content %}
-    <div class="row">
-        <div class="col-md-12" id="profile-img-container">
+    <div class="col-md-12" id="profile-container">
+
+        <!-- Profile Page Heading Begin -->
+        <h1>{{ user.get_username.upper }}'s Profile</h1>
+        <!-- Profile Page Heading End -->
+
+        <!-- Profile Image Container Begin -->
+        <div id="profile-img-container">
+            <!-- Profile Page Heading Begin -->
             {% load thumbnail %}
             {% thumbnail user.profile.profile_image "300x300" as im %}
             {% if user.profile.profile_image %}
                 <img src="{{ im.url }}" alt="{{ user.first_name }} {{ user.last_name }}">
             {% else %}
-                <img src="http://via.placeholder.com/200x200" alt="{{ user.first_name }} {{ user.last_name }}">
+                <img src="http://via.placeholder.com/300x300" alt="{{ user.first_name }} {{ user.last_name }}">
             {% endif %}
             {% endthumbnail %}
         </div>
-        <div class="col-md-12" id="profile-heading">
-            <h1>{{ user.get_username.upper }}'s Profile</h1>
+        <!-- Profile Image Container End -->
+
+        <div id="profile-heading">
             <button type="button" class="btn btn-success" onclick="location.href='{% url 'edit-profile' %}'">Edit Profile</button>
             <button type="button" class="btn btn-info" onclick="location.href='{% url 'new_post' %}'">Write Blog Post</button>
             <button type="button" class="btn btn-warning" onclick="location.href='{% url 'password_change' %}'">Change Password</button>
         </div>
-    </div>
 
-    <div class="row" id="profile-container">
-        <div class="col-md-12">
-            <div id="welcome-msg-container">
-                <h2 id="welcome-msg-text">
-                    Welcome to your profile
-                    {% if user.first_name %}
-                        {{ user.first_name }}
-                    {% else %}
-                        {{ user.get_username }}
-                    {% endif %}
-                </h2>
-            </div>
+        <div id="welcome-msg-container">
+            <h2 id="welcome-msg-text">
+                Welcome to your profile
+                {% if user.first_name %}
+                    {{ user.first_name }}
+                {% else %}
+                    {{ user.get_username }}
+                {% endif %}
+            </h2>
         </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-12" id="user-social">
+        <div id="user-social">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Website
@@ -54,56 +59,56 @@
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-3" id="user-details-profile">
-        <!--left col-->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                Profile
+        <div id="user-details-profile">
+            <!--left col-->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Profile
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>
+                                    Date of birth:
+                                </strong>
+                            </span>
+                            {% if user.profile.date_of_birth %}
+                                {{ user.profile.date_of_birth }}
+                            {% else %}
+                                Not Entered
+                            {% endif %}
+                        </li>
+                        <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>
+                                    Full Name:
+                                </strong>
+                            </span>
+                            {% if user.first_name and user.last_name %}
+                                {{ user.first_name }} {{ user.last_name }}
+                            {% elif user.first_name and not user.last_name %}
+                                {{ user.first_name }}
+                            {% else %}
+                                Not Entered
+                            {% endif %}
+                        </li>
+                        <li class="list-group-item text-right">
+                            <span class="pull-left">
+                                <strong>
+                                    Favourite Game:
+                                </strong>
+                            </span>
+                            {% if user.profile.fave_game %}
+                                {{ user.profile.fave_game }}
+                            {% else %}
+                                Not Entered
+                            {% endif %}
+                        </li>
+                </ul>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item text-right">
-                        <span class="pull-left">
-                            <strong>
-                                Date of birth:
-                            </strong>
-                        </span>
-                        {% if user.profile.date_of_birth %}
-                            {{ user.profile.date_of_birth }}
-                        {% else %}
-                            Not Entered
-                        {% endif %}
-                    </li>
-                    <li class="list-group-item text-right">
-                        <span class="pull-left">
-                            <strong>
-                                Full Name:
-                            </strong>
-                        </span>
-                        {% if user.first_name and user.last_name %}
-                            {{ user.first_name }} {{ user.last_name }}
-                        {% elif user.first_name and not user.last_name %}
-                            {{ user.first_name }}
-                        {% else %}
-                            Not Entered
-                        {% endif %}
-                    </li>
-                    <li class="list-group-item text-right">
-                        <span class="pull-left">
-                            <strong>
-                                Favourite Game:
-                            </strong>
-                        </span>
-                        {% if user.profile.fave_game %}
-                            {{ user.profile.fave_game }}
-                        {% else %}
-                            Not Entered
-                        {% endif %}
-                    </li>
-            </ul>
         </div>
-    </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-9" id="user-about-me">
+        <div id="user-about-me">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     {% if user.first_name %}
@@ -126,7 +131,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-12 col-lg-12" id="user-social">
+        <div id="user-social">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     Social Media
