@@ -3,19 +3,24 @@
 {% load staticfiles %}
 {% load bootstrap_tags %}
 
-<!-- Sets the main site title -->
+<!-- Page Title Begin -->
 {% block title %}
 	Create An Account
 {% endblock %}
+<!-- Page Title End -->
 
 <!-- start our login page content injection -->
 {% block content %}
+	<!-- Custom Form Container Begin -->
 	<div class="custom-form-container col-md-12">
 
 		<h1>Create An Account</h1>
 
+		<!-- Page Image Begin -->
 		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
+		<!-- Page Image End -->
 		
+		<!-- Custom Form Begin -->
 		<div class="custom-form">
 			<p>Sign up to Gamers Hub using the below form:</p>
 			<form action="." method="post">
@@ -26,7 +31,10 @@
 				<button class="btn btn-default" type="reset" value="Reset">Reset</button>
 			</form>
 		</div>
+		<!-- Custom Form End -->
+		
 	</div>
+	<!-- Custom Form Container End -->
 {% endblock %}
 
  <!-- Inject any needed JS files -->
