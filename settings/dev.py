@@ -4,7 +4,7 @@ Dev.py: - This is the settings used in development (DUBUG = True)
 import logging
 from settings.base import *
 
-logging.basicConfig(filename='debug.log', format='%(asctime)s:%(levelname)s:%(message)s', level=logging.DEBUG, datefmt='%d/%m/%Y %I:%M:%S %p ')
+logging.basicConfig(filename='debug.log', format='%(asctime)s:%(levelname)s:%(message)s', level=logging.DEBUG, datefmt='%d/%m/%Y %I:%M:%S %p ', filemode='w')
 logging.debug('You are now using the Development Debug Settings')
 logging.info('Settings.Dev')
 logging.warning('You are in Development Mode, Debug is set to True!')
