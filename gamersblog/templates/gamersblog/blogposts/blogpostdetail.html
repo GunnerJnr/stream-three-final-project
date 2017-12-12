@@ -13,9 +13,9 @@
 		<h1>{{ post.post_title }}</h1>
 		<hr>
 		<p class="date">
-            Published {{ post.publish }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
+            Published {{ post.published_date }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
-        <div class="col-md-12"  id="blog-post-detail">
+        <div id="blog-post-detail">
             {% load thumbnail %}
             {% thumbnail post.post_images "500x500" as im %}
             {% if post.post_images %}
@@ -26,7 +26,7 @@
 
         <br />
 
-        <div class="col-md-12">
+        <div>
             {{ post.post_body|linebreaks }}
         </div>
 
