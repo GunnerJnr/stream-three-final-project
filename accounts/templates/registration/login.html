@@ -42,3 +42,11 @@
         </div>
     </div>
  {% endblock %}
+
+
+ <!-- Inject any needed JS files -->
+ {% block body_js %}
+    <!-- Link to our custom JS file for login & register autofocus -->
+    <script src="{% static 'js/autofocus.js' %}" type="text/javascript"></script>
+ {% endblock %}
+ <!-- JS Injection End-->
