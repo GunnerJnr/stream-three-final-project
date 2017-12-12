@@ -65,7 +65,7 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 THUMBNAIL_FORCE_OVERWRITE = True
 
-# Log DEBUG information to the console
+# Log the DEBUG information to the console
 # https://docs.djangoproject.com/en/2.0/topics/logging/#topic-logging-parts-loggers
 LOGGING = {
     'version': 1.0,
