@@ -16,9 +16,13 @@
 
         <h1>Gamers Hub Login</h1>
 
+        <hr>
+
         <!-- Page Image Begin -->
         <img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
         <!-- Page Image End -->
+
+        <hr>
 		
 		<!-- Custom Form Begin -->
         <div class="custom-form">
@@ -32,21 +36,27 @@
                     Please login using the form below.
                 </p>
             {% endif %}
+
+            <br />
+
             <form action="{% url 'login' %}" method="post">
                 {{ form|as_bootstrap }}
                 <!-- CSRF protection -->
                 {% csrf_token %}
                 <input type="hidden" name="next" value="{{ next }}" />
-                <button class="btn btn-default" type="submit" value="Login">Login</button>
-                <button class="btn btn-default" type="reset" value="Reset">Reset</button>
+                <button class="btn btn-warning" type="submit" value="Login">Login</button>
+                <button class="btn btn-warning" type="reset" value="Reset">Reset</button>
             </form>
+
             <br />
-            <p><a href="{% url "password_reset" %}">Forgotten Password ?</a></p>
+
+            <p><a href="{% url 'password_reset' %}">Forgotten Password ?</a></p>
+
             <br />
-            <p>If you don't have an account with us please <a href="{% url "register" %}">register</a>:</p>
+            
+            <p>If you don't have an account with us please <a href="{% url 'register' %}">register</a>:</p>
         </div>
 		<!-- Custom Form End -->
-		
 	</div>
 	<!-- Custom Form Container End -->
  {% endblock %}

@@ -87,10 +87,6 @@ li {
 	margin: 0 auto;
 }
 
-.custom-form h1 {
-	margin: 20px auto;
-}
-
 .custom-form p {
 	min-width: 100%;
 }
@@ -110,19 +106,10 @@ li {
 	padding: 6px 10px;
 }
 
-.custom-form input[type=submit],
-.custom-form button {
+.custom-form input[type=submit] {
 	background: #BFACB1;
 	color: #436591;
 	font-size: 14px;
-	padding: 10px 20px;
-	text-transform: uppercase;
-}
-
-.custom-form button:hover {
-	background: #e0ced4;
-	color: #ee3a3a;
-	font-size: 14.5px;
 	padding: 10px 20px;
 	text-transform: uppercase;
 }

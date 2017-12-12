@@ -16,13 +16,20 @@
 
 		<h1>Create An Account</h1>
 
+		<hr>
+
 		<!-- Page Image Begin -->
 		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
 		<!-- Page Image End -->
+
+		<hr>
 		
 		<!-- Custom Form Begin -->
 		<div class="custom-form">
 			<p>Sign up to Gamers Hub using the below form:</p>
+
+			<br />
+			
 			<form action="." method="post">
 				{{ user_form|as_bootstrap }}
 				<!-- CSRF protection -->
@@ -32,7 +39,6 @@
 			</form>
 		</div>
 		<!-- Custom Form End -->
-		
 	</div>
 	<!-- Custom Form Container End -->
 {% endblock %}

@@ -2,26 +2,45 @@
 {% extends "gamershub/base.html" %}
 {% load staticfiles %}
 
+<!-- Page Title Begin -->
 {% block title %}
 	Logged out
 {% endblock %}
+<!-- Page Title End -->
 
+<!-- start our login page content injection -->
 {% block content %}
+	<!-- Custom Form Container Begin -->
 	<div class="custom-form-container col-md-12">
 
 		<h1>Logged out</h1>
 
-		<img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
+		<hr>
 
+		<!-- Page Image Begin -->
+        <img class="borderlands-img" src="{% static 'img/login-page/borderlands-two.jpg' %}">
+		<!-- Page Image End -->
+
+		<hr>
+		
+		<!-- Custom Form Begin -->
 		<div class="custom-form">
 			<p>
 				Thank You for visiting Gamers Hub.
-			<br  />
-				You have successfully logged out.
 			</p>
 			<p>
-				<a href="{% url "login" %}">Log back in ?</a>
+				You have successfully logged out.
 			</p>
+
+			<br />
+
+			<!-- Read More Btn Begin -->
+			<div>
+				<button type="button" class="btn btn-warning" onclick='location.href="{% url 'login' %}"'>Login again?</button>
+			</div>
+			<!-- Read More Btn End -->
 		</div>
+		<!-- Custom Form End -->
 	</div>
+	<!-- Custom Form Container End -->
 {% endblock %}
