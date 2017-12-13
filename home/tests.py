@@ -7,7 +7,6 @@ from django.test import TestCase
 from home.views import get_index
 
 
-# Create your tests here.
 class HomePageTest(TestCase):
     """
     HomePageTest(TestCase):
@@ -32,7 +31,7 @@ class HomePageTest(TestCase):
         """
         check_content(self):
         """
-        # check page content is OK 
+        # check page content is OK
         home_page = self.client.get('/')
         self.assertTemplateUsed(home_page, "index.html")
         home_page_template_output = render_to_response("index.html").content
