@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, redirect, get_object_or_404
 from django.utils import timezone
-from django.contrib import messages
 from .models import BlogPost
 from .forms import BlogPostForm
 
@@ -12,6 +11,9 @@ from .forms import BlogPostForm
 # define a new view to handle the creation of a new blog post
 @login_required
 def new_post(request):
+    """
+    new_post(request): handle the creation of a new blog post
+    """
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -30,8 +32,12 @@ def new_post(request):
     return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
 
 
+# define a new view to handle the editing of a blog post
 @login_required
 def edit_post(request, slug):
+    """
+    edit_post(request, slug): responsible for handling the editing of a blog post
+    """
     post = get_object_or_404(BlogPost, slug=slug)
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES, instance=post)
@@ -55,7 +61,8 @@ def blog_post_list(request):
     :param request:
     :return:
     """
-    object_list = BlogPost.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    object_list = BlogPost.objects.filter(
+        published_date__lte=timezone.now()).order_by('published_date')
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')
@@ -67,7 +74,8 @@ def blog_post_list(request):
     except EmptyPage:
         # if page is out of range deliver the last page of results
         blog_posts = paginator.page(paginator.num_pages)
-    return render(request, 'gamersblog/blogposts/blogpostlist.html', {'page': page, 'blog_posts': blog_posts})
+    return render(request, 'gamersblog/blogposts/blogpostlist.html',
+                  {'page': page, 'blog_posts': blog_posts})
 
 
 # define a view that will return a single blog post
@@ -85,7 +93,7 @@ def blog_post_detail(request, slug):
     return render(request, 'gamersblog/blogposts/blogpostdetail.html', {'post': post})
 
 
-# 
+# create a view to show the most viewd blog posts
 def most_viewed(request):
     """
     we wnat to get and list the top five most popular
@@ -94,7 +102,8 @@ def most_viewed(request):
     :param request:
     :return:
     """
-    top_posts = BlogPost.objects.filter(published_date__lte=timezone.now()).order_by('-post_views')[:10]
+    top_posts = BlogPost.objects.filter(
+        published_date__lte=timezone.now()).order_by('-post_views')[:10]
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(top_posts, 3)  # 3 posts in each page
     page = request.GET.get('page')
@@ -106,4 +115,5 @@ def most_viewed(request):
     except EmptyPage:
         # if page is out of range deliver the last page of results
         blog_posts = paginator.page(paginator.num_pages)
-    return render(request, 'gamersblog/blogposts/blogpostlist.html', {'page': page, 'blog_posts': blog_posts})
+    return render(request, 'gamersblog/blogposts/blogpostlist.html',
+                  {'page': page, 'blog_posts': blog_posts})

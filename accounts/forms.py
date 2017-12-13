@@ -34,6 +34,15 @@ class UserRegisterForm(forms.ModelForm):
             raise forms.ValidationError('Sorry, the passwords do not match!')
         return cd['password2']
 
+    def __init__(self, *args, **kwargs):
+        super(UserRegisterForm, self).__init__(*args, **kwargs)
+        self.fields['username'].required = True
+        self.fields["first_name"].required = False
+        self.fields["last_name"].required = False
+        self.fields["email"].required = True
+        self.fields["password1"].required = True
+        self.fields["password2"].required = True
+
 
 # This class will be responsible for handling the user login
 class UserLoginForm(forms.Form):
