@@ -1,12 +1,29 @@
+<!-- Tell Django we want to extend Base.html -->
 {% extends "gamershub/base.html" %}
 {% load staticfiles %}
 
-{% block content %}
-<div class="row" id="unsuccessful-purchase-page-container">
-    <div class="col-md-12">
-            <h1>Sorry, but you have cancelled the purchase of this item</h1>
-
-        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-cancel/game-over.jpg" %}" alt="purchase unsuccesful">
-    </div>
-</div>
+<!-- Page Title Begin -->
+{% block title %}
+    Purchase Cancelled
 {% endblock %}
+<!-- Page Title End -->
+
+<!-- start our purchase page content injection -->
+{% block content %}
+
+    <!-- Purchase Page Container Begin -->
+    <div class="col-md-12" id="unsuccessful-purchase-page-container">
+
+        <!-- Purchase Page Heading Begin -->
+        <h1>Sorry, but you have cancelled the purchase of this item</h1>
+        <!-- Purchase Page Header End -->
+
+        <!-- Purchase Page Image End -->
+        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-cancel/game-over.jpg" %}" alt="purchase unsuccesful">
+        <!-- Purchase Page Image End -->
+
+    </div>
+    <!-- Purchase Page Container End -->
+
+{% endblock %}
+<!-- end our purchase page content injection -->

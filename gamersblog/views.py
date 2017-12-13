@@ -1,11 +1,16 @@
+"""
+Views.py:
+"""
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render, redirect, get_object_or_404
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
-from .models import BlogPost
+
 from .forms import BlogPostForm
+from .models import BlogPost
 
 
 # define a new view to handle the creation of a new blog post
@@ -16,19 +21,27 @@ def new_post(request):
     """
     if request.method == "POST":
         form = BlogPostForm(request.POST, request.FILES)
+        # if the form is valid
         if form.is_valid():
             post = form.save(commit=False)
             post.post_author = request.user
             post.published_date = timezone.now()
+            # check the post title is unique
             post_title = form.cleaned_data['post_title']
+            # if the title exists throw an error 
             if BlogPost.objects.filter(post_title__iexact=post_title).exists():
+                # tell the user to pick a new title, this one exists
                 form.add_error(None, 'Sorry that title already exists')
             else:
+                # otherwise save the form
                 post = form.save()
+                # notify the user they were successful in adding a post
                 form.add_error(None, 'Your post has been added successfully')
+                # redirect the the blog post detail page
                 return redirect('blog_post_detail', post.slug)
     else:
         form = BlogPostForm()
+    # render the form for the user to create a blog post
     return render(request, 'gamersblog/blogposts/blogpostform.html', {'form': form})
 
 

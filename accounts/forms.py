@@ -24,6 +24,7 @@ class UserRegisterForm(forms.ModelForm):
         model = User
         fields = ('username', 'first_name', 'last_name', 'email')
 
+
     def clean_password2(self):
         """
         clean_password: Here we check if the second password matches the first password

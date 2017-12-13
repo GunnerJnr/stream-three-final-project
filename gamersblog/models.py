@@ -17,11 +17,11 @@ class BlogPost(models.Model):
     updated_date: States the date/time the post was last updated.
     published: States when the post was published.
     post_status: Returns the status, meaning is it in draft or published state.
-    image_width:
-    image_height:
-    post_images:
-    post_views:
-    post_tags:
+    image_width: the image width
+    image_height: the image height
+    post_images: the images that will be displayed
+    post_views: the number of views the post has recieved
+    post_tags: the posts tags
     """
 
     # Create our settings that will be used in our blog posts.
@@ -58,9 +58,11 @@ class BlogPost(models.Model):
             self.slug = slugify(self.post_title)
         super(BlogPost, self).save(*args, **kwargs)
 
+    # publish the blog post
     def publish(self):
         """
-        publish our blog post
+        publish our blog post, we set the published date
+        then save the post
         """
         self.published_date = timezone.now()
         self.save()

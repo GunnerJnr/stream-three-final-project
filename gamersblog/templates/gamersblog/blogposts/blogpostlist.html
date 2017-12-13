@@ -12,10 +12,13 @@
 {% block content %}
     <div id="blog-post-content">
         
+        <!-- Blog Post List Heading Begin -->
         <h1>Gamers Hub Blog</h1>
+        <!-- Blog Post List Heading End -->
 
         <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
+            <!-- Blog Post List Container Begin -->
             <div class="col-sm-4 col-md-4 col-lg-4 blog-post-container">
 
                 <!-- Blog Post Thumbnail Begin -->
@@ -72,6 +75,7 @@
                 <br />
 
             </div>
+            <!-- Blog Post List Container Begin -->
         {% endfor %}
         <!-- End for block -->
 

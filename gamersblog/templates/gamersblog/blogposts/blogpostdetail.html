@@ -3,18 +3,27 @@
 
 <!-- The main post tile -->
 {% block title %}
-		{{ post.post_title }}
+	{{ post.post_title }}
 {% endblock %}
 
-<!-- The main post content to be injected -->
+<!-- Content Begin -->
 {% block content %}
 	<!-- The main content of the body -->
 	<div class="col-md-12">
-		<h1>{{ post.post_title }}</h1>
-		<hr>
+
+        <!-- Blog Post Page Heading Begin -->
+        <h1>{{ post.post_title }}</h1>
+        <!-- Blog Post Page Heading End -->
+        
+        <hr>
+        
+        <!-- Blog Post Date, Author, Views and Tags Begin -->
 		<p class="date">
             Published {{ post.published_date }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
         </p>
+        <!-- Blog Post Date, Author, Views and Tags End -->
+
+        <!-- Blog Post Thumb Begin -->
         <div id="blog-post-detail">
             {% load thumbnail %}
             {% thumbnail post.post_images "500x500" as im %}
@@ -23,26 +32,34 @@
             {% endif %}
             {% endthumbnail %}
         </div>
+        <!-- Blog Post Thumb End -->
 
         <br />
 
+        <!-- Blog Post Body Begin -->
         <div>
             {{ post.post_body|linebreaks }}
         </div>
+        <!-- Blog Post Body End -->
 
         <br />
 
+        <!-- Blog Post Buttons Begin -->
         {% if post.user == user or user.is_staff %}
             <button type='button' class='btn btn-warning' onclick='location.href="{% url 'edit_post' post.slug %}"'>Edit Post</button>
         {% endif %}
         <button type='button' class='btn btn-info' onclick='location.href="{% url 'blog_post_list' %}"'>Back To Blog</button>
+        <!-- Blog Post Buttons End -->
+
         <!-- load disqus tags and comment begin -->
         {% load disqus_tags %}
         {% set_disqus_title post.post_title %}
         {% disqus_show_comments %}
         <!-- load disqus tags and comment end -->
+
     </div>
+    <!-- Col-md-12 End -->
 {% endblock %}
-<!-- end block content injection -->
+<!-- Content End -->
 
 

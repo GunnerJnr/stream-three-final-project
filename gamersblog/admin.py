@@ -1,10 +1,12 @@
+"""
+Admin.py:
+"""
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from .models import BlogPost
 
-# Register your models here.
+from .models import BlogPost
 
 
 # Customise the admin area so we can display more fields

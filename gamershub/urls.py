@@ -52,5 +52,6 @@ urlpatterns = [
     url(r'^static/(?P<path>.*)$', serve, {'document_root': STATIC_ROOT,}),
 ]
 
+# debug settings to use for static files
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()

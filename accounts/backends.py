@@ -1,8 +1,11 @@
+"""
+Backends.py
+"""
 # -*- coding: utf-8 -*-
 from django.contrib.auth.models import User
 
 
-# Create your backends here.
+# Create custom email authentication for user login.
 class EmailAuth(object):
     """
     Authenticate the users using an email address

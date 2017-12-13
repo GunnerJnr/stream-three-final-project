@@ -1,11 +1,13 @@
-# -*- coding: utf-8 -*-
 """
 Views.py: -
 """
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import render
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 from .models import GamersHubProducts
 
 
@@ -14,6 +16,7 @@ from .models import GamersHubProducts
 def products_list(request):
     """
     products_list:
+        Handles the pagination for the products to be displayed
     """
     object_list = GamersHubProducts.objects.get_queryset().order_by('id')
     # add pagination to the blog page, we will display 3 posts per page

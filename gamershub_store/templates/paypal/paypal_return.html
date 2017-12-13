@@ -1,12 +1,29 @@
+<!-- Tell Django we want to extend Base.html -->
 {% extends "gamershub/base.html" %}
 {% load staticfiles %}
 
-{% block content %}
-<div class="row" id="successful-purchase-page-container">
-    <div class="col-md-12">
-        <h1>Thank You! Your purchase was successful.</h1>
-
-        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-return/thank-you.png" %}" alt="purchase succesful">
-    </div>
-</div>
+<!-- Page Title Begin -->
+{% block title %}
+    Purchase Successful
 {% endblock %}
+<!-- Page Title End -->
+
+<!-- start our purchase page content injection -->
+{% block content %}
+
+    <!-- Purchase Page Container Begin -->
+    <div class="col-md-12" id="successful-purchase-page-container">
+
+        <!-- Purchase Page Heading Begin -->
+        <h1>Thank You! Your purchase was successful.</h1>
+        <!-- Purchase Page Header End -->
+
+        <!-- Purchase Page Image End -->
+        <img class="img-responsive" src="{% static "img/gamershub-store/paypal-return/thank-you.png" %}" alt="purchase succesful">
+        <!-- Purchase Page Image End -->
+
+    </div>
+    <!-- Purchase Page Container End -->
+
+{% endblock %}
+<!-- end our purchase page content injection -->

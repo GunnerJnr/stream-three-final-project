@@ -23,12 +23,13 @@ class GamersHubProducts(models.Model):
     class Meta:
         """
         Meta class:
+            Set a friendlier name in the admin panel
         """
         verbose_name_plural = "Gamers Hub Products"
 
-    length = 255
-    image_width = 200
-    image_height = 200
+    length = 255  # max_length variable
+    image_width = 200  # image width
+    image_height = 200  # image height
 
     product_images = models.ImageField(upload_to='gamershub/product_images/%d/%m/%Y',
                                        height_field='image_height',
