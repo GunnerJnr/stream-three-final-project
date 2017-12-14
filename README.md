@@ -12,6 +12,8 @@
 
 [Credits](#credits)
 
+---
+
 ## Description
 
 A live version of the site can be accessed by following this [link](https://gamershub.herokuapp.com/).
@@ -31,6 +33,8 @@ There is also a store front which will allow the users to purchase any gaming pr
 Users can register to the site for free, by doing so they will get access to hidden parts of the site that are not available to just anyone! Such as the store for instance. Also users are not able to crete or edit blog posts unless registered/logged in but they can of course view any that exist already.
 
 [Back to Table Of Contents](#table-of-contents)
+
+---
 
 ## Testing
 
@@ -135,6 +139,8 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 
 [Back to Table Of Contents](#table-of-contents)
 
+---
+
 ## Installation
 
 Firstly clone the project from `Github`, you can do with the following command in a terminal/console window:
@@ -155,6 +161,8 @@ Or as stated above, a live version of the site can be accessed by following this
 
 [Back to Table Of Contents](#table-of-contents)
 
+---
+
 ## Usage
 
 [Django Bootstrap Forms](https://django-bootstrap-form.readthedocs.io/en/latest/) - Used for responsive layout and design.
@@ -171,8 +179,12 @@ Or as stated above, a live version of the site can be accessed by following this
 
 [Back to Table Of Contents](#table-of-contents)
 
+---
+
 ## Credits
 
 Code Institute - For the lessons on Full Stack Development.
 
 [Back to Table Of Contents](#table-of-contents)
+
+---
