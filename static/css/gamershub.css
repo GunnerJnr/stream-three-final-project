@@ -30,19 +30,18 @@ h1 {
 
 p {
 	font-style: normal;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p.date {
 	color: #555454;
 	font-size: 12px;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
 }
 
 a {
 	color: #2e5384;
 	font-style: normal;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-decoration: none;
 	text-transform: none;
 }
@@ -50,7 +49,7 @@ a {
 a:hover {
 	color: #ee3a3a;
 	font-style: normal;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-decoration: none;
 	text-transform: none;
 }
@@ -234,7 +233,7 @@ ul.messages li a.close:hover {
 }
 
 .blog-post-container {
-	border: solid 0.025px rgba(146, 136, 136, 0.5);
+	border: solid 0.025px #eeebeb;
 }
 
 #blog-post-thumb-container img {
@@ -314,7 +313,7 @@ ul.messages li a.close:hover {
 .pagination a {
 	padding: 8px 16px;
     text-decoration: none;
-    transition: background-color .3s;
+    transition: background-color #eeba2c .3s;
     border: 1px solid #ddd;
     margin: 0 4px;
 }
@@ -358,12 +357,12 @@ ul.messages li a.close:hover {
 #user-details-profile,
 #user-about-me,
 #user-social {
-	min-height: auto;
+	height: auto;
 }
 
 #user-about-me .panel-body,
 #user-details-profile .list-group {
-	min-height: auto;
+	height: auto;
 }
 
 #user-details-profile .list-group-item {
@@ -393,7 +392,7 @@ ul.messages li a.close:hover {
 }
 
 .product-container {
-	border: solid 0.025px rgba(146, 136, 136, 0.5);
+	border: solid 0.025px #928888;
 }
 
 #product-content p,

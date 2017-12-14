@@ -77,6 +77,61 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 
 ```
 
+#### CSS Validation Errors
+
+##### gamershubs-dark.css
+
+Line 301: `#blog-post-detail-thumb img` - Parse Error [empty string]
+Line 302: `#blog-post-detail-thumb img` - Parse Error [empty string]
+Line 324: `.pagination a` - Property transition doesn't exist : `background-color #eeba2c 0.3s background-color #eeba2c 0.3s`
+Line 356: `#profile-img-container img` - Parse Error [empty string]
+Line 569: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+Line 572: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+Line 579: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+Line 586: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+Line 666: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+Line 669: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+Line 675: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+Line 682: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+Line 762: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+Line 765: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+Line 771: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+Line 778: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+Line 823: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+Line 826: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+Line 832: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+Line 839: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+Line 884: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+Line 887: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+Line 893: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+Line 900: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+##### gamershubs.css
+
+Line 292: `#blog-post-detail-thumb img` - Parse Error [empty string]
+Line 293: `#blog-post-detail-thumb img` - Parse Error [empty string]
+Line 316: `.pagination a` - Property transition doesn't exist : `background-color #eeba2c 0.3s background-color #eeba2c 0.3s`
+Line 343: `#profile-img-container img` - Parse Error [empty string]
+552: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`           [-webkit-scrollbar]
+555: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
+562: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
+569: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+651: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`           [-webkit-scrollbar]
+654: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
+660: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
+667: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+749: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`           [-webkit-scrollbar]
+752: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
+758: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
+765: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+812: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`           [-webkit-scrollbar]
+815: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
+821: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
+828: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+875: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`           [-webkit-scrollbar]
+878: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
+884: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
+891: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+
 [Back to Table Of Contents](#table-of-contents)
 
 ## Installation
