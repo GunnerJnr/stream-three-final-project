@@ -42,7 +42,7 @@ If you do feel the need to purchase a cool gaming item or piece of attire from o
 
 ### Chrome Developer Tools
 
-I have mainly used Google Chromes built in developer tools to help with testing my site over the duration of development. These tools have allowed me to inspect my code and make adjustments along the way in live time to see what certain changes could look like. It has also helped me with responsive design, this is a great tool because it has a selection of devices to choose from as well as normal responsive design where you can also adjust the width and height manually. The console has also come in very helpful along the way for errors with any missing resources, and also with any errors in the Javascript files. Aside form the above mentioned there are other tools in Chrome used for bits and bobs but nothing worth going in to detail about at this time.
+I have mainly used Google Chrome's built in developer tools to help with testing my site over the duration of development. These tools have allowed me to inspect my code and make adjustments along the way in live time to see what certain changes could look like. It has also helped me with responsive design, this is a great tool because it has a selection of devices to choose from as well as normal responsive design where you can also adjust the width and height manually. The console has also come in very helpful along the way for errors with any missing resources, and also with any errors in the Javascript files. Aside form the above mentioned there are other tools in Chrome used for bits and bobs but nothing worth going in to detail about at this time.
 
 ### House Hold Devices
 
