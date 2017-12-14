@@ -66,7 +66,7 @@ Heroku deployment was ok but I did have a lot of issues with the static files to
 
 At this time I only know of a few bugs in the site. One is the bug mentioned above with the urls in the blog post detail overlapping the edge of the page on some devices.
 
-Heroku seems to throw out some weird bugs every now and then, one of which is more a warning than a bug where bootstrap forms complains about unreferenced varibales that have not been defined in the template, it seems to do this while processing the template and also the admin panel. As far as I am aware this is nothing to worry about and is quite a common short cut that a lot of developers use. For more information about this please see this [stack overflow answer](https://stackoverflow.com/questions/34797884/getting-error-with-is-popup-variable-in-django-1-9).
+Heroku seems to throw out some weird bugs every now and then, one of which is more a warning than a bug where bootstrap forms complains about unreferenced variables that have not been defined in the template, it seems to do this while processing the template and also the admin panel. As far as I am aware this is nothing to worry about and is quite a common short cut that a lot of developers use. For more information about this please see this [stack overflow answer](https://stackoverflow.com/questions/34797884/getting-error-with-is-popup-variable-in-django-1-9).
 
 Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing out the below error related to MySQL. It has yet to do it again so I would like to put it down to Heroku maintenance or something. As another student was also recieving this I am pretty confident it is not my site or code causing this.
 
@@ -89,7 +89,7 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 
 #### CSS Validation Errors
 
-A note on the majority of these CSS Validation warnings/errors, I believe most to be because they use some CSS4 language but we can only validate CSS3 as of now. Also after some research the Empty String error is a know bug for border radius in CSS. However I felt it best I still document them to show I am aware of their existence in the project.
+A note on the majority of these CSS Validation warnings/errors, I believe most to be because they use some CSS4 language but we can only validate CSS3 as of now. Also after some research the Empty String error is a know bug for border radius in CSS. However I felt it best I still document them to show I am aware of their existence in the project. I hope to fix them and start removing them in due course. Mainly so the read me can shrink to a decent size.
 
 ##### [gamershubs-dark.css](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css)
 
@@ -147,7 +147,7 @@ A note on the majority of these CSS Validation warnings/errors, I believe most t
 
 ### Javascript Files
 
-I also just wnated to note I had a small issue with conflicting JS files in the project, it seemed that by using `$(document).ready` I was only able to use the top most linked JS file and the other wouldn't respond, I had no idea why it was doing this, all I can put it down to is the way that Django renders its templates, and because most of the templates extend from `Base.html` that once it had rendered it didnt re render for the newer script. The fix to remedy this problem was simply to remove the `$(document).ready` and all works fine.
+I also just wanted to note I had a small issue with conflicting JS files in the project, it seemed that by using `$(document).ready` I was only able to use the top most linked JS file and the other wouldn't respond, I had no idea why it was doing this, all I can put it down to is the way that Django renders its templates, and because most of the templates extend from `Base.html` that once it had rendered it didnt re render for the newer script. The fix to remedy this problem was simply to remove the `$(document).ready` and all works fine.
 
 ### Paypal IPN
 
@@ -171,7 +171,7 @@ Once you have cloned the project, you will need to set up a `virtual environment
 
 Also please see the following link for setting up a [Virtual Environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/#lower-level-virtualenv)
 
-Once all this is completed you should simply be able to run the command `pip install -r requirements.txt` from your activated `virtual environment` terminal/console window to install all the neccessary packages needed to run the project. Once this completes you should be able to now simply run the command `python manage.py runserver` and it should fire up the development server where you can navigate to `localhost:8000` to browse the site offline.
+Once all this is completed you should simply be able to run the command `pip install -r requirements.txt` from your activated `virtual environment` terminal/console window to install all the necessary packages needed to run the project. Once this completes you should be able to now simply run the command `python manage.py runserver` and it should fire up the development server where you can navigate to `localhost:8000` to browse the site offline.
 
 Or as stated above, a live version of the site can be accessed by following this [link](https://gamershub.herokuapp.com/).
 
