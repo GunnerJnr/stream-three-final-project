@@ -30,7 +30,7 @@ The site can be navigated easily by using the navbar which can be found at the t
 
 Signing up is a synch, just fill in the form fields and away you go, you are then free to log in which will take you directly to your profile page, from here you can change your password, edit your profile or write a blog post. You may also have noticed you now have some new links in the navbar that were not available before signing up/logging in. You can also view the most viewed blog posts from the navbar to keep up with the latest popular trends.
 
-Forgotten your password ? Don't panic you can eneter the email address you used in the forgotten password form and you will be sent a temporary link that will alow you to log in and change your password.
+Forgotten your password ? Don't panic you can enter the email address you used in the forgotten password form and you will be sent a temporary link that will alow you to log in and change your password.
 
 If you do feel the need to purchase a cool gaming item or piece of attire from our store, its quick and simple, we decided for a quick and easy purchase that we would integrate paypal, this was to keep it quick, simple and hassle free for all our users.
 
