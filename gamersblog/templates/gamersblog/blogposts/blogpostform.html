@@ -21,7 +21,7 @@
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form | as_bootstrap }}
-            <button class="btn btn-default" type="submit" value="save">Save Post</button>
+            <button class="btn btn-warning btn-sm" type="submit" value="save">Save Post</button>
         </form>
         <!-- Form Fields End -->
     </div>

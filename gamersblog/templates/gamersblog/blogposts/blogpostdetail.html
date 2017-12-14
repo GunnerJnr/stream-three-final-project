@@ -46,9 +46,9 @@
 
         <!-- Blog Post Buttons Begin -->
         {% if post.user == user or user.is_staff %}
-            <button type='button' class='btn btn-warning' onclick='location.href="{% url 'edit_post' post.slug %}"'>Edit Post</button>
+            <button type='button' class="btn btn-warning btn-sm" onclick='location.href="{% url 'edit_post' post.slug %}"'>Edit Post</button>
         {% endif %}
-        <button type='button' class='btn btn-info' onclick='location.href="{% url 'blog_post_list' %}"'>Back To Blog</button>
+        <button type='button' class="btn btn-warning btn-sm" onclick='location.href="{% url 'blog_post_list' %}"'>Back To Blog</button>
         <!-- Blog Post Buttons End -->
 
         <hr>
