@@ -1,4 +1,4 @@
-# DOCUMENTATION FOR STREAM 3 FINAL PROJECT
+# DOCUMENTATION FOR STREAM 3 FINAL PROJECT - GAMERS HUB
 
 ## Table of Contents
 
@@ -45,6 +45,12 @@ I used a number of house hold devices to test my site on also, I can say it seem
 ### Built In Django Testing
 
 This is a department I seemed to struggle in, I mainly struggled with coming up for tests to write. Whether it is just because of lack of knowledge or lack of experience I don't know, so I am hoping the tests are sufficient. There are around 8 in total. I would like to add more in due course but due to time constraints I will just have to leave it as is for the time being. A little about the tests. I have focused mainly on writing tests for the accounts app due to it being one of the more important as it contains user information. There are tests for the user login with username or email, as well as various other tests for page rendering, etc.
+
+### Deployment
+
+I deployed the site to Heroku, the only unfortunate thing here is that the only way to test changes live are to push them to Heroku. One thing I regret not doing with this is creating a branch on github for development, instead I stupidly pushed every change to the master branch, and it has a very high commit count and is now quite a messey commit history. I will learn from my mistake and not do the same in the future.
+
+Heroku deployment was ok but I did have a lot of issues with the static files to begin, it was deleting images from the server after the dynos were restarted. because of this I decided to change the storage to Amazon AWS, it functions a lot better. I also used the ClearDB add on for dumping the data from local to heroku for the database to be uploaded.
 
 ### Known Bugs
 
