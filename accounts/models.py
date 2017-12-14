@@ -44,7 +44,6 @@ class Profile(models.Model):
     youtube_url = models.URLField(max_length=200, blank=True, null=True)
     personal_site_url = models.URLField(max_length=200, blank=True, null=True)
 
-
     # define a view to handle the users about section
     def about_me_description(self):
         """
@@ -55,7 +54,6 @@ class Profile(models.Model):
     # display a more readable description in the admin panel
     about_me_description.short_description = "The users about me entry"
     about_me_desc = property(about_me_description)
-
 
     def __unicode__(self):
         return 'Profile for user {}'.format(self.user)

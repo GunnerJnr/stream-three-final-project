@@ -60,7 +60,7 @@ def edit(request):
         profile_form = EditProfileForm(instance=request.user.profile,
                                        data=request.POST,
                                        files=request.FILES
-                                      )
+                                       )
         # if the user form and the profile form are both valid
         if user_form.is_valid() and profile_form.is_valid():
             # save the user form
@@ -74,7 +74,8 @@ def edit(request):
         else:
             # otherwise we throw the user an error message telling them we could not update
             # their profile page, and they need to fix the relevant field
-            messages.error(request, 'Sorry, but there was an error updating your profile')
+            messages.error(
+                request, 'Sorry, but there was an error updating your profile')
     else:
         user_form = EditUserForm(instance=request.user)
         profile_form = EditProfileForm(instance=request.user.profile)
@@ -82,4 +83,4 @@ def edit(request):
     return render(request, 'accounts/edit_profile.html',
                   {'user_form': user_form,
                    'profile_form': profile_form
-                  })
+                   })

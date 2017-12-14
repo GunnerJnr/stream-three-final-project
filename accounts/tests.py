@@ -6,6 +6,7 @@ from __future__ import unicode_literals
 from django.test import TestCase
 from accounts.forms import *  # import all forms, pylint: disable=W0401, W0614,
 
+
 # Create our test class
 class SetUpClass(TestCase):
     """
@@ -21,6 +22,7 @@ class SetUpClass(TestCase):
             email='testuser@example.com',
             password='adminroot123',
             )
+
 
 class UserFormTest(TestCase):
     """
@@ -42,7 +44,6 @@ class UserFormTest(TestCase):
             })
         self.assertTrue(form.is_valid())
 
-
     def test_form_is_invalid(self):
         """
         test_form_is_invalid(self):
@@ -57,7 +58,6 @@ class UserFormTest(TestCase):
             'password2': ''
             })
         self.assertFalse(form.is_valid())
-
 
     def test_user_registration(self):
         """
@@ -74,7 +74,6 @@ class UserFormTest(TestCase):
         })
         self.assertTrue(user_register)
 
-
     def test_username_login(self):
         """
         test_user_login(self):
@@ -86,7 +85,6 @@ class UserFormTest(TestCase):
             'password2': 'adminroot123'
         })
         self.assertTrue(login_with_username)
-
 
     def test_email_login(self):
         """
