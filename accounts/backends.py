@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 
 # Create custom email authentication for user login.
+# pylint: disable=R0201
 class EmailAuth(object):
     """
     Authenticate the users using an email address
@@ -18,7 +19,7 @@ class EmailAuth(object):
             user = User.objects.get(email=username)
             if user.check_password(password):
                 return user
-
+            return None
         except User.DoesNotExist:
             return None
 

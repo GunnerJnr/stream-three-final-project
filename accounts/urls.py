@@ -1,10 +1,13 @@
+"""
+Urls.py:
+"""
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from accounts import views as accounts_views
 
 
 # accounts app URLs
-urlpatterns = [
+urlpatterns = [  # pylint: disable=C0103,
     # views using the built in django authentication - see link for reference
     # https://docs.djangoproject.com/en/1.11/topics/auth/default/#module-django.contrib.auth.views
 
@@ -26,8 +29,10 @@ urlpatterns = [
     # password reset views
     url(r'^password-reset/$', auth_views.password_reset, name='password_reset'),
     url(r'^password-reset/done/$', auth_views.password_reset_done, name='password_reset_done'),
-    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', auth_views.password_reset_confirm, name='password_reset_confirm'),
-    url(r'^password-reset/complete/$', auth_views.password_reset_complete, name='password_reset_complete'),
+    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$',\
+    auth_views.password_reset_confirm, name='password_reset_confirm'),
+    url(r'^password-reset/complete/$', auth_views.password_reset_complete,\
+    name='password_reset_complete'),
 
     # Please see the below for the password_reset_email.html
     # https://docs.djangoproject.com/en/1.11/topics/auth/default/#django.contrib.auth.views.PasswordResetView

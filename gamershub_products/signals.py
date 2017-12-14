@@ -5,9 +5,9 @@ from paypal.standard.ipn.signals import valid_ipn_received
 from paypal.standard.models import ST_PP_COMPLETED
 
 
-def item_purchased(sender, **kwargs):
+def item_purchased(sender):
     """
-    item_purchased(sender, **kwargs):
+    item_purchased(sender):
     """
     ipn_obj = sender
     if ipn_obj.payment_status == ST_PP_COMPLETED:

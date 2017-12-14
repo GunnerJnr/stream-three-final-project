@@ -28,7 +28,7 @@ def register(request):
             # save the new User object
             new_user.save()
             # create the users profile
-            profile = Profile.objects.create(user=new_user)
+            profile = Profile.objects.create(user=new_user)  # pylint: disable=W0612
             # finally return the register completed html page request
             return render(request, 'accounts/register_done.html', {'new_user': new_user})
     else:
@@ -60,7 +60,7 @@ def edit(request):
         profile_form = EditProfileForm(instance=request.user.profile,
                                        data=request.POST,
                                        files=request.FILES
-                                       )
+                                      )
         # if the user form and the profile form are both valid
         if user_form.is_valid() and profile_form.is_valid():
             # save the user form
@@ -83,4 +83,4 @@ def edit(request):
     return render(request, 'accounts/edit_profile.html',
                   {'user_form': user_form,
                    'profile_form': profile_form
-                   })
+                  })

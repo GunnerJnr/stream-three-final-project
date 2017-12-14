@@ -29,10 +29,10 @@ class UserRegisterForm(forms.ModelForm):
         clean_password: Here we check if the second password matches the first password
         entered, if they do not match we return a validation error message to the user
         """
-        cd = self.cleaned_data
-        if cd['password1'] != cd['password2']:
+        clean_pwd_data = self.cleaned_data
+        if clean_pwd_data['password1'] != clean_pwd_data['password2']:
             raise forms.ValidationError('Sorry, the passwords do not match!')
-        return cd['password2']
+        return clean_pwd_data['password2']
 
     def __init__(self, *args, **kwargs):
         super(UserRegisterForm, self).__init__(*args, **kwargs)
@@ -57,6 +57,10 @@ class UserLoginForm(forms.Form):
 
 
 class EditUserForm(forms.ModelForm):
+    """
+    EditUserForm(forms.ModelForm):
+        Handle the users details so they can edit them
+    """
     class Meta:
         """
         model: the User model
@@ -67,6 +71,11 @@ class EditUserForm(forms.ModelForm):
 
 
 class EditProfileForm(forms.ModelForm):
+    """
+    EditProfileForm(forms.ModelForm):
+        We want to allow the user to edit their profile
+        so we provide a form
+    """
     class Meta:
         """
         model: UserProfile model

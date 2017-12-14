@@ -28,7 +28,7 @@ def new_post(request):
             post.published_date = timezone.now()
             # check the post title is unique
             post_title = form.cleaned_data['post_title']
-            # if the title exists throw an error 
+            # if the title exists throw an error
             if BlogPost.objects.filter(post_title__iexact=post_title).exists():
                 # tell the user to pick a new title, this one exists
                 form.add_error(None, 'Sorry that title already exists')

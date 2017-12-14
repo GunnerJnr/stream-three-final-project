@@ -18,7 +18,7 @@ def products_list(request):
     products_list:
         Handles the pagination for the products to be displayed
     """
-    object_list = GamersHubProducts.objects.get_queryset().order_by('id')
+    object_list = GamersHubProducts.objects.get_queryset().order_by('id')  # pylint: disable=E1101
     # add pagination to the blog page, we will display 3 posts per page
     paginator = Paginator(object_list, 3)  # 3 posts in each page
     page = request.GET.get('page')

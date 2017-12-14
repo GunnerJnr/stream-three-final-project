@@ -1,3 +1,6 @@
+"""
+Urls.py:
+"""
 from django.conf.urls import url
 from . import views as gamersblog_views
 

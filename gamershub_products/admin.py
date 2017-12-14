@@ -5,7 +5,7 @@ Admin.py:
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from models import GamersHubProducts
+from gamershub_products.models import GamersHubProducts
 
 # Register products to admin panel
 admin.site.register(GamersHubProducts)
