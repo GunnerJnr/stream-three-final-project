@@ -1,4 +1,4 @@
-# DOCUMENTATION FOR STREAM 3 FINAL PROJECT - THE DJANGO SITE
+# DOCUMENTATION FOR STREAM 3 FINAL PROJECT
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ A live version of the site can be accessed by following this [link](https://game
 
 ### Stream Three Final Project - Gamers Hub
 
-Gamers Hub is a fictional all purpose online community for gamers and like minded people. The idea behind it came from my passion of games and game development.
+Gamers Hub is a fictional, all purpose online community for gamers and like minded people. The idea behind it came from my passion of games and game development.
 
 Its purpose is to unite gamers and like minded people, it will give them a place to share and voice there opinions by utilising the `django-disqus` pkg to comment on blog posts.
 
@@ -26,7 +26,9 @@ The users will also have the option of creating their own blog posts which can a
 
 There is also a profile page of which they can set some basic information about their self if they so wish.
 
-There os also a store front which will allow the users to purchase any gaming product they desire, as long as we have it in stock.
+There is also a store front which will allow the users to purchase any gaming product they desire, as long as we have it in stock.
+
+Users can register to the site for free, by doing so they will get access to hidden parts of the site that are not available to just anyone! Such as the store for instance. Also users are not able to crete or edit blog posts unless registered/logged in but they can of course view any that exist already.
 
 [Back to Table Of Contents](#table-of-contents)
 
