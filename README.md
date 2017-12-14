@@ -20,17 +20,15 @@ A live version of the site can be accessed by following this [link](https://game
 
 ### Stream Three Final Project - Gamers Hub
 
-Gamers Hub is a fictional, all purpose online community for gamers and like minded people. The idea behind it came from my passion of games and game development.
+Gamers Hub is a fictional, all purpose online community for gamers and like minded people. The idea behind it came from my passion of games, gaming and game development. Its purpose is to unite gamers and like minded people from all across the world, it will give them a place to share and voice there opinions by utilising the `django-disqus` package to comment and have discussions on blog posts. The users will also have the option of creating their own blog posts which can also be commented on by fellow gamers. The user is also able to edit their blog post if they so wish. There is also a user profile page of which they can set some basic information about their self. There is also a store front which will allow the users to purchase any gaming product they desire, as long as we have it in stock. Currently we only have a few items but overtime we will grow and have a lot more on offer, so please bare with us. Users can also register to the site for free, by doing so they will get access to hidden parts of the site that are not available to just anyone! Such as the store for instance. Also users are not able to create or edit blog posts unless they have registered/logged in but they can of course view any blog posts that exist already.
 
-Its purpose is to unite gamers and like minded people, it will give them a place to share and voice there opinions by utilising the `django-disqus` pkg to comment on blog posts.
+The site can be navigated easily by using the navbar which can be found at the top of the page, it may have a hamburger menu (3 lines) on smaller devices, you simply click the link you want and it will navigate you to the relevant page.
 
-The users will also have the option of creating their own blog posts which can also be commented on by fellow gamers.
+Signing up is a synch, just fill in the form fields and away you go, you are then free to log in which will take you directly to your profile page, from here you can change your password, edit your profile or write a blog post. You may also have noticed you now have some new links in the navbar that were not available before signing up/logging in. You can also view the most viewed blog posts from the navbar to keep up with the latest popular trends.
 
-There is also a profile page of which they can set some basic information about their self if they so wish.
+Forgotten your password ? Don't panic you can eneter the email address you used in the forgotten password form and you will be sent a temporary link that will alow you to log in and change your password.
 
-There is also a store front which will allow the users to purchase any gaming product they desire, as long as we have it in stock.
-
-Users can register to the site for free, by doing so they will get access to hidden parts of the site that are not available to just anyone! Such as the store for instance. Also users are not able to crete or edit blog posts unless registered/logged in but they can of course view any that exist already.
+If you do feel the need to purchase a cool gaming item or piece of attire from our store, its quick and simple, we decided for a quick and easy purchase that we would integrate paypal, this was to keep it quick, simple and hassle free for all our users.
 
 [Back to Table Of Contents](#table-of-contents)
 
@@ -146,6 +144,10 @@ A note on the majority of these CSS Validation warnings/errors, I believe most t
 ### Javascript Files
 
 I also just wnated to note I had a small issue with conflicting JS files in the project, it seemed that by using `$(document).ready` I was only able to use the top most linked JS file and the other wouldn't respond, I had no idea why it was doing this, all I can put it down to is the way that Django renders its templates, and because most of the templates extend from `Base.html` that once it had rendered it didnt re render for the newer script. The fix to remedy this problem was simply to remove the `$(document).ready` and all works fine.
+
+### Paypal IPN
+
+I managed to integrate paypal and users can successfully buy or cancel their purchase and will be redirected back to the site. However, I have no functionality in place that would return the user a reciept for purchase, I will rely on paypal to handle this for me as I set up payments using Single Payments.
 
 [Back to Table Of Contents](#table-of-contents)
 
