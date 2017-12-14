@@ -105,6 +105,7 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 * Line 887: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
 * Line 893: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
 * Line 900: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+
 ##### gamershubs.css
 
 * Line 292: `#blog-post-detail-thumb img` - Parse Error [empty string]
