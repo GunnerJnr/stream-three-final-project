@@ -50,6 +50,10 @@ I used a number of house hold devices to test my site on also, I can say it seem
 
 This is a department I seemed to struggle in, I mainly struggled with coming up for tests to write. Whether it is just because of lack of knowledge or lack of experience I don't know, so I am hoping the tests are sufficient. There are around 8 in total. I would like to add more in due course but due to time constraints I will just have to leave it as is for the time being. A little about the tests. I have focused mainly on writing tests for the accounts app due to it being one of the more important as it contains user information. There are tests for the user login with username or email, as well as various other tests for page rendering, etc.
 
+### Slack Group Code Institute Students
+
+The students on the Slack App, who are part of the same course also played a major part in my testing of the site, it was vital they all test on there different gadgets and devices, and sign up, they pointed out a lot of flaws and bugs in the app. One with was a pretty big expoit. Found by Andy (Mormoran), this exploit allowed any user that was registered to edit any users blog post, as you can see this is not ideal and quick a big flaw in the system, luckily it was found and fixed. Andy was also responsible for suggesting I used the class of container opposed to container-fluid. Mainly this is so he didn't keep getting neck ache from panning his head 180 degrees looking at the screen from left to right. I also need to thank the likes of Robin (robinz) and Simen (eventyret) for their continued help throughout the course.There are a number of other students too but there are too many to name.
+
 ### Deployment
 
 I deployed the site to Heroku, the only unfortunate thing here is that the only way to test changes live are to push them to Heroku. One thing I regret not doing with this is creating a branch on github for development, instead I stupidly pushed every change to the master branch, and it has a very high commit count and is now quite a messey commit history. I will learn from my mistake and not do the same in the future.
@@ -183,7 +187,9 @@ Or as stated above, a live version of the site can be accessed by following this
 
 ## Credits
 
-Code Institute - For the lessons on Full Stack Development.
+[Code Institute](https://www.codeinstitute.net) - For the lessons on Full Stack Development.
+
+The Slack Community, its been a pleasure! Special thanks go to Yoni Lavi, Nakita, Niel and Tiffany Snell for being the best mentors/helpers out there.
 
 [Back to Table Of Contents](#table-of-contents)
 
