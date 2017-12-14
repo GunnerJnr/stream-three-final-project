@@ -79,32 +79,32 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 
 #### CSS Validation Errors
 
-##### gamershubs-dark.css
+##### [gamershubs-dark.css](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css)
 
-* Line 301: `#blog-post-detail-thumb img` - Parse Error [empty string]
-* Line 302: `#blog-post-detail-thumb img` - Parse Error [empty string]
-* Line 324: `.pagination a` - Property transition doesn't exist : `background-color #eeba2c 0.3s background-color #eeba2c 0.3s`
-* Line 356: `#profile-img-container img` - Parse Error [empty string]
-* Line 569: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
-* Line 572: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
-* Line 579: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
-* Line 586: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
-* Line 666: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
-* Line 669: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
-* Line 675: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
-* Line 682: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
-* Line 762: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
-* Line 765: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
-* Line 771: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
-* Line 778: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
-* Line 823: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
-* Line 826: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
-* Line 832: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
-* Line 839: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
-* Line 884: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
-* Line 887: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
-* Line 893: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
-* Line 900: Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+* [Line 301](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L301): `#blog-post-detail-thumb img` - Parse Error [empty string]
+* [Line 302](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L302): `#blog-post-detail-thumb img` - Parse Error [empty string]
+* [Line 324](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L324): `.pagination a` - Property transition doesn't exist : `background-color #eeba2c 0.3s background-color #eeba2c 0.3s`
+* [Line 356](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L356): `#profile-img-container img` - Parse Error [empty string]
+* [Line 569](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L569): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+* [Line 572](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L572): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+* [Line 579](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L579): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+* [Line 586](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L586): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+* [Line 666](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L666): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+* [Line 669](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L669): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+* [Line 675](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L675): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+* [Line 682](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L682): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+* [Line 762](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L762): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+* [Line 765](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L765): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+* [Line 771](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L771): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+* [Line 778](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L778): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+* [Line 823](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L823): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+* [Line 826](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L826): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+* [Line 832](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L832): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+* [Line 839](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L839): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
+* [Line 884](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L884): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar`          [-webkit-scrollbar]
+* [Line 887](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L887): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`    [-webkit-scrollbar-track]
+* [Line 893](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L893): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb]
+* [Line 900](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L900): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`    [-webkit-scrollbar-thumb:window-inactive]
 
 ##### gamershubs.css
 
