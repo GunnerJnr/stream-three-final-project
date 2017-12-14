@@ -87,6 +87,8 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 
 #### CSS Validation Errors
 
+A note on the majority of these CSS Validation warnings/errors, I believe most to be because they use some CSS4 language but we can only validate CSS3 as of now. Also after some research the Empty String error is a know bug for border radius in CSS. However I felt it best I still document them to show I am aware of their existence in the project.
+
 ##### [gamershubs-dark.css](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css)
 
 * [Line 301](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub-dark.css#L301): `#blog-post-detail-thumb img` - Parse Error [empty string]
@@ -140,6 +142,10 @@ Also as of yesterday (13/12/2017) heroku was acting a bit strange and throwing o
 * [Line 878](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub.css#L878): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-track`     [-webkit-scrollbar-track]
 * [Line 884](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub.css#L884): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb]
 * [Line 891](https://github.com/GunnerJnr/stream-three-final-project/blob/master/static/css/gamershub.css#L891): Unknown pseudo-element or pseudo-class `::-webkit-scrollbar-thumb`     [-webkit-scrollbar-thumb:window-inactive]
+
+### Javascript Files
+
+I also just wnated to note I had a small issue with conflicting JS files in the project, it seemed that by using `$(document).ready` I was only able to use the top most linked JS file and the other wouldn't respond, I had no idea why it was doing this, all I can put it down to is the way that Django renders its templates, and because most of the templates extend from `Base.html` that once it had rendered it didnt re render for the newer script. The fix to remedy this problem was simply to remove the `$(document).ready` and all works fine.
 
 [Back to Table Of Contents](#table-of-contents)
 
