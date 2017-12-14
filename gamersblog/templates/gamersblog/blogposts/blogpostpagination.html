@@ -3,12 +3,12 @@
     <ul class="pager">
         <!-- If there is a previous page to navigate to then display previous link -->
       {% if page.has_previous %}
-        <li class="previous"><a href="?page={{ page.previous_page_number }}"><span aria-hidden="true">&larr;</span> Previous</a></li>
+        <a href="?page={{ page.previous_page_number }}">Previous</a>
       {% endif %}
 
       <!-- if there is a next page to navigate too then show the next link -->
       {% if page.has_next %}
-        <li class="next"><a href="?page={{ page.next_page_number }}">Next <span aria-hidden="true">&rarr;</span></a></li>
+        <a href="?page={{ page.next_page_number }}">Next</a>
       {% endif %}
     </ul>
   </nav>

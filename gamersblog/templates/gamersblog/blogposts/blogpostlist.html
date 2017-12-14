@@ -19,18 +19,18 @@
         <!-- Here we create a for block to loop through all the blog posts and return them by absolute URL and post title -->
         {% for post in  blog_posts %}
             <!-- Blog Post List Container Begin -->
-            <div class="col-sm-4 col-md-4 col-lg-4 blog-post-container">
+            <div class="col-sm-12 col-md-4 col-lg-4 blog-post-container">
 
                 <!-- Blog Post Thumbnail Begin -->
                 <div id="blog-post-thumb-container">
                     <!-- add an image to the post preview for a nice touch -->
                     <a href="{{ post.get_absolute_url }}">
                         {% load thumbnail %}
-                        {% thumbnail post.post_images "300x300" crop="center" as im %}
+                        {% thumbnail post.post_images "500x300" crop="center" format="PNG" as im %}
                         {% if post.post_images %}
                             <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                         {% else %}
-                            <img src="http://via.placeholder.com/500x200" alt="blog-post-thumbs">
+                            <img src="http://via.placeholder.com/500x300" alt="blog-post-thumbs">
                         {% endif %}
                         {% endthumbnail %}
                     </a>
@@ -67,7 +67,7 @@
                 <!-- Blog Post Preview End -->
 
                 <!-- Read More Btn Begin -->
-                <div>
+                <div id="blog-post-preview-btn">
                     <button type="button" class="btn btn-warning btn-sm" onclick="location.href='{{ post.get_absolute_url }}'">Read More</button>
                 </div>
                 <!-- Read More Btn End -->
@@ -80,7 +80,7 @@
         <!-- End for block -->
 
         <!-- Pagination Begin -->
-        <div class="col-md-12">
+        <div class="col-md-12 pagination">
             {% include "gamersblog/blogposts/blogpostpagination.html" with page=blog_posts %}
         </div>
         <!-- Pagination End -->

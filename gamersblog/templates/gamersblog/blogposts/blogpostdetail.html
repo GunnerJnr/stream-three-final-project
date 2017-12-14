@@ -24,21 +24,21 @@
         <!-- Blog Post Date, Author, Views and Tags End -->
 
         <!-- Blog Post Thumb Begin -->
-        <div id="blog-post-detail">
+        <div id="blog-post-detail-thumb">
             {% load thumbnail %}
-            {% thumbnail post.post_images "500x500" as im %}
+            {% thumbnail post.post_images "500x500" format="PNG" as im %}
             {% if post.post_images %}
-                <img class="" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
             {% endif %}
             {% endthumbnail %}
         </div>
         <!-- Blog Post Thumb End -->
 
-        <br />
+        <hr>
 
         <!-- Blog Post Body Begin -->
-        <div>
-            {{ post.post_body|linebreaks }}
+        <div id="blog-post-detail-body">
+            {{ post.post_body|linebreaks|urlize }}
         </div>
         <!-- Blog Post Body End -->
 
@@ -50,6 +50,8 @@
         {% endif %}
         <button type='button' class='btn btn-info' onclick='location.href="{% url 'blog_post_list' %}"'>Back To Blog</button>
         <!-- Blog Post Buttons End -->
+
+        <hr>
 
         <!-- load disqus tags and comment begin -->
         {% load disqus_tags %}

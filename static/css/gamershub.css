@@ -237,14 +237,10 @@ ul.messages li a.close:hover {
 	border: solid 0.025px rgba(146, 136, 136, 0.5);
 }
 
-#blog-post-thumb-container {
-	margin: 0 auto;
-}
-
 #blog-post-thumb-container img {
 	max-width: 100%;
 	height: auto;
-	margin: 20px auto;
+	margin: 5px auto;
 }
 
 #blog-post-title {
@@ -262,6 +258,11 @@ ul.messages li a.close:hover {
 	text-align: center;
 }
 
+#blog-post-preview-btn {
+	margin: 3px auto;
+	min-height: 20px;
+}
+
 #blog-post-preview a {
 	color: #2e5384;
 	text-transform: none;
@@ -277,12 +278,18 @@ ul.messages li a.close:hover {
 	font-weight: bold;
 }
 
-#blog-post-detail {
+#blog-post-detail-thumb {
 	margin: 0 auto;
 	text-align: center;
 }
 
-#blog-post-detail img {
+#blog-post-detail-body {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+#blog-post-detail-thumb img {
 	border-top-left-radius: 25px;
 	border-bottom-right-radius: 25px;
 	max-width: 100%;
@@ -296,13 +303,29 @@ ul.messages li a.close:hover {
 .next,
 .previous,
 .pager {
-	margin: 2px 2px;
 	text-align: center;
 }
 
 .pagination {
+	display: inline-block;
 	font-weight: bold;
 }
+
+.pagination a {
+	padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 
 /********** Profile Image Style **********/
@@ -468,13 +491,19 @@ ul.messages li a.close:hover {
 /* No media query since this is the default in Bootstrap */
 /* So we will make our own custom to handle these devices */
 
-@media screen and (max-width: 400px) and (min-width: 178px) {
+@media screen and (max-width: 400px) and (min-width: 10px) {
 
+	/********** Text Style **********/
 	.h1,
 	.h2,
 	.h3 {
 		font-size: 0.5em;
 	}
+
+	p {
+		font-size: 10px;
+	}
+
 	/********** Nav Bar Style **********/
 	navbar {
 		position: static;
@@ -563,6 +592,17 @@ ul.messages li a.close:hover {
 
 @media screen and (max-width: 768px) and (min-width: 401px) {
 
+	/********** Text Style **********/
+	.h1,
+	.h2,
+	.h3 {
+		font-size: 0.6em;
+	}
+
+	p {
+		font-size: 11px;
+	}
+
 	/********** Nav Bar Style **********/
 	navbar {
 		position: static;
@@ -649,6 +689,17 @@ ul.messages li a.close:hover {
 /* Medium devices (desktops, 769px and up) */
 
 @media screen and (max-width: 991px) and (min-width: 769px) {
+
+	/********** Text Style **********/
+	.h1,
+	.h2,
+	.h3 {
+		font-size: 0.75em;
+	}
+
+	p {
+		font-size: 12px;
+	}
 
 	/********** Nav Bar Style **********/
 	navbar {

@@ -21,17 +21,17 @@
         {% for product in products %}
 
         <!-- Product Container Begin -->
-        <div class="col-sm-4 col-md-4 col-lg-4 product-container">
+        <div class="col-sm-12 col-md-4 col-lg-4 product-container">
 
             <!-- Product Thumb Container Begin -->
             <div class="product-thumb-container">
                 <!-- add an image to the post preview for a nice touch -->
                 {% load thumbnail %}
-                {% thumbnail product.product_images "300x300" crop="center" as im %}
+                {% thumbnail product.product_images "500x300" crop="center" as im %}
                 {% if product.product_images  %}
                     <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
                 {% else %}
-                    <img src="http://via.placeholder.com/200x200">
+                    <img src="http://via.placeholder.com/500x200">
                 {% endif %}
                 {% endthumbnail %}
             </div>
