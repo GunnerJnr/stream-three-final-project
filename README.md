@@ -15,7 +15,7 @@
 ---
 
 <p align="center">
-![alt text](https://github.com/GunnerJnr/stream-three-final-project/blob/master/read-me-img/mobile-preview.png "Mobile Preview")
+<img src='https://github.com/GunnerJnr/stream-three-final-project/blob/master/read-me-img/mobile-preview.png' alt="Mobile Preview">
 </p>
 
 ## Description
