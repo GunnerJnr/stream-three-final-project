@@ -14,6 +14,9 @@
 
 ---
 
+![alt text](https://github.com/GunnerJnr/stream-three-final-project/blob/master/read-me-img/mobile-preview.png "Mobile Preview")
+
+
 ## Description
 
 A live version of the site can be accessed by following this [link](https://gamershub.herokuapp.com/).
