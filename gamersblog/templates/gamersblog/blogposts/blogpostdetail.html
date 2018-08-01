@@ -14,9 +14,9 @@
         <!-- Blog Post Page Heading Begin -->
         <h1>{{ post.post_title }}</h1>
         <!-- Blog Post Page Heading End -->
-        
+
         <hr>
-        
+
         <!-- Blog Post Date, Author, Views and Tags Begin -->
 		<p class="date">
             Published {{ post.published_date }} by {{ post.post_author }} | Post Views {{ post.post_views }} | Tags: {{ post.post_tags }}
@@ -45,7 +45,7 @@
         <br>
 
         <!-- Blog Post Buttons Begin -->
-        {% if post.user == user or user.is_staff %}
+        {% if user == post.post_author or user.is_staff %}
             <button type='button' class="btn btn-warning btn-sm" onclick='location.href="{% url 'edit_post' post.slug %}"'>Edit Post</button>
         {% endif %}
         <button type='button' class="btn btn-warning btn-sm" onclick='location.href="{% url 'blog_post_list' %}"'>Back To Blog</button>
